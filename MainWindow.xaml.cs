@@ -44,59 +44,35 @@ namespace MakuTweakerNew
         {
             public static Dictionary<string, Dictionary<string, string>> LoadLocalization(string language, string category)
             {
-                var localizationFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "loc");
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = $"MakuTweakerNew.loc.{language}.json";
 
-                var enFile = Path.Combine(localizationFolder, "en.json");
-                if (!File.Exists(enFile))
+                using Stream stream = assembly.GetManifestResourceStream(resourceName);
+
+                if (stream == null)
                 {
-                    throw new FileNotFoundException($"Cannot find the base en.json localization file.\nPlease reinstall MakuTweaker.");
+                    Settings.Default.lang = "en";
+                    throw new FileNotFoundException($"Cannot find embedded localization {resourceName}.\nLanguage has been changed to English.");
                 }
 
-                var enContent = File.ReadAllText(enFile);
-                var enData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, string>>>>>(enContent);
+                using StreamReader reader = new StreamReader(stream);
+                var jsonContent = reader.ReadToEnd();
 
-                if (!enData.ContainsKey("categories") || !enData["categories"].ContainsKey(category))
+                var localizationData =
+                    JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, string>>>>>(jsonContent);
+
+                if (localizationData.ContainsKey("categories"))
                 {
-                    throw new KeyNotFoundException($"Cannot find a \"{category}\" category in the base en.json localization file.");
-                }
+                    var categories = localizationData["categories"];
 
-                var resultCategory = enData["categories"][category];
-                if (language == "en")
-                {
-                    return resultCategory;
-                }
-
-                var targetFile = Path.Combine(localizationFolder, $"{language}.json");
-                if (!File.Exists(targetFile))
-                {
-                    Properties.Settings.Default.lang = "en";
-                    Properties.Settings.Default.Save();
-                    throw new FileNotFoundException($"Cannot find a {targetFile} localization file.\nPlease reinstall MakuTweaker.\nLanguage has been changed to English.");
-                }
-
-                var targetContent = File.ReadAllText(targetFile);
-                var targetData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, string>>>>>(targetContent);
-
-                if (targetData.ContainsKey("categories") && targetData["categories"].ContainsKey(category))
-                {
-                    var targetCategory = targetData["categories"][category];
-
-                    foreach (var subCategory in targetCategory)
+                    if (categories.ContainsKey(category))
                     {
-                        var subCategoryName = subCategory.Key;
-
-                        if (!resultCategory.ContainsKey(subCategoryName))
-                        {
-                            resultCategory[subCategoryName] = new Dictionary<string, string>();
-                        }
-                        foreach (var translation in subCategory.Value)
-                        {
-                            resultCategory[subCategoryName][translation.Key] = translation.Value;
-                        }
+                        return categories[category];
                     }
                 }
 
-                return resultCategory;
+                Settings.Default.lang = "en";
+                throw new KeyNotFoundException($"Cannot find category '{category}' in localization {resourceName}");
             }
         }
 
@@ -355,7 +331,7 @@ namespace MakuTweakerNew
             string message = string.Empty;
             var languageCode = Properties.Settings.Default.lang ?? "en";
             var basel = MainWindow.Localization.LoadLocalization(languageCode, "base");
-            Icon trayIcon = new Icon(GetResourceStream("MakuTweakerNew.MakuT.ico"));
+            Icon trayIcon = new Icon(GetResourceStream("assets/icons/MakuT.ico"));
 
             TaskbarIcon _trayIcon = new TaskbarIcon
             {
@@ -383,15 +359,15 @@ namespace MakuTweakerNew
                 _trayIcon.Dispatcher.Invoke(() => _trayIcon.Dispose());
             });
         }
-        private Stream GetResourceStream(string resourceName)
+        private Stream GetResourceStream(string relativePath)
         {
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            var resourceStream = assembly.GetManifestResourceStream(resourceName);
-            if (resourceStream == null)
-            {
-                throw new FileNotFoundException($"Ресурс {resourceName} не найден.");
-            }
-            return resourceStream;
+            var uri = new Uri($"pack://application:,,,/{relativePath}", UriKind.Absolute);
+            var resourceInfo = Application.GetResourceStream(uri);
+
+            if (resourceInfo == null)
+                throw new FileNotFoundException($"Ресурс {relativePath} не найден.");
+
+            return resourceInfo.Stream;
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
@@ -438,13 +414,15 @@ namespace MakuTweakerNew
             .GetManifestResourceStream("MakuTweakerNew.BuildNumber.txt")!)
             .ReadToEnd()
             .Trim());
+
             string url = "https://raw.githubusercontent.com/AdderlyMark/MakuTweaker/refs/heads/main/ver.json";
+
             using (HttpClient client = new HttpClient())
             {
                 try
                 {
                     HttpResponseMessage response = await client.GetAsync(url);
-                    response.EnsureSuccessStatusCode();    
+                    response.EnsureSuccessStatusCode();
 
                     string jsonString = await response.Content.ReadAsStringAsync();
 
@@ -457,53 +435,52 @@ namespace MakuTweakerNew
                             string lb = jsonData["build"];
                             if (int.Parse(lb) > ThisBuild)
                             {
-                                Icon trayIcon = new Icon(GetResourceStream("MakuTweakerNew.MakuT.ico"));
-                                TaskbarIcon _trayIcon = new TaskbarIcon
+                                Application.Current.Dispatcher.Invoke(() =>
                                 {
-                                    ToolTipText = "MakuTweaker",
-                                    Icon = trayIcon
-                                };
+                                    Icon trayIcon = new Icon(GetResourceStream("assets/icons/MakuT.ico"));
+                                    TaskbarIcon _trayIcon = new TaskbarIcon
+                                    {
+                                        ToolTipText = "MakuTweaker",
+                                        Icon = trayIcon
+                                    };
 
-                                if (Properties.Settings.Default.lang == "ru" || Properties.Settings.Default.lang == "ua" || Properties.Settings.Default.lang == "kz")
-                                {
-                                    _trayIcon.ShowBalloonTip("MakuTweaker", "Доступно обновление MakuTweaker!\nНажмите на уведомление, чтобы перейти на страницу загрузки.", BalloonIcon.Info);
-                                }
-                                else
-                                {
-                                    _trayIcon.ShowBalloonTip("MakuTweaker", "An update for MakuTweaker is available!\nClick the notification to go to the download page.", BalloonIcon.Info);
-                                }
+                                    string currentLang = Properties.Settings.Default.lang;
+                                    if (currentLang is "ru" or "uk" or "be" or "kk" or "az")
+                                    {
+                                        _trayIcon.ShowBalloonTip("MakuTweaker", "Доступно обновление MakuTweaker!\nНажмите на уведомление, чтобы перейти на страницу загрузки.", BalloonIcon.Info);
+                                    }
+                                    else
+                                    {
+                                        _trayIcon.ShowBalloonTip("MakuTweaker", "An update for MakuTweaker is available!\nClick the notification to go to the download page.", BalloonIcon.Info);
+                                    }
 
+                                    _trayIcon.TrayBalloonTipClicked += (sender, args) =>
+                                    {
+                                        Process.Start(new ProcessStartInfo("https://adderly.top/makutweaker") { UseShellExecute = true });
+                                    };
 
-                                _trayIcon.TrayBalloonTipClicked += (sender, args) =>
-                                {
-                                    Process.Start(new ProcessStartInfo("https://adderly.top/makutweaker") { UseShellExecute = true });
-                                };
-                                Task.Delay(8000).ContinueWith(t =>
-                                {
-                                    _trayIcon.Dispatcher.Invoke(() => _trayIcon.Dispose());
+                                    Task.Delay(8000).ContinueWith(t =>
+                                    {
+                                        _trayIcon.Dispatcher.Invoke(() => _trayIcon.Dispose());
+                                    });
                                 });
                             }
                             else
                             {
-
                             }
                         }
                         else
                         {
-
                         }
                     }
                     catch (JsonException ex)
                     {
-
                     }
                 }
                 catch (HttpRequestException e)
                 {
-
                 }
             }
-
         }
         private int checkWinVer()
         {

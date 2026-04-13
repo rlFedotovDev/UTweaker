@@ -10,21 +10,39 @@
       d:DesignHeight="672" d:DesignWidth="704.04"
       Title="Shutdown Timer">
 
-    <Grid>
-        <TextBlock x:Name="label" HorizontalAlignment="Left" Margin="24,11,0,0" TextWrapping="Wrap" Text="Shutdown After Time" VerticalAlignment="Top" FontSize="32" FontFamily="Segoe UI Semibold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,66,0,0" TextWrapping="Wrap" x:Name="sat" Text="Enter The Number of Minutes After Which The System Will Shutdown. Press The *Shutdown* Button to Start The Timer You Set." VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Semilight" Width="670"/>
-        <controls:TextBox x:Name="mins" Margin="24,176,621,0" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="6" Watermark="Minutes" TextChanged="mins_TextChanged" GotFocus="mins_GotFocus" Height="31" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="138,179,0,0" TextWrapping="Wrap" x:Name="hours" Text="Minutes / Hours: 0" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Semilight" Width="324" Height="57"/>
-        <controls:Button x:Name="cancel" Margin="220,226,276,0" Content="Cancel Shutdown Timer" Height="30" VerticalAlignment="Top" MinWidth="208.04" MaxWidth="208.04" Click="cancel_Click"/>
-        <controls:Button x:Name="shut" Margin="4,226,492,0" Content="Start Shutdown Timer" Height="30" VerticalAlignment="Top" MinWidth="100" MaxWidth="208.04" Click="shut_Click"/>
-        <Slider x:Name="time" Margin="27,307,83,0" Maximum="288" LargeChange="12" TickPlacement="BottomRight" TickFrequency="12" ValueChanged="time_ValueChanged" SmallChange="1" Height="72" VerticalAlignment="Top" Value="24"/>
-        <TextBlock HorizontalAlignment="Left" Margin="27,335,0,0" TextWrapping="Wrap" x:Name="os" Text="0s" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="646,335,0,0" TextWrapping="Wrap" x:Name="oned" Text="1d" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="16" Height="20"/>
-        <controls:Button x:Name="tenM" Margin="4,266,599,0" Content="10 Minutes" Height="30" MinWidth="100" MaxWidth="100" VerticalAlignment="Top" Click="tenM_Click"/>
-        <controls:Button x:Name="thirtyM" Margin="112,266,492,0" Content="30 Minutes" Height="30" MinWidth="100" MaxWidth="100" VerticalAlignment="Top" Click="threeM_Click"/>
-        <controls:Button x:Name="oneH" Margin="220,266,384,0" Content="1 Hour" Height="30"  MaxWidth="100" MinWidth="100" VerticalAlignment="Top" Click="oneH_Click"/>
-        <controls:Button x:Name="twoH" Margin="328,266,276,0" Content="2 Hours" Height="30"  MaxWidth="100" MinWidth="100" VerticalAlignment="Top" Click="twoH_Click"/>
-        <controls:Button x:Name="fourH" Margin="436,266,168,0" Content="4 Hours" Height="30"  MaxWidth="100" MinWidth="100" VerticalAlignment="Top" Click="fourH_Click"/>
-        <controls:Button x:Name="sixH" Margin="544,266,60,0" Content="6 Hours" Height="30" MaxWidth="100" MinWidth="100" VerticalAlignment="Top" Click="sixH_Click"/>
-    </Grid>
+    <StackPanel Margin="24,11,24,0">
+
+        <TextBlock x:Name="label" TextWrapping="Wrap" Text="Shutdown After Time" FontSize="32" FontFamily="Segoe UI Semibold" Margin="0,0,0,10"/>
+
+        <TextBlock x:Name="sat" TextWrapping="Wrap" Text="Enter The Number of Minutes After Which The System Will Shutdown. Press The *Shutdown* Button to Start The Timer You Set." FontSize="20" FontFamily="Segoe UI Semilight" Margin="0,0,0,12"/>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+            <controls:TextBox x:Name="mins" Width="80" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="6" Watermark="Minutes" TextChanged="mins_TextChanged" GotFocus="mins_GotFocus" Height="31" VerticalAlignment="Center"/>
+            <TextBlock x:Name="hours" Text="Minutes / Hours: 0" FontSize="20" FontFamily="Segoe UI Semilight" VerticalAlignment="Center" Margin="15,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+            <controls:Button x:Name="shut" Content="Start Shutdown Timer" Height="30" Width="208" Click="shut_Click" Margin="0,0,10,0"/>
+            <controls:Button x:Name="cancel" Content="Cancel Shutdown Timer" Height="30" Width="208" Click="cancel_Click"/>
+        </StackPanel>
+
+        <WrapPanel Margin="0,0,0,2">
+            <controls:Button x:Name="tenM" Content="10 Minutes" Height="30" Width="100" Click="tenM_Click" Margin="0,0,8,8"/>
+            <controls:Button x:Name="thirtyM" Content="30 Minutes" Height="30" Width="100" Click="threeM_Click" Margin="0,0,8,8"/>
+            <controls:Button x:Name="oneH" Content="1 Hour" Height="30" Width="100" Click="oneH_Click" Margin="0,0,8,8"/>
+            <controls:Button x:Name="twoH" Content="2 Hours" Height="30" Width="100" Click="twoH_Click" Margin="0,0,8,8"/>
+            <controls:Button x:Name="fourH" Content="4 Hours" Height="30" Width="100" Click="fourH_Click" Margin="0,0,8,8"/>
+            <controls:Button x:Name="sixH" Content="6 Hours" Height="30" Width="100" Click="sixH_Click" Margin="0,0,8,8"/>
+        </WrapPanel>
+
+        <StackPanel HorizontalAlignment="Left" Width="640">
+            <Slider x:Name="time" Maximum="288" LargeChange="12" TickPlacement="BottomRight" TickFrequency="12" ValueChanged="time_ValueChanged" SmallChange="1" Value="24" Margin="0,0,0,0"/>
+
+            <Grid Margin="0,-2,0,0">
+                <TextBlock x:Name="os" Text="0s" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" IsHitTestVisible="False"/>
+                <TextBlock x:Name="oned" Text="1d" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Right" IsHitTestVisible="False"/>
+            </Grid>
+        </StackPanel>
+
+    </StackPanel>
 </Page>

@@ -9,7 +9,7 @@
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <AssemblyName>MakuTweaker</AssemblyName>
     <Authors>MarkAdderly</Authors>
-    <Version>5.3.1</Version>
+    <Version>5.3.2.2</Version>
     <PackageIcon>MakuTweakerNEWnoround.png</PackageIcon>
     <PackageProjectUrl>https://adderly.top</PackageProjectUrl>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -17,13 +17,14 @@
 	  <ApplicationIcon>assets/icons/MakuTweaker.ico</ApplicationIcon>
 	  <PlatformTarget>x64</PlatformTarget>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-    <FileVersion>5.3.1</FileVersion>
-    <AssemblyVersion>5.3.1</AssemblyVersion>
+    <FileVersion>5.3.2.2</FileVersion>
+    <AssemblyVersion>5.3.2.2</AssemblyVersion>
     <Title>MakuTweaker</Title>
     <Copyright>MarkAdderly</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assets\icons\MakuT.ico" />
     <None Remove="BuildLab.txt" />
     <None Remove="BuildNumber.txt" />
     <None Remove="assets/images/hand_heart_donate_icon.png" />
@@ -35,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="assets/icons/MakuT.ico" />
+    <EmbeddedResource Include="loc\*.json" />
     <Content Include="assets/icons/MakuTweaker.ico" />
   </ItemGroup>
 
@@ -66,6 +67,7 @@
     </Resource>
     <Resource Include="assets/images/Telegram_2019_Logo.svg.png" />
     <Resource Include="assets/images/You-Tube-16.png" />
+    <Resource Include="assets\icons\MakuT.ico" />
   </ItemGroup>
 
   <ItemGroup>

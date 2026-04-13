@@ -1,8 +1,11 @@
-﻿using MakuTweakerNew.Properties;
+﻿using Hardcodet.Wpf.TaskbarNotification;
+using MakuTweakerNew.Properties;
 using MicaWPF.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
@@ -19,8 +22,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Windows.UI.Composition.Desktop;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using Hardcodet.Wpf.TaskbarNotification;
-using System.Drawing;
 
 namespace MakuTweakerNew
 {
@@ -159,6 +160,17 @@ namespace MakuTweakerNew
             ApplyThrottle(100);
         }
 
+        private Stream GetResourceStream(string relativePath)
+        {
+            var uri = new Uri($"pack://application:,,,/{relativePath}", UriKind.Absolute);
+            var resourceInfo = Application.GetResourceStream(uri);
+
+            if (resourceInfo == null)
+                throw new FileNotFoundException($"Ресурс {relativePath} не найден.");
+
+            return resourceInfo.Stream;
+        }
+
         private void ShowThrottleNotification(int percent)
         {
             var languageCode = Properties.Settings.Default.lang ?? "en";
@@ -167,12 +179,7 @@ namespace MakuTweakerNew
             string baseText = perfor["main"]["flyout"];
             string message = $"{baseText}{percent}%";
 
-            Icon trayIcon = new Icon(
-                ((MainWindow)Application.Current.MainWindow)
-                .GetType()
-                .Assembly
-                .GetManifestResourceStream("MakuTweakerNew.MakuT.ico")
-            );
+            Icon trayIcon = new Icon(GetResourceStream("assets/icons/MakuT.ico"));
 
             TaskbarIcon tray = new TaskbarIcon
             {

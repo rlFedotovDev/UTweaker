@@ -6,6 +6,7 @@ using ModernWpf;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,13 +20,9 @@ namespace MakuTweakerNew
         private MainWindow mw = (MainWindow)System.Windows.Application.Current.MainWindow;
         bool isLoaded = false;
 
-        // Данные для локализации
-        private readonly string[] _languages = { "en", "ru", "ua", "cz", "de", "es", "pl", "et", "zh", "ja", "tl" };
-        
-        // Словарь переводчиков: Код языка -> (Заголовок, Имя)
         private readonly Dictionary<string, (string Label, string Name)> _translators = new()
         {
-            ["cz"] = ("Pomohl s lokalizací:", "qCLairvoyant"),
+            ["cs"] = ("Pomohl s lokalizací:", "qCLairvoyant"),
             ["de"] = ("Hilfe bei der Lokalisierung:", "Scorazio"),
             ["pl"] = ("Pomoc w lokalizacji:", "dfa_jk"),
             ["et"] = ("Aitas lokaliseerimisega:", "KirTeanEesti")
@@ -34,22 +31,75 @@ namespace MakuTweakerNew
         public SettingsAbout()
         {
             InitializeComponent();
-            
-            // Базовая инициализация
             credN.Text = "Mark Adderly\nNikitori\nNikitori, Massgrave";
-            lang.SelectedIndex = Settings.Default.langSI;
-            
+            if (string.IsNullOrEmpty(Settings.Default.lang))
+            {
+                string systemLang = CultureInfo.CurrentUICulture.Name.ToLower();
+                string isoLang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.ToLower();
+                Settings.Default.lang = systemLang switch
+                {
+                    "zh-tw" or "zh-hk" or "zh-mo" => "tw",
+                    "zh-cn" or "zh-sg" or "zh-chs" => "zh",
+
+                    _ => isoLang switch
+                    {
+                        "uk" => "uk",   // Украинский
+                        "cs" => "cs",   // Чешский
+                        "ru" => "ru",   // Русский
+                        "az" => "az",   // Азербайджанский
+                        "es" => "es",   // Испанский
+                        "tl" => "tl",   // Тагальский
+                        "fil" => "tl",  // Филиппинский
+                        "tr" => "tr",   // Турецкий
+                        "ko" => "ko",   // Корейский
+                        "zh" => "zh",   // Китайский
+                        "it" => "it",   // Итальянский
+                        "de" => "de",   // Немецкий
+                        "fr" => "fr",   // Французский
+                        "be" => "be",   // Белорусский
+                        "vi" => "vi",   // Вьетнамский
+                        "id" => "id",   // Индонезийский
+                        "hi" => "hi",   // Хинди
+                        "ja" => "ja",   // Японский
+                        "kk" => "kk",   // Казахский
+                        "pt" => "pt",   // Португальский
+                        "lv" => "lv",   // Латвийский
+                        "fi" => "fi",   // Финский
+                        "et" => "et",   // Эстонский
+                        "pl" => "pl",   // Польский
+                        "th" => "th",   // Тайский
+                        _ => "en"       // Стандартный (Английский)
+                    }
+                };
+
+                Settings.Default.Save();
+            }
+
+            foreach (ComboBoxItem item in lang.Items)
+            {
+                if (item.Tag?.ToString() == Settings.Default.lang)
+                {
+                    lang.SelectedItem = item;
+                    break;
+                }
+            }
+
+            if (lang.SelectedIndex == -1)
+            {
+                lang.SelectedIndex = 0;
+            }
+
+            Settings.Default.langSI = lang.SelectedIndex;
+
             if (checkWinVer() < 22000)
             {
                 style.Visibility = Visibility.Collapsed;
                 styleL.Visibility = Visibility.Collapsed;
             }
 
-            // Установка темы
             var currentTheme = MicaWPFServiceUtility.ThemeService.CurrentTheme;
             theme.SelectedIndex = currentTheme == WindowsTheme.Dark ? 1 : 0;
 
-            // Установка индекса стиля через switch-выражение
             style.SelectedIndex = Settings.Default.style switch
             {
                 "Mica" => 0,
@@ -75,10 +125,9 @@ namespace MakuTweakerNew
             catch { return 19045; }
         }
 
-        // Вспомогательный метод для ссылок
         private void OpenUrl(string url) => Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
 
-        #region Обработчики событий (имена оставлены как в XAML)
+        #region Обработчики событий
 
         private void Button_Click(object sender, RoutedEventArgs e) => OpenUrl("https://adderly.top");
 
@@ -94,10 +143,10 @@ namespace MakuTweakerNew
 
             bool isDark = theme.SelectedIndex == 1;
             Settings.Default.theme = isDark ? "Dark" : "Light";
-            
+
             MicaWPFServiceUtility.ThemeService.ChangeTheme(isDark ? WindowsTheme.Dark : WindowsTheme.Light);
             ThemeManager.Current.ApplicationTheme = isDark ? ApplicationTheme.Dark : ApplicationTheme.Light;
-            
+
             Brush color = isDark ? Brushes.White : Brushes.Black;
             mw.Foreground = color;
             mw.Separator.Stroke = color;
@@ -108,16 +157,14 @@ namespace MakuTweakerNew
         private void lang_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!isLoaded) return;
-
-            int idx = lang.SelectedIndex;
-            if (idx >= 0 && idx < _languages.Length)
+            if (lang.SelectedItem is ComboBoxItem selectedItem && selectedItem.Tag != null)
             {
-                Settings.Default.lang = _languages[idx];
+                Settings.Default.lang = selectedItem.Tag.ToString();
             }
-            
-            Settings.Default.langSI = idx;
+
+            Settings.Default.langSI = lang.SelectedIndex;
             Settings.Default.Save();
-            
+
             mw.LoadLang(Settings.Default.lang);
             relang();
             UpdateLocalizationCredits();
@@ -126,8 +173,6 @@ namespace MakuTweakerNew
         private void style_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!isLoaded) return;
-
-            // Кортеж: тип фона и строковое имя
             var styleData = style.SelectedIndex switch
             {
                 0 => (Type: BackdropType.Mica, Name: "Mica"),

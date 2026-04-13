@@ -30,7 +30,6 @@ namespace MakuTweakerNew
     //dating back to my very beginnings with C#.
     //Most likely, in MakuTweaker 5.4, this specific tab—along with all this code—will be removed and replaced with something new.
 
-
     public partial class ContextMenu : Page
     {
         private MainWindow mw = (MainWindow)System.Windows.Application.Current.MainWindow;

@@ -9,7 +9,7 @@
                 "sat": "Väljalülitamise taimer",
                 "quick": "Windowsi kiirseadistus",
                 "act": "Windowsi aktiveerimine",
-                "cm": "Kontekstimenüü",
+                "adv": "Täpsemad seaded",
                 "sr": "Süsteem ja taastamine",
                 "perf": "Jõudlus",
                 "per": "Personalisatsioon",
@@ -25,6 +25,12 @@
                 "on": "Sees",
                 "off": "Väljas",
                 "apply": "Rakenda",
+                "applied": "Rakendatud",
+                "updatenotify": "MakuTweakeri värskendus on saadaval!\nAllalaadimislehele minemiseks klõpsake teavitusel.",
+                "updatedialog": "MakuTweakeri värskendus on saadaval.\nSoovitatav on installida uusim versioon, et saada juurdepääs uutele funktsioonidele ja veaparandustele. Klõpsake «Uuenda», et minna veebilehele ja laadida alla uus paigaldaja.",
+                "updatebutton": "Uuenda",
+                "updatecancel": "Lükka edasi",
+                "updatecheckb": "Ära kuva uuesti enne programmi uuendamist",
                 "rebnotify": "Rakendatud funktsioon nõuab arvuti taaskäivitamist.",
                 "rebnotifyexplorer": "Rakendatud funktsioon nõuab failihalduri taaskäivitamist.",
                 "rebnotifysfc": "Pärast protsessi lõppu taaskäivitage seade!"
@@ -114,7 +120,6 @@
                 "is": "paigaldatud...",
                 "isnt": "ei ole paigaldanud...",
                 "comp": "Kontrollimine lõpetatud!",
-
                 "suredialogT1": "Olete valinud kustutamise",
                 "suredialogT2": "MakuTweakeride abil.",
                 "suredialogT3": "Peate mõistma, et seda rakendust ei ole võimalik süsteemi tagasi tuua,\nja nendega seotud töö võib olla ebastabiilne.",
@@ -148,7 +153,7 @@
             "main": {
                 "label": "Windows'i kiirseadistus",
                 "b": "Käivita kiirseadistus",
-                "info": "Kasutage märkeruute, et valida seaded,\nmida soovite autotuningus kasutada.",
+                "info": "Kasutage märkeruute, et valida seaded,\nmida soovite autotuningus kasutada.\nSeaded peidetakse pärast rakendamist.",
                 "infodone": "Kiirseadistuse valikud on lõppenud!\nPärast nende kasutamist ärge unustage süsteemi uuesti käivitada. \nHead kasutamist!",
                 "uncheck": "Võtta kõik maha",
                 "checkall": "Aktiveeri kõik",
@@ -176,21 +181,22 @@
                 "offierr": "Office ei saa aktiveerida Ohook meetodiga. Installige Office uuesti ja proovige seejärel uuesti."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Kontekstimenüü",
-                "t1": "Luba vana kontekstimenüü",
-                "t2": "Eemalda kontekstimenüü viivitus",
-                "t3": "Ava terminalis",
-                "t4": "Lisa lemmikutesse",
-                "t5": "Jaga",
-                "t6": "Taasta eelmine versioon",
-                "t8": "Saada",
-                "t10": "Kopeeri kui tee",
-                "t11": "Kinnita Start-menüüsse",
-                "t12": "Kinnita tegumiribale",
-                "t13": "Ava uuel vahekaardil",
-                "t14": "NVIDIA juhtpaneel"
+                "deledge_title": "Eemalda Microsoft Edge",
+                "deledge_btn": "Eemalda",
+                "deledge_before": "Enne Microsoft Edge'i eemaldamist veenduge, et teil on mõni muu brauser. Kas soovite enne eemaldamist minna Google Chrome'i lehele?",
+                "deledge_sure": "Kas olete kindel, et soovite Microsoft Edge'i eemaldada? Seda toimingut ei saa tagasi võtta!",
+                "deledge_tooltip": "Microsoft Edge'i täielik eemaldamine, sealhulgas värskendusteenused ja planeerija ülesanded. Edge WebView2 see ei mõjuta, seega süsteemi kriitilised komponendid jäävad tööle. Tegelikult eemaldatakse ainult brauser ise – tegutsege omal vastutusel.",
+                "deledge_error": "Microsoft Edge'i eemaldamisel tekkis viga. Võib-olla on see juba eemaldatud või puuduvad installifailid.",
+                "deledge_done": "Microsoft Edge'i eemaldamine on täielikult lõpetatud.",
+                "index_title": "Lülita välja ketta indekseerimise teenus",
+                "index_tooltip": "Soovitatav vanematele arvutitele ja HDD-ga sülearvutitele – võib märgatavalt vähendada kettakoormust ja suurendada süsteemi tundlikkust. Võib kiirendada failihaldurit mis tahes seadmes, kuid süsteemi ja failihalduri otsing muutub aeglasemaks.",
+                "vbs": "Keela Virtualization-based Security",
+                "oldbootloader": "Luba vana Windowsi alglaadur",
+                "advancedboot": "Kuva iga käivituse ajal täpsemad alglaadimisvalikud",
+                "swap": "Keela saalefail",
+                "ttl": "Luba interneti jagamise piirangute ümbersõit (TTL 65)"
             }
         },
         "sr": {
@@ -202,22 +208,17 @@
                 "batterylabel": "Loo aku seisundi aruanne",
                 "b2": "Taasta",
                 "b4": "Puhasta",
-                "oldbootloader": "Luba vana Windowsi alglaadur",
-                "advancedboot": "Kuva iga käivituse ajal täpsemad alglaadimisvalikud",
                 "bitlocker": "Keela BitLockeri automaatne krüptimine",
                 "coreisol": "Keela tuuma isolatsioon / mälu terviklikkus",
                 "hybern": "Keela hibernatsioon",
-                "vbs": "Keela Virtualization-based Security",
                 "sleeptimeout": "Keela unerežiimi ja ekraani väljalülitamise taimer",
-                "swap": "Keela saalefail",
                 "bing": "Keela veebipõhine otsing Bingiga",
                 "sticky": "Keela Sticky Keys",
                 "uac": "Keela kasutajakonto kontroll (UAC)",
                 "smartscreen": "Keela SmartScreen",
                 "chkdsk": "Määra Chkdsk taimeriks 1 minut",
                 "reportbutton": "Aruanne",
-                "telemetry": "Keela kogu telemeetria ja jälgimine süsteemis",
-                "ttl": "Luba interneti jagamise piirangute ümbersõit (TTL 65)"
+                "telemetry": "Keela kogu telemeetria ja jälgimine süsteemis"
             },
             "status": {
                 "o1b": "Aku seisundi aruanne loodi edukalt.",
@@ -248,6 +249,8 @@
                 "disablelogo": "Peida Windowsi logo süsteemi käivitamisel",
                 "disableanim": "Keela käivituse animatsioon",
                 "etask": "Lisa nupp \"Lõpeta ülesanne\" tegumiribale",
+                "oldcont": "Luba vana kontekstimenüü",
+                "delcont": "Eemalda kontekstimenüü viivitus",
                 "newname": "Uus fail",
                 "c1": "Standardne",
                 "c2": "Türkiissinine",
@@ -270,29 +273,23 @@
                 "label": "Info arvuti kohta",
                 "processorlabel": "Protsessor",
                 "processorname": "Nimi:",
-                "processorcores": "Tuumade arv:",
-                "processorthr": "Lõimede arv:",
+                "processorcores": "Tuumade ja lõimede arv:",
                 "processorfreq": "Baassagedus:",
                 "processorcache": "L3 vahemälu:",
-
                 "ramlabel": "Operatiivmälu",
                 "ramtotal": "Mälu kokku:",
                 "ramddr": "DDR-mälu tüüp:",
                 "ramfreq": "Sagedus:",
-
                 "mblabel": "Emaplaat",
                 "mbname": "Nimi:",
                 "mbver": "BIOS-i versioon:",
                 "mbdate": "BIOS-i kuupäev:",
-
                 "vlabel": "Videokaart",
                 "vname": "Nimi:",
                 "vmem": "Videomälu maht:",
-
-                "ssdl": "SSD, HDD, USB-mäluseadmed",
+                "ssdl": "Kettaseadmed",
                 "sname": "Nimi:",
                 "smem": "Kogumaht:",
-
                 "benchtitle": "MakuTweakeri benchmarkid",
                 "benchbutton": "Ühe tuuma test",
                 "benchbutton2": "Mitme tuuma test",
@@ -301,29 +298,20 @@
                 "test1": "Ühe tuuma test on lõpetatud.",
                 "test2": "Tulemus:",
                 "test3": "operatsiooni sooritati.",
-                "running": "Ühe tuuma test töötab...\nPalun oodake 10 sekundit.",
-                "running_multicore": "Mitme tuuma test töötab...\nPalun oodake 10 sekundit.",
+                "running": "Ühe tuuma test töötab... Palun oodake 10 sekundit.",
+                "running_multicore": "Mitme tuuma test töötab... Palun oodake 10 sekundit.",
                 "test1multi": "Mitme tuuma test on lõpetatud.",
-
                 "tpmtitle": "TPM moodul:",
                 "tpmy": "Olemas",
                 "tpmn": "Puudub",
-
                 "ramsticktitle": "RAM-moodulid",
                 "manu": "Tootja:",
                 "capac": "Maht:",
                 "partnum": "Tootekood:",
-
-                "branding": "Bränd",
-                "modeln": "Mudel:",
-
-                "full_model": "Seade ja mudel:",
-                "full_cpu": "Protsessor:",
-                "full_gpu": "Videokaart:",
-                "full_ram": "Operatiivmälu:",
-                "full_motherboard": "Emaplaat:",
-                "full_usbssd": "Salvestusruum kokku:",
-                "tooltip": "Vajutage F3, et lülitada sisse kompaktne vaade.\nSamuti võite vajutada F5 või Ctrl+S,\net salvestada lehe sisu TXT-failina."
+                "modeln": "Mudel",
+                "allvram": "Kogu videomälu",
+                "devicemanu": "Seadme tootja",
+                "tooltip": "Vajutage F5 või Ctrl+S, et salvestada lehe sisu TXT-failina."
             }
         },
         "pmgr": {
@@ -332,12 +320,29 @@
                 "endprocess": "Lõpeta protsess",
                 "onlyfrozen": "Kuva ainult hangunud protsessid",
                 "location": "Faili asukoht",
+                "excl": "Lisa eranditesse",
+                "exclinfo": "Sisestage protsesside nimed komadega eraldatult:",
+                "excltitle": "Protsesside erandid",
+                "clear": "Tühjenda",
+                "save": "Salvesta",
+                "showall": "Kuva kõik",
                 "from50mb": "alates 50 MB",
                 "from100mb": "alates 100 MB",
                 "from300mb": "alates 300 MB",
                 "from500mb": "alates 500 MB",
                 "from1000mb": "alates 1 GB",
                 "from2000mb": "alates 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker võimaldab blokeerida määratud protsesside ja rakenduste käivitamist. Loetlege need komadega eraldatult ning programm rakendab piirangud automaatselt. Protsessi vabastamiseks eemaldage see loendist ja salvestage muudatused.",
+                "excltitle": "Rakenduste blokeerimine",
+                "applyban": "Rakenda blokeerimine",
+                "howitworks": "Kuidas see töötab?",
+                "banyandex": "Blokeeri Yandex",
+                "clear": "Tühjenda",
+                "makutnah": "Ära blokeeri mind!"
             }
         },
         "ab": {
@@ -349,7 +354,15 @@
                 "d": "Tume",
                 "st": "Stiil",
                 "label": "Seaded",
-                "credL": "Idee ja arendus:\nProgrammi ikoon:\nEriline tänu:",
+                "cfg_info": "Saate valitud MakuTweakeri seaded salvestada .mktw-faili, et need hiljem uues arvutis importida ja rakendada või sõpradega jagada. Pärast rakendamist on vaja taaskäivitust.",
+                "cfg_title": "Seaded / Eelseaded",
+                "cfg_save": "Salvesta",
+                "cfg_import": "Laadi",
+                "cfg_svsuccess": "Seaded salvestati edukalt faili.",
+                "cfg_ldsuccess": "Faili seaded rakendati edukalt. Soovitatav on seade taaskäivitada.",
+                "cfg_error": "Faili salvestamisel tekkis viga.",
+                "cfg_error1": "Faili lugemisel tekkis viga.",
+                "credL": "Versioon:\nIdee ja arendus:\nProgrammi ikoon:\nEriline tänu:",
                 "atop": "Ametlik veebisait"
             }
         },

@@ -9,7 +9,7 @@
                 "sat": "Shutdown Timer",
                 "quick": "Quick Windows Setup",
                 "act": "Windows Activation",
-                "cm": "Context Menu",
+                "adv": "Advanced Settings",
                 "sr": "System and Recovery",
                 "perf": "Performance",
                 "per": "Personalization",
@@ -18,13 +18,19 @@
             },
             "lowtabs": {
                 "rexp": "Restart Explorer",
-                "set": "Settings & About"
+                "set": "Settings / About"
             },
             "def": {
                 "statusdef": "Information About the Last Action in MakuTweaker...",
                 "on": "On",
                 "off": "Off",
                 "apply": "Apply",
+                "applied": "Applied",
+                "updatenotify": "A MakuTweaker update is available!\nClick the notification to go to the download page.",
+                "updatedialog": "A MakuTweaker update is available.\nIt is recommended to install the latest version to access new features and bug fixes. Click “Update” to visit the website and download the new installer.",
+                "updatebutton": "Update",
+                "updatecancel": "Later",
+                "updatecheckb": "Do not show again until the program is updated",
                 "rebnotify": "The Function You applied requires a Reboot.",
                 "rebnotifyexplorer": "The Function You Applied Requires a Restart of Explorer.",
                 "rebnotifysfc": "After The Process Is Finished, Reboot Your Device!"
@@ -114,7 +120,6 @@
                 "is": "is Installed...",
                 "isnt": "isn't Installed...",
                 "comp": "Checking Completed!",
-
                 "suredialogT1": "You have chosen to uninstall",
                 "suredialogT2": "using MakuTweaker.",
                 "suredialogT3": "You should be aware that this application can no longer be restored to the system,\nand work related to these components may not be correct.",
@@ -150,7 +155,7 @@
                 "b": "Start Quick Setup",
                 "uncheck": "Uncheck All",
                 "checkall": "Activate all",
-                "info": "Use Checkboxes To Select The Settings\nTo Be Applied For Windows Quick Setup.",
+                "info": "Use Checkboxes To Select The Settings\nTo Be Applied For Windows Quick Setup.\nSettings will be hidden after applying.",
                 "infodone": "Quick setup is complete!\nDon't forget to restart your computer to apply the changes.\nEnjoy using your system!",
                 "hidewidget": "Hide The Task View And Widgets Button",
                 "removeads": "Remove Ads In Start Menu And Taskbar Search",
@@ -176,21 +181,22 @@
                 "offierr": "Office cannot be activated using the Ohook method. Please reinstall Office and try again."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Context Menu",
-                "t1": "Enable The Old Context Menu",
-                "t2": "Remove Context Menu Delay",
-                "t3": "Open in Terminal",
-                "t4": "Add to Favorites",
-                "t5": "Share",
-                "t6": "Restore previous versions",
-                "t8": "Send to",
-                "t10": "Copy as path",
-                "t11": "Pin to Start menu",
-                "t12": "Pin to Taskbar",
-                "t13": "Open in new tab",
-                "t14": "NVIDIA Control Panel"
+                "deledge_title": "Uninstall Microsoft Edge",
+                "deledge_btn": "Uninstall",
+                "deledge_before": "Before uninstalling Microsoft Edge, make sure you have another browser. Do you want to go to the Google Chrome page before uninstalling?",
+                "deledge_sure": "Are you sure you want to uninstall Microsoft Edge? This action cannot be undone!",
+                "deledge_tooltip": "Complete removal of Microsoft Edge, including update services and scheduler tasks. Edge WebView2 is not affected, so critical system components remain functional. Effectively, only the browser itself is removed - however, perform actions at your own risk.",
+                "deledge_error": "An error occurred while removing Microsoft Edge. It may already be uninstalled or its installer files are missing.",
+                "deledge_done": "Microsoft Edge uninstallation has been completely finished.",
+                "index_title": "Disable Disk Indexing Service",
+                "index_tooltip": "Recommended for older computers and laptops with HDD - can significantly reduce disk load and increase system responsiveness. It may speed up file explorer on any device, but searching in the system and explorer will become slower.",
+                "vbs": "Disable Virtualization-based Security",
+                "oldbootloader": "Enable Old OS Bootloader",
+                "advancedboot": "Additional Options on Each Boot",
+                "swap": "Disable Virtual Memory Page File",
+                "ttl": "Enable Internet Sharing Restriction Bypass (TTL 65)"
             }
         },
         "sr": {
@@ -202,22 +208,17 @@
                 "batterylabel": "Generate Battery Report",
                 "b2": "Repair",
                 "b4": "Clean",
-                "oldbootloader": "Enable Old OS Bootloader",
-                "advancedboot": "Additional Options on Each Boot",
                 "bitlocker": "Disable BitLocker Automatic Encryption",
                 "coreisol": "Disable Core Isolation / Memory Integrity",
                 "hybern": "Disable Hibernation Mode",
-                "vbs": "Disable Virtualization-based Security",
                 "sleeptimeout": "Disable Sleep & Screen timeout",
-                "swap": "Disable Virtual Memory Page File",
                 "bing": "Disable Online Search in Start via Bing",
                 "sticky": "Disable Sticky Keys Pop-up",
                 "uac": "Disable User Account Control",
                 "smartscreen": "Disable Smart Screen",
                 "chkdsk": "Set Chkdsk Timeout to 1 Minute",
                 "reportbutton": "Report",
-                "telemetry": "Disable All Telemetry and tracking in the system",
-                "ttl": "Enable internet sharing restriction bypass (TTL 65)"
+                "telemetry": "Disable All Telemetry and tracking in the system"
             },
             "status": {
                 "o1b": "You Have Successfully Generated The Battery Report.",
@@ -231,7 +232,7 @@
                 "applyb": "Apply Limit",
                 "minb": "Minimum Performance",
                 "maxb": "Maximum Performance",
-                "info": "With MakuTweaker, you can increase your laptop's battery life by software-limiting the processor's power level.\nOn desktop PCs, this helps reduce heat, power consumption, and fan noise, making the system quieter and more stable.\nThe lower the percentage you set, the lower the performance will be, but the longer the battery life.\nPlease note that after unplugging the laptop from the charger, you may need to set the limit again.",
+                "info": "With MakuTweaker, you can increase your laptop's battery life by software-limiting the processor's power level.\nOn desktop PCs, this helps reduce heat, power consumption, and fan noise, making the system quieter and more stable.\nThe lower the percentage you set, the lower the performance will be, but the longer the battery life.\nPlease note that after unplugging the laptop from the charger,\nyou may need to set the limit again.",
                 "flyout": "Processor performance limit has been set to "
             }
         },
@@ -243,11 +244,13 @@
                 "verbose": "Enable Super-Detailed System Information",
                 "smallwindows": "Small Window Buttons",
                 "blur": "Disable Blur on The Lock Screen",
-                "transparency": "Disable transparency",
-                "darktheme": "Enable dark theme",
+                "transparency": "Disable Transparency",
+                "darktheme": "Enable Dark Theme",
                 "disablelogo": "Disable Windows Logo in Bootloader",
                 "disableanim": "Disable Animation in Bootloader",
                 "etask": "Add \"End Task\" Button to the Taskbar",
+                "oldcont": "Enable The Old Context Menu",
+                "delcont": "Remove Context Menu Delay",
                 "newname": "New File",
                 "c1": "Standard",
                 "c2": "Cyan",
@@ -270,29 +273,23 @@
                 "label": "PC Information",
                 "processorlabel": "CPU",
                 "processorname": "Processor Name:",
-                "processorcores": "Number of Cores:",
-                "processorthr": "Number of Threads:",
+                "processorcores": "Number of Cores and Threads:",
                 "processorfreq": "Base Frequency:",
                 "processorcache": "Level 3 Cache:",
-
                 "ramlabel": "RAM",
                 "ramtotal": "Total RAM:",
                 "ramddr": "DDR Type:",
                 "ramfreq": "Frequency:",
-
                 "mblabel": "Motherboard",
                 "mbname": "Name:",
                 "mbver": "BIOS Version:",
                 "mbdate": "BIOS Date:",
-
                 "vlabel": "GPU",
                 "vname": "Name:",
                 "vmem": "Total VRAM:",
-
-                "ssdl": "SSD, HDD, USB Drives",
+                "ssdl": "Disk Drives",
                 "sname": "Name:",
                 "smem": "Total Capacity:",
-
                 "benchtitle": "MakuTweaker Benchmark",
                 "benchbutton": "Single-Core Test",
                 "benchbutton2": "Multi-Threaded Test",
@@ -301,29 +298,20 @@
                 "test1": "Single-Core Test Completed.",
                 "test2": "Score:",
                 "test3": "Operations completed.",
-                "running": "Single-Сore Test Running...\nPlease wait 10 seconds.",
-                "running_multicore": "Multi-Threaded Test Running...\nPlease wait 10 seconds.",
+                "running": "Single-Сore Test Running... Please wait 10 seconds.",
+                "running_multicore": "Multi-Threaded Test Running... Please wait 10 seconds.",
                 "test1multi": "Multi-Threaded Test Completed.",
-
                 "tpmtitle": "TPM Module:",
                 "tpmy": "Detected",
                 "tpmn": "Not Detected",
-
                 "ramsticktitle": "RAM Sticks",
                 "manu": "Manufacturer:",
                 "capac": "Capacity:",
                 "partnum": "Part Number:",
-
-                "branding": "Branding",
-                "modeln": "Model:",
-
-                "full_model": "Device and Model:",
-                "full_cpu": "CPU:",
-                "full_gpu": "GPU:",
-                "full_ram": "RAM:",
-                "full_motherboard": "Motherboard:",
-                "full_usbssd": "Total storage capacity:",
-                "tooltip": "Press F3 to enable compact page mode.\nYou can also press F5 or Ctrl+S\nto save the page contents to a TXT file."
+                "modeln": "Model",
+                "allvram": "Total VRAM",
+                "devicemanu": "Device Manufacturer",
+                "tooltip": "Press F5 or Ctrl+S to save the page content as a TXT file."
             }
         },
         "pmgr": {
@@ -332,12 +320,29 @@
                 "endprocess": "End Process",
                 "onlyfrozen": "Show only frozen processes",
                 "location": "File location",
+                "excl": "Add to exclusions",
+                "exclinfo": "Enter process names separated by commas:",
+                "excltitle": "Process Exclusions",
+                "clear": "Clear",
+                "save": "Save",
+                "showall": "Show All",
                 "from50mb": "From 50 MB",
                 "from100mb": "From 100 MB",
                 "from300mb": "From 300 MB",
                 "from500mb": "From 500 MB",
                 "from1000mb": "From 1 GB",
                 "from2000mb": "From 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker allows you to block the launch of specified processes and applications. List them separated by commas, and the program will automatically apply restrictions. To unblock a process, remove it from the list and save the changes.",
+                "excltitle": "Application Blocking",
+                "applyban": "Apply Blocking",
+                "howitworks": "How does it work?",
+                "banyandex": "Block Yandex",
+                "clear": "Clear",
+                "makutnah": "Don't block me!"
             }
         },
         "ab": {
@@ -349,7 +354,15 @@
                 "d": "Dark",
                 "st": "Style",
                 "label": "Settings",
-                "credL": "Idea and Development:\r\nProgram Icon:\r\nSpecial Thanks:",
+                "cfg_info": "You can save selected MakuTweaker settings to a .mktw file to later import and apply them on a new computer or share with friends. A restart may be required after applying.",
+                "cfg_title": "Configs / Presets",
+                "cfg_save": "Save",
+                "cfg_import": "Load",
+                "cfg_svsuccess": "Settings were successfully saved to the file.",
+                "cfg_ldsuccess": "Settings from the file were successfully applied. A restart may be needed.",
+                "cfg_error": "An error occurred while saving the file.",
+                "cfg_error1": "An error occurred while reading the file.",
+                "credL": "Version:\nIdea and Development:\r\nProgram Icon:\r\nSpecial Thanks:",
                 "atop": "Official Website"
             }
         },

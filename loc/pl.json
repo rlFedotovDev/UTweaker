@@ -9,7 +9,7 @@
                 "sat": "Timer wyłączania",
                 "quick": "Szybka konfiguracja Windows",
                 "act": "Aktywacja Windows",
-                "cm": "Menu kontekstowe",
+                "adv": "Ustawienia zaawansowane",
                 "sr": "System oraz odzyskiwanie",
                 "perf": "Wydajność",
                 "per": "Personalizacja",
@@ -25,6 +25,12 @@
                 "on": "Wł.",
                 "off": "Wył.",
                 "apply": "Zastosuj",
+                "applied": "Zastosowano",
+                "updatenotify": "Dostępna jest aktualizacja MakuTweaker!\nKliknij powiadomienie, aby przejść do strony pobierania.",
+                "updatedialog": "Dostępna jest aktualizacja MakuTweaker.\nZaleca się zainstalowanie najnowszej wersji, aby uzyskać dostęp do nowych funkcji i poprawek błędów. Kliknij «Aktualizuj», aby przejść na stronę i pobrać nowy instalator.",
+                "updatebutton": "Aktualizuj",
+                "updatecancel": "Później",
+                "updatecheckb": "Nie pokazuj ponownie do czasu aktualizacji programu",
                 "rebnotify": "Zastosowana funkcja wymaga ponownego uruchomienia.",
                 "rebnotifyexplorer": "Zastosowana funkcja wymaga ponownego uruchomienia Eksploratora.",
                 "rebnotifysfc": "Po zakończeniu procesu uruchom ponownie komputer!"
@@ -114,7 +120,6 @@
                 "is": "zainstalowany...",
                 "isnt": "nie zainstalowany...",
                 "comp": "Sprawdzanie zakończone!",
-
                 "suredialogT1": "Wybrałeś usunięcie",
                 "suredialogT2": "za pomocą MakuTweaker.",
                 "suredialogT3": "Pamiętaj, że tej aplikacji nie będzie można już przywrócić, a funkcje zależne od tych składników mogą przestać działać poprawnie.",
@@ -150,7 +155,7 @@
                 "b": "Zacznij szybką konfigurację",
                 "uncheck": "Odznacz wszystkie",
                 "checkall": "Aktywuj wszystkie",
-                "info": "Użyj pól wyboru, aby wybrać ustawienia,\nktóre mają zostać zastosowane w szybkiej konfiguracji Windows.",
+                "info": "Użyj pól wyboru, aby wybrać ustawienia,\nktóre mają zostać zastosowane w szybkiej konfiguracji Windows.\nUstawienia zostaną ukryte po zastosowaniu.",
                 "infodone": "Szybka konfiguracja jest zakończona!\nNie zapomnij uruchomić ponownie komputera, aby zastosować zmiany.\nMiłego użytkowania systemem!",
                 "hidewidget": "Ukryj przycisk Widok Zadań i Widgety",
                 "removeads": "Usuń reklamy w menu Start i wyszukiwaniu na pasku zadań",
@@ -176,21 +181,22 @@
                 "offierr": "Office nie może być aktywowany przy użyciu metody Ohook. Proszę ponownie zainstalować Office i spróbować ponownie."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Menu kontekstowe",
-                "t1": "Włącz stare menu kontekstowe",
-                "t2": "Usuń opóźnienie menu kontekstowego",
-                "t3": "Otwórz w terminalu",
-                "t4": "Dodaj do ulubionych",
-                "t5": "Udostępnij",
-                "t6": "Przywróć poprzednią wersję",
-                "t8": "Wyślij do",
-                "t10": "Kopiuj jako ścieżkę",
-                "t11": "Przypnij do menu Start",
-                "t12": "Przypnij do paska zadań",
-                "t13": "Otwórz w nowej karcie",
-                "t14": "Panel sterowania NVIDIA"
+                "deledge_title": "Odinstaluj Microsoft Edge",
+                "deledge_btn": "Odinstaluj",
+                "deledge_before": "Przed odinstalowaniem Microsoft Edge upewnij się, że masz inną przeglądarkę. Czy chcesz przejść do strony Google Chrome przed odinstalowaniem?",
+                "deledge_sure": "Czy na pewno chcesz usunąć Microsoft Edge? Tej operacji नहीं można cofnąć!",
+                "deledge_tooltip": "Całkowite usunięcie Microsoft Edge, w tym usług aktualizacji i zadań harmonogramu. Edge WebView2 nie jest modyfikowany, dzięki czemu krytyczne komponenty systemu pozostają sprawne. W rzeczywistości usuwana jest tylko sama przeglądarka – działania podejmujesz jednak na własne ryzyko.",
+                "deledge_error": "Wystąpił błąd podczas usuwania Microsoft Edge. Możliwe, że jest już odinstalowany lub brakuje plików instalatora.",
+                "deledge_done": "Usuwanie Microsoft Edge zostało całkowicie zakończone.",
+                "index_title": "Wyłącz usługę indeksowania dysków",
+                "index_tooltip": "Zalecane dla starszych komputerów i laptopów z dyskiem HDD - może znacznie zmniejszyć obciążenie dysku i zwiększyć responsywność systemu. Może przyspieszyć działanie eksploratora na dowolnym urządzeniu, ale wyszukiwanie w systemie i eksploratorze stanie się wolniejsze.",
+                "vbs": "Wyłącz zabezpieczenia oparte na wirtualizacji (VBS)",
+                "oldbootloader": "Włącz stary bootloader systemu Windows",
+                "advancedboot": "Dodatkowe opcje przy każdym uruchomieniu",
+                "swap": "Wyłącz wirtualny plik stronicowania(Page File)",
+                "ttl": "Włącz obejście ograniczeń udostępniania internetu (TTL 65)"
             }
         },
         "sr": {
@@ -202,22 +208,17 @@
                 "batterylabel": "Generuj raport baterii",
                 "b2": "Napraw",
                 "b4": "Wyczyść",
-                "oldbootloader": "Włącz stary bootloader systemu Windows",
-                "advancedboot": "Dodatkowe opcje przy każdym uruchomieniu",
                 "bitlocker": "Wyłącz autonomiczne szyfrowanie BitLocker",
                 "coreisol": "Wyłącz izolację rdzenia / integralność pamięci",
                 "hybern": "Wyłącz hibernację",
-                "vbs": "Wyłącz zabezpieczenia oparte na wirtualizacji (VBS)",
                 "sleeptimeout": "Wyłącz timer uśpienia i wyłączenia ekranu",
-                "swap": "Wyłącz wirtualny plik stronicowania(Page File)",
                 "bing": "Wyłącz wyszukiwanie online w Start przez Bing",
                 "sticky": "Wyłącz wyskakujące okienko funkcji klawiszy trwałych",
                 "uac": "Wyłącz kontrolę kont użytkowników",
                 "smartscreen": "Wyłącz Smart Screen",
                 "chkdsk": "Ustaw timeout Chkdsk na 1 minutę",
                 "reportbutton": "Report",
-                "telemetry": "Wyłącz telemetrię i zbieranie danych",
-                "ttl": "Włącz obejście ograniczeń udostępniania internetu (TTL 65)"
+                "telemetry": "Wyłącz telemetrię i zbieranie danych"
             },
             "status": {
                 "o1b": "Pomyślnie wygenerowałeś raport baterii.",
@@ -248,6 +249,8 @@
                 "disablelogo": "Wyłącz logo Windows w Bootloaderze",
                 "disableanim": "Wyłącz animację w Bootloaderze",
                 "etask": "Dodaj przycisk \"Zakończ zadanie\" do paska zadań",
+                "oldcont": "Włącz stare menu kontekstowe",
+                "delcont": "Usuń opóźnienie menu kontekstowego",
                 "newname": "Nowy Plik",
                 "c1": "Standartowy",
                 "c2": "Cyjan",
@@ -270,29 +273,23 @@
                 "label": "Informacja o PC",
                 "processorlabel": "Procesor",
                 "processorname": "Nazwa procesora:",
-                "processorcores": "Liczba rdzeni:",
-                "processorthr": "Liczba wątków:",
+                "processorcores": "Liczba rdzeni i wątków:",
                 "processorfreq": "Taktowanie podstawowe:",
                 "processorcache": "Pamięć podręczna L3:",
-
                 "ramlabel": "Pamięć RAM",
                 "ramtotal": "Pojemność:",
                 "ramddr": "Typ DDR:",
                 "ramfreq": "Taktowanie:",
-
                 "mblabel": "Płyta główna",
                 "mbname": "Nazwa:",
                 "mbver": "Wersja BIOS:",
                 "mbdate": "Data BIOS:",
-
                 "vlabel": "Karta graficzna",
                 "vname": "Nazwa:",
                 "vmem": "Pojemność VRAM:",
-
-                "ssdl": "Dyski (SSD, HDD, USB)",
+                "ssdl": "Dyski",
                 "sname": "Nazwa:",
                 "smem": "Pojemność całkowita:",
-
                 "benchtitle": "Benchmark za pomocą MakuTweaker",
                 "benchbutton": "Test jednordzeniowy",
                 "benchbutton2": "Test wielowątkowy",
@@ -301,29 +298,20 @@
                 "test1": "Test jednordzeniowy zakończony.",
                 "test2": "Wynik:",
                 "test3": "Operacje wykonano.",
-                "running": "Trwa test jednordzeniowy...\nProszę czekać 10 sekund.",
-                "running_multicore": "Trwa test wielowątkowy...\nProszę czekać, potrwa to 10 sekund.",
+                "running": "Trwa test jednordzeniowy... Proszę czekać 10 sekund.",
+                "running_multicore": "Trwa test wielowątkowy... Proszę czekać, potrwa to 10 sekund.",
                 "test1multi": "Test wielowątkowy zakończony.",
-
                 "tpmtitle": "Moduł TPM:",
                 "tpmy": "Wykryto",
                 "tpmn": "Nie wykryto",
-
-                "ramsticktitle": "Moduły RAM:   ",
+                "ramsticktitle": "Moduły RAM:",
                 "manu": "Producent:",
                 "capac": "Pojemność:",
                 "partnum": "Numer części:",
-
-                "branding": "Producent:",
-                "modeln": "Model:",
-
-                "full_model": "Urządzenie oraz model:",
-                "full_cpu": "Procesor:",
-                "full_gpu": "Karta graficzna:",
-                "full_ram": "Pamięć RAM:",
-                "full_motherboard": "Płyta główna:",
-                "full_usbssd": "Całkowita pojemność dysków:",
-                "tooltip": "Wciśnij F3, aby włączyć tryb kompaktowy strony.\nMożesz również nacisnąć F5 lub Ctrl+S,\naby zapisać zawartość strony do pliku TXT."
+                "modeln": "Model",
+                "allvram": "Całkowita pamięć wideo",
+                "devicemanu": "Producent urządzenia",
+                "tooltip": "Naciśnij F5 lub Ctrl+S, aby zapisać zawartość strony jako plik TXT."
             }
         },
         "pmgr": {
@@ -332,12 +320,29 @@
                 "endprocess": "Zakończ proces",
                 "onlyfrozen": "Pokaż tylko zawieszone procesy",
                 "location": "Lokalizacja pliku",
+                "excl": "Dodaj do wyjątków",
+                "exclinfo": "Wprowadź nazwy procesów oddzielone przecinkami:",
+                "excltitle": "Wyjątki procesów",
+                "clear": "Wyczyść",
+                "save": "Zapisz",
+                "showall": "Pokaż wszystko",
                 "from50mb": "Od 50 MB",
                 "from100mb": "Od 100 MB",
                 "from300mb": "Od 300 MB",
                 "from500mb": "Od 500 MB",
                 "from1000mb": "Od 1 GB",
                 "from2000mb": "Od 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker umożliwia blokowanie uruchamiania określonych procesów i aplikacji. Wypisz je, oddzielając przecinkami, a program automatycznie zastosuje ograniczenia. Aby odblokować proces, usuń go z listy i zapisz zmiany.",
+                "excltitle": "Blokowanie aplikacji",
+                "applyban": "Zastosuj blokadę",
+                "howitworks": "Jak to działa?",
+                "banyandex": "Zablokuj Yandex",
+                "clear": "Wyczyść",
+                "makutnah": "Nie blokuj mnie!"
             }
         },
         "ab": {
@@ -349,7 +354,15 @@
                 "d": "Ciemny",
                 "st": "Styl",
                 "label": "Ustawienia",
-                "credL": "Pomysł i wykonanie:\r\nIkona programu:\r\nPodziękowania:",
+                "cfg_info": "Możesz zapisać wybrane ustawienia MakuTweaker do pliku .mktw, aby później zaimportować je i zastosować na nowym komputerze lub udostępnić znajomym. Po zastosowaniu wymagany jest restart.",
+                "cfg_title": "Konfiguracje / Presety",
+                "cfg_save": "Zapisz",
+                "cfg_import": "Wczytaj",
+                "cfg_svsuccess": "Ustawienia zostały pomyślnie zapisane do pliku.",
+                "cfg_ldsuccess": "Ustawienia z pliku zostały pomyślnie zastosowane. Zaleca się ponowne uruchomienie urządzenia.",
+                "cfg_error": "Wystąpił błąd podczas zapisywania pliku.",
+                "cfg_error1": "Wystąpił błąd podczas odczytu pliku.",
+                "credL": "Wersja:\nPomysł i wykonanie:\r\nIkona programu:\r\nPodziękowania:",
                 "atop": "Oficjalna strona internetowa"
             }
         },

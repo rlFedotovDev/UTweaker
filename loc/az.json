@@ -9,7 +9,7 @@
                 "sat": "Söndürmə taymeri",
                 "quick": "Windows-un sürətli sazlanması",
                 "act": "Windows aktivasiyası",
-                "cm": "Kontekst menyusu",
+                "adv": "Qabaqcıl parametrlər",
                 "sr": "Sistem və bərpa",
                 "perf": "Məhsuldarlıq",
                 "per": "Fərdiləşdirmə",
@@ -25,6 +25,12 @@
                 "on": "Aç.",
                 "off": "Bağ.",
                 "apply": "Tətbiq et",
+                "applied": "Tətbiq edildi",
+                "updatenotify": "MakuTweaker üçün yeniləmə mövcuddur!\nYükləmə səhifəsinə keçmək üçün bildirişə klikləyin.",
+                "updatedialog": "MakuTweaker üçün yeniləmə mövcuddur.\nYeni funksiyalara və səhv düzəlişlərinə çıxış əldə etmək üçün ən son versiyanı quraşdırmaq tövsiyə olunur. Sayta keçmək və yeni quraşdırıcını yükləmək üçün «Yenilə» düyməsini basın.",
+                "updatebutton": "Yenilə",
+                "updatecancel": "Təxirə sal",
+                "updatecheckb": "Proqram yenilənənə qədər daha göstərmə",
                 "rebnotify": "Tətbiq etdiyiniz funksiya yenidən başlatma tələb edir.",
                 "rebnotifyexplorer": "Tətbiq etdiyiniz funksiya Explorer-in yenidən başladılmasını tələb edir.",
                 "rebnotifysfc": "Proses bitdikdən sonra cihazı yenidən başladın!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Windows-un sürətli sazlanması",
                 "b": "Sürətli sazlamanı işə sal",
-                "info": "Avtomatik sazlamada tətbiq etmək istədiyiniz\nayarları seçmək üçün qutuculardan istifadə edin.",
+                "info": "Avtomatik sazlamada tətbiq etmək istədiyiniz\nayarları seçmək üçün qutuculardan istifadə edin.\nParametrlər tətbiq edildikdən sonra gizlədiləcək.",
                 "infodone": "Sürətli sazlama parametrləri bitdi!\nTətbiq etdikdən sonra yenidən başlatmağı unutmayın.\nSistemdən xoş istifadə!",
                 "uncheck": "Hamısını seçmə",
                 "checkall": "Hamısını aktivləşdir",
@@ -175,21 +181,22 @@
                 "offierr": "Office Ohook metodu istifadə edilərək aktivləşdirilə bilməz. Office-i yenidən quraşdırın və yenidən cəhd edin."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Kontekst menyusu",
-                "t1": "Köhnə kontekst menyusunu aktivləşdir",
-                "t2": "Kontekst menyusunun gecikməsini aradan qaldır",
-                "t3": "Terminalda aç",
-                "t4": "Seçilmişlərə əlavə et",
-                "t5": "Paylaş",
-                "t6": "Əvvəlki versiyanı bərpa et",
-                "t8": "Göndər",
-                "t10": "Yol kimi kopyala",
-                "t11": "Başlanğıc ekranına bərkit",
-                "t12": "Tapşırıq panelinə bərkit",
-                "t13": "Yeni tab-da aç",
-                "t14": "NVIDIA İdarəetmə Paneli"
+                "deledge_title": "Microsoft Edge-i silin",
+                "deledge_btn": "Sil",
+                "deledge_before": "Microsoft Edge-i silməzdən əvvəl başqa brauzerinizin olduğundan əmin olun. Silməzdən əvvəl Google Chrome səhifəsinə keçmək istəyirsiniz?",
+                "deledge_sure": "Microsoft Edge-i silmək istədiyinizə əminsiniz? Bu hərəkəti geri qaytarmaq mümkün olmayacaq!",
+                "deledge_tooltip": "Yeniləmə xidmətləri və planlaşdırıcı tapşırıqları daxil olmaqla Microsoft Edge-in tamamilə silinməsi. Bu zaman Edge WebView2 təsir göstərmir, ona görə də kritik sistem komponentləri işlək vəziyyətdə qalır. Faktiki olaraq yalnız brauzerin özü silinir - lakin hərəkətləri öz riskinizlə edin.",
+                "deledge_error": "Microsoft Edge silinərkən xəta baş verdi. Ola bilsin ki, o artıq silinib və ya quraşdırıcı faylları yoxdur.",
+                "deledge_done": "Microsoft Edge-in silinməsi tamamilə başa çatdı.",
+                "index_title": "Diskin indeksləşdirmə xidmətini söndürün",
+                "index_tooltip": "Köhnə kompüterlər və HDD-si olan noutbuklar üçün tövsiyə olunur - diskdəki yükü əhəmiyyətli dərəcədə azalda bilər və sistemin cavabdehliyini artıra bilər. Hər hansı bir cihazda fayl tədqiqatçısının (explorer) işini sürətləndirə bilər, lakin sistemdə və tədqiqatçıda axtarış daha yavaş olacaqdır.",
+                "vbs": "Virtualization-based Security-ni söndür",
+                "oldbootloader": "Köhnə sistem yükləyicisini aktivləşdir",
+                "advancedboot": "Hər sistem yüklənməsində əlavə parametrlər",
+                "swap": "Səhifələmə faylını (swap) söndür",
+                "ttl": "İnternet paylaşımı məhdudiyyətlərini keçməyi aktivləşdir (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Batareya xüsusiyyətləri haqqında hesabat hazırla",
                 "b2": "Bərpa et",
                 "b4": "Təmizlə",
-                "oldbootloader": "Köhnə sistem yükləyicisini aktivləşdir",
-                "advancedboot": "Hər sistem yüklənməsində əlavə parametrlər",
                 "bitlocker": "BitLocker avtomatik şifrələməsini söndür",
                 "coreisol": "Nüvə izolyasiyasını / yaddaş bütövlüyünü söndür",
                 "hybern": "Hibernasiyanı söndür",
-                "vbs": "Virtualization-based Security-ni söndür",
                 "sleeptimeout": "Yuxu rejimi və ekranın sönmə taymerini söndür",
-                "swap": "Səhifələmə faylını (swap) söndür",
                 "bing": "Bing vasitəsilə onlayn axtarışı söndür",
                 "sticky": "Yapışqan düymələri söndür",
                 "uac": "İstifadəçi hesabı nəzarətini (UAC) söndür",
                 "smartscreen": "Smart Screen-i söndür",
                 "chkdsk": "Chkdsk üçün taym-autu 1 dəqiqəyə təyin et",
                 "reportbutton": "Hesabat",
-                "telemetry": "Sistemdə bütün telemetriya və izləməni söndür",
-                "ttl": "İnternet paylaşımı məhdudiyyətlərini keçməyi aktivləşdir (TTL 65)"
+                "telemetry": "Sistemdə bütün telemetriya və izləməni söndür"
             },
             "status": {
                 "o1b": "Batareya xüsusiyyətləri haqqında hesabatı uğurla yaratdınız.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Sistem yükləyicisində Windows loqosunu söndür",
                 "disableanim": "Sistem yükləyicisində animasiyanı söndür",
                 "etask": "Tapşırıq panelinə \"Tapşırığı bitir\" düyməsini əlavə et",
+                "oldcont": "Köhnə kontekst menyusunu aktivləşdir",
+                "delcont": "Kontekst menyusunun gecikməsini aradan qaldır",
                 "newname": "Yeni fayl",
                 "c1": "Standart",
                 "c2": "Firuzəyi",
@@ -269,8 +273,7 @@
                 "label": "PC haqqında məlumat",
                 "processorlabel": "Prosessor",
                 "processorname": "Adı:",
-                "processorcores": "Nüvə sayı:",
-                "processorthr": "Axın sayı:",
+                "processorcores": "Nüvələrin və axınların sayı:",
                 "processorfreq": "Baza tezliyi:",
                 "processorcache": "3-cü səviyyə keş:",
                 "ramlabel": "Operativ yaddaş (RAM)",
@@ -284,7 +287,7 @@
                 "vlabel": "Video kart",
                 "vname": "Adı:",
                 "vmem": "Video yaddaş həcmi:",
-                "ssdl": "SSD, HDD, USB fləş kartlar",
+                "ssdl": "Disk yaddaş qurğuları",
                 "sname": "Adı:",
                 "smem": "Tam həcm:",
                 "benchtitle": "MakuTweaker ilə bençmarklar",
@@ -295,8 +298,8 @@
                 "test1": "Tək nüvəli test tamamlandı.",
                 "test2": "Bal:",
                 "test3": "əməliyyat yerinə yetirildi.",
-                "running": "Tək nüvəli test gedir...\n10 saniyə gözləyin.",
-                "running_multicore": "Çox nüvəli test gedir...\n10 saniyə gözləyin.",
+                "running": "Tək nüvəli test gedir... 10 saniyə gözləyin.",
+                "running_multicore": "Çox nüvəli test gedir... 10 saniyə gözləyin.",
                 "test1multi": "Çox nüvəli test tamamlandı.",
                 "tpmtitle": "TPM Modulu:",
                 "tpmy": "Var",
@@ -305,15 +308,10 @@
                 "manu": "İstehsalçı:",
                 "capac": "Həcm:",
                 "partnum": "Detalların nömrəsi:",
-                "branding": "Brendinq",
-                "modeln": "Model:",
-                "full_model": "Cihaz və model:",
-                "full_cpu": "Prosessor:",
-                "full_gpu": "Video kart:",
-                "full_ram": "Operativ yaddaş:",
-                "full_motherboard": "Ana plata:",
-                "full_usbssd": "Bütün disklərin həcmi:",
-                "tooltip": "Səhifənin kompakt rejimini aktivləşdirmək üçün F3 düyməsinə basın.\nHəmçinin səhifənin məzmununu TXT faylına saxlamaq üçün\nF5 və ya Ctrl+S düymələrinə basa bilərsiniz."
+                "modeln": "Model",
+                "allvram": "Ümumi video yaddaş",
+                "devicemanu": "Cihaz istehsalçısı",
+                "tooltip": "Səhifənin məzmununu TXT faylına saxlamaq üçün F5 və ya Ctrl+S basın."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Prosesi bitir",
                 "onlyfrozen": "Yalnız donmuş prosesləri göstər",
                 "location": "Faylın yerləşdiyi yer",
+                "excl": "İstisnalara əlavə et",
+                "exclinfo": "Proses adlarını vergüllə daxil edin:",
+                "excltitle": "Proses istisnaları",
+                "clear": "Təmizlə",
+                "save": "Saxla",
+                "showall": "Hamısını göstər",
                 "from50mb": "50 MB-dan",
                 "from100mb": "100 MB-dan",
                 "from300mb": "300 MB-dan",
                 "from500mb": "500 MB-dan",
                 "from1000mb": "1 GB-dan",
                 "from2000mb": "2 GB-dan"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker göstərilən proses və tətbiqlərin işə salınmasını bloklamağa imkan verir. Onları vergüllə ayıraraq yazın və proqram məhdudiyyətləri avtomatik tətbiq edəcək. Prosesi blokdan çıxarmaq üçün onu siyahıdan silin və dəyişiklikləri yadda saxlayın.",
+                "excltitle": "Tətbiqlərin bloklanması",
+                "applyban": "Bloklamanı tətbiq et",
+                "howitworks": "Bu necə işləyir?",
+                "banyandex": "Yandex-i blokla",
+                "clear": "Təmizlə",
+                "makutnah": "Məni bloklama!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Qaranlıq",
                 "st": "Üslub",
                 "label": "Ayarlar",
-                "credL": "İdeya və işlənmə:\nProqram ikonu:\nXüsusi təşəkkür:",
+                "cfg_info": "Seçilmiş MakuTweaker parametrlərini .mktw faylına saxlaya bilərsiniz ki, sonra onları yeni kompüterdə idxal edib tətbiq edəsiniz və ya dostlarınızla paylaşasınız. Tətbiq etdikdən sonra yenidən başladma tələb olunur.",
+                "cfg_title": "Konfiqlər / Presetlər",
+                "cfg_save": "Saxla",
+                "cfg_import": "Yüklə",
+                "cfg_svsuccess": "Parametrlər uğurla fayla saxlanıldı.",
+                "cfg_ldsuccess": "Fayldan parametrlər uğurla tətbiq edildi. Cihazı yenidən başlatmaq faydalı ola bilər.",
+                "cfg_error": "Faylı saxlayarkən xəta baş verdi.",
+                "cfg_error1": "Faylı oxuyarkən xəta baş verdi.",
+                "credL": "Versiya:\nİdeya və işlənmə:\nProqram ikonu:\nXüsusi təşəkkür:",
                 "atop": "Rəsmi sayt"
             }
         },

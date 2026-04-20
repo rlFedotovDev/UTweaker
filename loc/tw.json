@@ -9,7 +9,7 @@
                 "sat": "關機計時器",
                 "quick": "Windows 快速設定",
                 "act": "Windows 啟用",
-                "cm": "右鍵選單",
+                "adv": "進階設定",
                 "sr": "系統與修復",
                 "perf": "效能",
                 "per": "個人化",
@@ -25,6 +25,12 @@
                 "on": "開啟",
                 "off": "關閉",
                 "apply": "套用",
+                "applied": "已套用",
+                "updatenotify": "MakuTweaker 有可用更新！\n點擊通知以前往下載頁面。",
+                "updatedialog": "MakuTweaker 有可用更新。\n建議安裝最新版本以獲得新功能和錯誤修復。點擊「更新」以訪問網站並下載新的安裝程式。",
+                "updatebutton": "更新",
+                "updatecancel": "稍後",
+                "updatecheckb": "在程式更新之前不要再次顯示",
                 "rebnotify": "您所套用的功能需要重新啟動電腦。",
                 "rebnotifyexplorer": "您所套用的功能需要重新啟動檔案總管。",
                 "rebnotifysfc": "程序完成後，請重新啟動您的裝置！"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Windows 快速設定",
                 "b": "執行快速設定",
-                "info": "使用核取方塊選擇您想要在自動設定中套用的項目。",
+                "info": "使用核取方塊選擇您想要在自動設定中套用的項目。\n設定將在套用後隱藏。",
                 "infodone": "快速設定參數已完成！\n套用後，請記得重新啟動電腦。\n祝您使用愉快！",
                 "uncheck": "取消全選",
                 "checkall": "全部啟用",
@@ -175,21 +181,22 @@
                 "offierr": "無法使用 Ohook 方法啟用 Office。請重新安裝 Office 後再試一次。"
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "右鍵選單",
-                "t1": "啟用傳統右鍵選單",
-                "t2": "移除右鍵選單延遲",
-                "t3": "在終端機中開啟",
-                "t4": "加入最愛",
-                "t5": "共用",
-                "t6": "還原舊版",
-                "t8": "傳送至",
-                "t10": "複製為路徑",
-                "t11": "釘選到開始畫面",
-                "t12": "釘選到工作列",
-                "t13": "在新分頁中開啟",
-                "t14": "NVIDIA 控制面板"
+                "deledge_title": "解除安裝 Microsoft Edge",
+                "deledge_btn": "解除安裝",
+                "deledge_before": "在解除安裝 Microsoft Edge 之前，請確保您有另一個瀏覽器。您想在解除安裝前訪問 Google Chrome 頁面嗎？",
+                "deledge_sure": "您確定要刪除 Microsoft Edge 嗎？此操作無法撤銷！",
+                "deledge_tooltip": "完全刪除 Microsoft Edge，包括更新服務和排程任務。Edge WebView2 不受影響，因此關鍵系統組件保持正常運行。實際上只删除了瀏覽器本身 - 但請自行承擔風險進行操作。",
+                "deledge_error": "刪除 Microsoft Edge 時出錯。它可能已被解除安裝或缺少其安裝程式檔案。",
+                "deledge_done": "Microsoft Edge 的解除安裝已完全完成。",
+                "index_title": "停用磁碟索引服務",
+                "index_tooltip": "建議配備 HDD 的舊款電腦和筆記型電腦使用 - 可顯著減輕磁碟負載並提高系統回應速度。可加快任何裝置上的檔案總管速度，但系統和檔案總管中的搜尋將變慢。",
+                "vbs": "停用虛擬化安全性 (VBS)",
+                "oldbootloader": "啟用傳統系統開機載入程式",
+                "advancedboot": "每次開機時顯示進階選項",
+                "swap": "停用分頁檔",
+                "ttl": "啟用網路共享限制繞過 (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "產生電池報告",
                 "b2": "修復",
                 "b4": "清理",
-                "oldbootloader": "啟用傳統系統開機載入程式",
-                "advancedboot": "每次開機時顯示進階選項",
                 "bitlocker": "停用 BitLocker 自動加密",
                 "coreisol": "停用核心隔離 / 記憶體完整性",
                 "hybern": "停用休眠",
-                "vbs": "停用虛擬化安全性 (VBS)",
                 "sleeptimeout": "停用睡眠與螢幕關閉計時器",
-                "swap": "停用分頁檔",
                 "bing": "停用 Bing 線上搜尋",
                 "sticky": "停用相黏鍵",
                 "uac": "停用使用者帳戶控制 (UAC)",
                 "smartscreen": "停用 SmartScreen",
                 "chkdsk": "將 Chkdsk 超時設定為 1 分鐘",
                 "reportbutton": "報告",
-                "telemetry": "停用系統中所有遙測與追蹤",
-                "ttl": "啟用網路共享限制繞過 (TTL 65)"
+                "telemetry": "停用系統中所有遙測與追蹤"
             },
             "status": {
                 "o1b": "您已成功產生電池報告。",
@@ -247,6 +249,8 @@
                 "disablelogo": "停用系統開機載入程式中的 Windows 標誌",
                 "disableanim": "停用系統開機載入程式中的動畫",
                 "etask": "在工作列新增「結束工作」按鈕",
+                "oldcont": "啟用傳統右鍵選單",
+                "delcont": "移除右鍵選單延遲",
                 "newname": "新檔案",
                 "c1": "預設",
                 "c2": "青色",
@@ -269,8 +273,7 @@
                 "label": "電腦資訊",
                 "processorlabel": "處理器",
                 "processorname": "名稱:",
-                "processorcores": "核心數:",
-                "processorthr": "執行緒數:",
+                "processorcores": "核心與執行緒數量:",
                 "processorfreq": "基礎頻率:",
                 "processorcache": "L3 快取:",
                 "ramlabel": "記憶體",
@@ -284,7 +287,7 @@
                 "vlabel": "顯示卡",
                 "vname": "名稱:",
                 "vmem": "視訊記憶體大小:",
-                "ssdl": "SSD, HDD, USB 隨身碟",
+                "ssdl": "磁碟機",
                 "sname": "名稱:",
                 "smem": "總容量:",
                 "benchtitle": "MakuTweaker 效能測試",
@@ -295,8 +298,8 @@
                 "test1": "單核心測試完成。",
                 "test2": "分數:",
                 "test3": "次操作已完成。",
-                "running": "正在進行單核心測試...\n請等待 10 秒。",
-                "running_multicore": "正在進行多核心測試...\n請等待 10 秒。",
+                "running": "正在進行單核心測試... 請等待 10 秒。",
+                "running_multicore": "正在進行多核心測試... 請等待 10 秒。",
                 "test1multi": "多核心測試完成。",
                 "tpmtitle": "TPM 模組:",
                 "tpmy": "已偵測",
@@ -305,15 +308,10 @@
                 "manu": "製造商:",
                 "capac": "容量:",
                 "partnum": "零件編號:",
-                "branding": "品牌",
-                "modeln": "型號:",
-                "full_model": "裝置與型號:",
-                "full_cpu": "處理器:",
-                "full_gpu": "顯示卡:",
-                "full_ram": "記憶體:",
-                "full_motherboard": "主機板:",
-                "full_usbssd": "所有儲存裝置總容量:",
-                "tooltip": "按 F3 可切換頁面精簡模式。\n您也可以按 F5 或 Ctrl+S\n將頁面內容儲存為 TXT 檔案。"
+                "modeln": "型號",
+                "allvram": "總顯示記憶體",
+                "devicemanu": "設備製造商",
+                "tooltip": "按下 F5 或 Ctrl+S 以將頁面內容儲存為 TXT 檔案。"
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "結束處理程序",
                 "onlyfrozen": "僅顯示無回應的處理程序",
                 "location": "檔案位置",
+                "excl": "新增到例外",
+                "exclinfo": "輸入以逗號分隔的程序名稱：",
+                "excltitle": "程序例外",
+                "clear": "清除",
+                "save": "儲存",
+                "showall": "顯示全部",
                 "from50mb": "50 MB 以上",
                 "from100mb": "100 MB 以上",
                 "from300mb": "300 MB 以上",
                 "from500mb": "500 MB 以上",
                 "from1000mb": "1 GB 以上",
                 "from2000mb": "2 GB 以上"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker 允許您阻止指定的程序和應用程式啟動。請用逗號分隔列出它們，程式將自動套用限制。若要解除封鎖，請從清單中刪除並儲存變更。",
+                "excltitle": "應用程式封鎖",
+                "applyban": "套用封鎖",
+                "howitworks": "這是如何運作的？",
+                "banyandex": "封鎖 Yandex",
+                "clear": "清除",
+                "makutnah": "不要封鎖我！"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "深色",
                 "st": "樣式",
                 "label": "設定",
-                "credL": "構思與開發:\n程式圖示:\n特別感謝:",
+                "cfg_info": "您可以將選擇的 MakuTweaker 設定儲存為 .mktw 檔案，以便之後在新電腦上匯入並套用，或與朋友分享。套用後需要重新啟動。",
+                "cfg_title": "設定 / 預設",
+                "cfg_save": "儲存",
+                "cfg_import": "載入",
+                "cfg_svsuccess": "設定已成功儲存至檔案。",
+                "cfg_ldsuccess": "已成功套用檔案中的設定。建議重新啟動裝置。",
+                "cfg_error": "儲存檔案時發生錯誤。",
+                "cfg_error1": "讀取檔案時發生錯誤。",
+                "credL": "版本\n構思與開發:\n程式圖示:\n特別感謝:",
                 "atop": "官方網站"
             }
         },

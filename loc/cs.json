@@ -9,7 +9,7 @@
                 "sat": "Časovač vypnutí",
                 "quick": "Rychlé nastavení Windows",
                 "act": "Aktivace Windows",
-                "cm": "Kontextová nabídka",
+                "adv": "Pokročilá nastavení",
                 "sr": "Systém a obnovení",
                 "perf": "Výkon",
                 "per": "Přizpůsobení",
@@ -25,6 +25,12 @@
                 "on": "Zap.",
                 "off": "Vyp.",
                 "apply": "Použít",
+                "applied": "Použito",
+                "updatenotify": "Je k dispozici aktualizace MakuTweaker!\nKlikněte na oznámení pro přechod na stránku stahování.",
+                "updatedialog": "Je k dispozici aktualizace MakuTweaker.\nDoporučuje se nainstalovat nejnovější verzi, abyste získali přístup k novým funkcím a opravám chyb. Klikněte na «Aktualizovat» pro přechod na web a stažení nového instalátoru.",
+                "updatebutton": "Aktualizovat",
+                "updatecancel": "Odložit",
+                "updatecheckb": "Znovu nezobrazovat do aktualizace programu",
                 "rebnotify": "Funkce, kterou jste použili, vyžaduje restart zařízení.",
                 "rebnotifyexplorer": "Funkce, kterou jste použili, vyžaduje restart Průzkumníka.",
                 "rebnotifysfc": "Po dokončení procesu restartujte zařízení!"
@@ -114,7 +120,6 @@
                 "is": "nainstalován...",
                 "isnt": "není nainstalován...",
                 "comp": "Kontrola je ukončena!",
-
                 "suredialogT1": "Vybrali jste smazání",
                 "suredialogT2": "pomocí MakuTweakeru.",
                 "suredialogT3": "Musíte pochopit, že tuto aplikaci nelze vrátit do systému,\na práce spojená s těmito komponentami může být nestabilní.",
@@ -148,7 +153,7 @@
             "main": {
                 "label": "Rychlé nastavení Windows",
                 "b": "Zapnout rychlé nastavení",
-                "info": "Použijte zaškrtávací políčka pro výběr nastavení,\nkterá byste chtěli použít při automatickém nastavení.",
+                "info": "Použijte zaškrtávací políčka pro výběr nastavení,\nkterá byste chtěli použít při automatickém nastavení.\nParametry budou po použití skryty.",
                 "infodone": "Žádné další možnosti rychlého nastavení!\nPo jejich použití nezapomeňte restartovat počítač.\nUžijte si používání systému!",
                 "uncheck": "Deaktivovat vše",
                 "checkall": "Aktivovat všechno",
@@ -176,21 +181,22 @@
                 "offierr": "Office nelze aktivovat pomocí metody Ohook. Přeinstalujte Office a poté to zkuste znovu."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Kontextová nabídka",
-                "t1": "Povolit klasickou kontextovou nabídku",
-                "t2": "Odstranit zpoždění kontextové nabídky",
-                "t3": "Otevřít v terminálu",
-                "t4": "Přidat k oblíbeným",
-                "t5": "Sdílet",
-                "t6": "Obnovit předchozí verzi",
-                "t8": "Odeslat",
-                "t10": "Kopírovat jako cestu",
-                "t11": "Připnout na obrazovku Start",
-                "t12": "Připnout na hlavní panel",
-                "t13": "Otevřít na nové kartě",
-                "t14": "Ovládací panel NVIDIA"
+                "deledge_title": "Odinstalovat Microsoft Edge",
+                "deledge_btn": "Odinstalovat",
+                "deledge_before": "Před odinstalováním Microsoft Edge se ujistěte, že máte jiný prohlížeč. Chcete před odinstalací přejít na stránku Google Chrome?",
+                "deledge_sure": "Opravdu chcete odinstalovat Microsoft Edge? Tuto akci nebude možné vrátit zpět!",
+                "deledge_tooltip": "Úplné odstranění Microsoft Edge, včetně aktualizačních služeb a úloh plánovače. Komponenta Edge WebView2 není ovlivněna, takže kritické systémové součásti zůstávají funkční. Fakticky se odstraňuje pouze samotný prohlížeč – akce však provádíte na vlastní nebezpečí.",
+                "deledge_error": "Při odstraňování Microsoft Edge došlo k chybě. Možná je již odinstalován nebo chybí soubory jeho instalátoru.",
+                "deledge_done": "Odstranění Microsoft Edge bylo zcela dokončeno.",
+                "index_title": "Zakázat službu indexování disků",
+                "index_tooltip": "Doporučeno pro starší počítače a notebooky s HDD – může výrazně snížit zatížení disku a zvýšit odezvu systému. Může zrychlit Průzkumníka na jakémkoli zařízení, ale vyhledávání v systému a Průzkumníku bude pomalejší.",
+                "vbs": "Vypnout Virtualization-based Security",
+                "oldbootloader": "Povolit starý zavaděč systému",
+                "advancedboot": "Pokročilé možnosti při každém spuštění systému",
+                "swap": "Vypnout stránkovací soubor",
+                "ttl": "Povolit obcházení limitů sdílení internetu (TTL 65)"
             }
         },
         "sr": {
@@ -202,22 +208,17 @@
                 "batterylabel": "Vytvořit zprávu o stavu baterie",
                 "b2": "Obnovit",
                 "b4": "Vyčistit",
-                "oldbootloader": "Povolit starý zavaděč systému",
-                "advancedboot": "Pokročilé možnosti při každém spuštění systému",
                 "bitlocker": "Vypnout automatické šifrování BitLocker",
                 "coreisol": "Vypnout izolaci jádra / integritu paměti",
                 "hybern": "Vypnout hibernaci",
-                "vbs": "Vypnout Virtualization-based Security",
                 "sleeptimeout": "Vypnout časovač spánku a vypnutí displeje",
-                "swap": "Vypnout stránkovací soubor",
                 "bing": "Vypnout online vyhledávání přes Bing",
                 "sticky": "Vypnout funkci Sticky Keys",
                 "uac": "Vypnout Řízení uživatelských účtů (UAC)",
                 "smartscreen": "Vypnout funkci Smart Screen",
                 "chkdsk": "Nastavit časový limit pro Chkdsk na 1 minutu",
                 "reportbutton": "Zpráva",
-                "telemetry": "Vypnout veškerou telemetrii a sledování v systému",
-                "ttl": "Povolit obcházení limitů sdílení internetu (TTL 65)"
+                "telemetry": "Vypnout veškerou telemetrii a sledování v systému"
             },
             "status": {
                 "o1b": "Zpráva o stavu baterie byla úspěšně vytvořena.",
@@ -248,6 +249,8 @@
                 "disablelogo": "Vypnout logo Windows v zavaděči systému",
                 "disableanim": "Vypnout animaci v zavaděči systému",
                 "etask": "Přidat tlačítko \"Ukončit úlohu\" na hlavní panel",
+                "oldcont": "Povolit klasickou kontextovou nabídku",
+                "delcont": "Odstranit zpoždění kontextové nabídky",
                 "newname": "Nový soubor",
                 "c1": "Standardní",
                 "c2": "Tyrkysová",
@@ -270,29 +273,23 @@
                 "label": "Informace o PC",
                 "processorlabel": "Procesor",
                 "processorname": "Název:",
-                "processorcores": "Počet jader:",
-                "processorthr": "Počet vláken:",
+                "processorcores": "Počet jader a vláken:",
                 "processorfreq": "Základní frekvence:",
                 "processorcache": "L3 cache:",
-
                 "ramlabel": "Operační paměť",
                 "ramtotal": "Celková paměť:",
                 "ramddr": "Typ paměti DDR:",
                 "ramfreq": "Frekvence:",
-
                 "mblabel": "Základní deska",
                 "mbname": "Název:",
                 "mbver": "Verze BIOSu:",
                 "mbdate": "Datum aktualizace BIOSu:",
-
                 "vlabel": "Grafická karta",
                 "vname": "Název:",
                 "vmem": "Velikost videopaměti:",
-
-                "ssdl": "SSD, HDD, USB flashky",
+                "ssdl": "Disková úložiště",
                 "sname": "Název:",
                 "smem": "Celková kapacita:",
-
                 "benchtitle": "Benchmarky pomocí MakuTweaker",
                 "benchbutton": "Jednojádrový test",
                 "benchbutton2": "Vícejádrový test",
@@ -301,29 +298,20 @@
                 "test1": "Jednojádrový test byl dokončen.",
                 "test2": "Skóre:",
                 "test3": "operací dokončeno.",
-                "running": "Probíhá jednojádrový test...\nPočkejte 10 sekund.",
-                "running_multicore": "Probíhá vícejádrový test...\nPočkejte 10 sekund.",
+                "running": "Probíhá jednojádrový test... Počkejte 10 sekund.",
+                "running_multicore": "Probíhá vícejádrový test... Počkejte 10 sekund.",
                 "test1multi": "Vícejádrový test byl dokončen.",
-
                 "tpmtitle": "TPM Modul:",
                 "tpmy": "Přítomen",
                 "tpmn": "Chybí",
-
                 "ramsticktitle": "Moduly RAM",
                 "manu": "Výrobce:",
                 "capac": "Kapacita:",
                 "partnum": "Číslo dílu:",
-
-                "branding": "Branding",
-                "modeln": "Model:",
-
-                "full_model": "Zařízení a model:",
-                "full_cpu": "Procesor:",
-                "full_gpu": "Grafická karta:",
-                "full_ram": "Operační paměť:",
-                "full_motherboard": "Základní deska:",
-                "full_usbssd": "Kapacita všech úložišť:",
-                "tooltip": "Stisknutím klávesy F3 zapnete kompaktní režim stránky.\nMůžete také stisknout F5 nebo Ctrl+S,\npro uložení obsahu stránky do souboru TXT"
+                "modeln": "Model",
+                "allvram": "Celková videopaměť",
+                "devicemanu": "Výrobce zařízení",
+                "tooltip": "Stiskněte F5 nebo Ctrl+S pro uložení obsahu stránky do souboru TXT."
             }
         },
         "pmgr": {
@@ -332,12 +320,29 @@
                 "endprocess": "Ukončit proces",
                 "onlyfrozen": "Zobrazit pouze zamrzlé procesy",
                 "location": "Umístění souboru",
+                "excl": "Přidat do výjimek",
+                "exclinfo": "Zadejte názvy procesů oddělené čárkou:",
+                "excltitle": "Výjimky procesů",
+                "clear": "Vyčistit",
+                "save": "Uložit",
+                "showall": "Zobrazit vše",
                 "from50mb": "od 50 МБ",
                 "from100mb": "od 100 МБ",
                 "from300mb": "od 300 МБ",
                 "from500mb": "od 500 МБ",
                 "from1000mb": "od 1 GB",
                 "from2000mb": "od 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker umožňuje blokovat spouštění zadaných procesů a aplikací. Uveďte je oddělené čárkou a program automaticky použije omezení. Chcete-li proces odblokovat, odstraňte jej ze seznamu a uložte změny.",
+                "excltitle": "Blokování aplikací",
+                "applyban": "Použít blokování",
+                "howitworks": "Jak to funguje?",
+                "banyandex": "Zablokovat Yandex",
+                "clear": "Vyčistit",
+                "makutnah": "Neblokuj mě!"
             }
         },
         "ab": {
@@ -349,7 +354,15 @@
                 "d": "Tmavý",
                 "st": "Styl",
                 "label": "Nastavení",
-                "credL": "Idea a vývoj:\nIkona programu:\nZvláštní poděkování:",
+                "cfg_info": "Vybraná nastavení MakuTweaker můžete uložit do souboru .mktw, abyste je mohli později importovat a použít na novém počítači nebo sdílet s přáteli. Po použití je nutný restart.",
+                "cfg_title": "Konfigurace / Presety",
+                "cfg_save": "Uložit",
+                "cfg_import": "Načíst",
+                "cfg_svsuccess": "Nastavení bylo úspěšně uloženo do souboru.",
+                "cfg_ldsuccess": "Nastavení ze souboru bylo úspěšně použito. Doporučuje se restart zařízení.",
+                "cfg_error": "Při ukládání souboru došlo k chybě.",
+                "cfg_error1": "Při čtení souboru došlo k chybě.",
+                "credL": "Verze:\nIdea a vývoj:\nIkona programu:\nZvláštní poděkování:",
                 "atop": "Oficiální web"
             }
         },

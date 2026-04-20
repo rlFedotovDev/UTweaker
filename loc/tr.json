@@ -9,7 +9,7 @@
                 "sat": "Kapatma Zamanlayıcısı",
                 "quick": "Hızlı Windows Ayarları",
                 "act": "Windows Etkinleştirme",
-                "cm": "Bağlam Menüsü",
+                "adv": "Gelişmiş ayarlar",
                 "sr": "Sistem ve Kurtarma",
                 "perf": "Performans",
                 "per": "Kişiselleştirme",
@@ -25,6 +25,12 @@
                 "on": "Açık",
                 "off": "Kapalı",
                 "apply": "Uygula",
+                "applied": "Uygulandı",
+                "updatenotify": "MakuTweaker güncellemesi mevcut!\nİndirme sayfasına gitmek için bildirime tıklayın.",
+                "updatedialog": "MakuTweaker güncellemesi mevcut.\nYeni özelliklere ve hata düzeltmelerine erişmek için en son sürümü yüklemeniz önerilir. Siteye gitmek ve yeni yükleyiciyi indirmek için «Güncelle»ye tıklayın.",
+                "updatebutton": "Güncelle",
+                "updatecancel": "Daha sonra",
+                "updatecheckb": "Program güncellenene kadar tekrar gösterme",
                 "rebnotify": "Uyguladığınız özellik yeniden başlatma gerektirir.",
                 "rebnotifyexplorer": "Uyguladığınız özellik Explorer'ın yeniden başlatılmasını gerektirir.",
                 "rebnotifysfc": "İşlem tamamlandıktan sonra cihazınızı yeniden başlatın!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Hızlı Windows Ayarları",
                 "b": "Hızlı ayarları başlat",
-                "info": "Otomatik yapılandırmada uygulamak istediğiniz ayarları\nseçmek için onay kutularını kullanın.",
+                "info": "Otomatik yapılandırmada uygulamak istediğiniz ayarları\nseçmek için onay kutularını kullanın.\nAyarlar uygulandıktan sonra gizlenecektir.",
                 "infodone": "Hızlı ayar parametreleri sona erdi!\nUyguladıktan sonra yeniden başlatmayı unutmayın.\nSisteminizi iyi günlerde kullanın!",
                 "uncheck": "Tümünün seçimini kaldır",
                 "checkall": "Tümünü etkinleştir",
@@ -175,21 +181,22 @@
                 "offierr": "Office, Ohook yöntemi kullanılarak etkinleştirilemiyor. Office'i yeniden yükleyin ve tekrar deneyin."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Bağlam Menüsü",
-                "t1": "Eski bağlam menüsünü etkinleştir",
-                "t2": "Bağlam menüsü gecikmesini kaldır",
-                "t3": "Terminalde aç",
-                "t4": "Favorilere ekle",
-                "t5": "Paylaş",
-                "t6": "Önceki sürümü geri yükle",
-                "t8": "Gönder",
-                "t10": "Yol olarak kopyala",
-                "t11": "Başlat menüsüne sabitle",
-                "t12": "Görev çubuğuna sabitle",
-                "t13": "Yeni sekmede aç",
-                "t14": "NVIDIA Denetim Masası"
+                "deledge_title": "Microsoft Edge'i Kaldır",
+                "deledge_btn": "Kaldır",
+                "deledge_before": "Microsoft Edge'i kaldırmadan önce başka bir tarayıcınız olduğundan emin olun. Kaldırmadan önce Google Chrome sayfasına gitmek ister misiniz?",
+                "deledge_sure": "Microsoft Edge'i kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz!",
+                "deledge_tooltip": "Güncelleme servisleri ve zamanlayıcı görevleri dahil Microsoft Edge'in tamamen kaldırılması. Edge WebView2 etkilenmez, bu nedenle kritik sistem bileşenleri çalışmaya devam eder. Aslında sadece tarayıcının kendisi kaldırılır - ancak işlemleri kendi sorumluluğunuzda gerçekleştirin.",
+                "deledge_error": "Microsoft Edge kaldırılırken bir hata oluştu. Zaten kaldırılmış olabilir veya yükleyici dosyaları eksik olabilir.",
+                "deledge_done": "Microsoft Edge'in kaldırılması tamamen tamamlandı.",
+                "index_title": "Disk dizin oluşturma hizmetini devre dışı bırak",
+                "index_tooltip": "HDD'li eski bilgisayarlar ve dizüstü bilgisayarlar için önerilir - disk yükünü önemli ölçüde azaltabilir ve sistem tepkisini artırabilir. Herhangi bir cihazda dosya gezginini hızlandırabilir, ancak sistemde ve gezginde arama yapmak yavaşlayacaktır.",
+                "vbs": "Sanallaştırma tabanlı güvenliği (VBS) devre dışı bırak",
+                "oldbootloader": "Eski sistem önyükleyicisini etkinleştir",
+                "advancedboot": "Her sistem açılışında gelişmiş seçenekler",
+                "swap": "Disk belleği dosyasını (swap) devre dışı bırak",
+                "ttl": "İnternet paylaşım kısıtlamalarını aşmayı etkinleştir (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Pil durumu raporu oluştur",
                 "b2": "Onar",
                 "b4": "Temizle",
-                "oldbootloader": "Eski sistem önyükleyicisini etkinleştir",
-                "advancedboot": "Her sistem açılışında gelişmiş seçenekler",
                 "bitlocker": "BitLocker otomatik şifrelemeyi devre dışı bırak",
                 "coreisol": "Çekirdek yalıtımını / bellek bütünlüğünü devre dışı bırak",
                 "hybern": "Hazırda bekletmeyi devre dışı bırak",
-                "vbs": "Sanallaştırma tabanlı güvenliği (VBS) devre dışı bırak",
                 "sleeptimeout": "Uyku modu ve ekran kapatma zamanlayıcısını devre dışı bırak",
-                "swap": "Disk belleği dosyasını (swap) devre dışı bırak",
                 "bing": "Bing üzerinden çevrimiçi aramayı devre dışı bırak",
                 "sticky": "Yapışkan tuşları devre dışı bırak",
                 "uac": "Kullanıcı Hesabı Denetimini (UAC) devre dışı bırak",
                 "smartscreen": "SmartScreen'i devre dışı bırak",
                 "chkdsk": "Chkdsk zaman aşımını 1 dakikaya ayarla",
                 "reportbutton": "Rapor",
-                "telemetry": "Sistemdeki tüm telemetri ve takibi devre dışı bırak",
-                "ttl": "İnternet paylaşım kısıtlamalarını aşmayı etkinleştir (TTL 65)"
+                "telemetry": "Sistemdeki tüm telemetri ve takibi devre dışı bırak"
             },
             "status": {
                 "o1b": "Pil durumu raporunu başarıyla oluşturdunuz.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Sistem önyükleyicisindeki Windows logosunu devre dışı bırak",
                 "disableanim": "Sistem önyükleyicisindeki animasyonu devre dışı bırak",
                 "etask": "Görev çubuğuna \"Görevi sonlandır\" düğmesini ekle",
+                "oldcont": "Eski bağlam menüsünü etkinleştir",
+                "delcont": "Bağlam menüsü gecikmesini kaldır",
                 "newname": "Yeni dosya",
                 "c1": "Standart",
                 "c2": "Turkuaz",
@@ -269,8 +273,7 @@
                 "label": "Bilgisayar Bilgileri",
                 "processorlabel": "İşlemci",
                 "processorname": "Ad:",
-                "processorcores": "Çekirdek sayısı:",
-                "processorthr": "İş parçacığı sayısı:",
+                "processorcores": "Çekirdek ve iş parçacığı sayısı:",
                 "processorfreq": "Temel frekans:",
                 "processorcache": "L3 Önbellek:",
                 "ramlabel": "RAM",
@@ -284,7 +287,7 @@
                 "vlabel": "Ekran Kartı",
                 "vname": "Ad:",
                 "vmem": "Video belleği miktarı:",
-                "ssdl": "SSD, HDD, USB bellekler",
+                "ssdl": "Disk sürücüleri",
                 "sname": "Ad:",
                 "smem": "Toplam kapasite:",
                 "benchtitle": "MakuTweaker ile kıyaslama (Benchmark)",
@@ -295,8 +298,8 @@
                 "test1": "Tek çekirdek testi tamamlandı.",
                 "test2": "Puan:",
                 "test3": "işlem gerçekleştirildi.",
-                "running": "Tek çekirdek testi çalışıyor...\n10 saniye bekleyin.",
-                "running_multicore": "Çok çekirdekli test çalışıyor...\n10 saniye bekleyin.",
+                "running": "Tek çekirdek testi çalışıyor... 10 saniye bekleyin.",
+                "running_multicore": "Çok çekirdekli test çalışıyor... 10 saniye bekleyin.",
                 "test1multi": "Çok çekirdekli test tamamlandı.",
                 "tpmtitle": "TPM Modülü:",
                 "tpmy": "Mevcut",
@@ -305,15 +308,10 @@
                 "manu": "Üretici:",
                 "capac": "Kapasite:",
                 "partnum": "Parça numarası:",
-                "branding": "Marka",
-                "modeln": "Model:",
-                "full_model": "Cihaz ve model:",
-                "full_cpu": "İşlemci:",
-                "full_gpu": "Ekran Kartı:",
-                "full_ram": "RAM:",
-                "full_motherboard": "Anakart:",
-                "full_usbssd": "Tüm sürücülerin kapasitesi:",
-                "tooltip": "Kompakt modunu açmak için F3'e basın.\nAyrıca sayfa içeriğini TXT dosyası olarak kaydetmek için F5 veya Ctrl+S tuşlarına basabilirsiniz."
+                "modeln": "Model",
+                "allvram": "Toplam video belleği",
+                "devicemanu": "Cihaz üreticisi",
+                "tooltip": "Sayfa içeriğini TXT dosyası olarak kaydetmek için F5 veya Ctrl+S tuşlarına basın."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Görevi sonlandır",
                 "onlyfrozen": "Sadece yanıt vermeyen işlemleri göster",
                 "location": "Dosya konumu",
+                "excl": "İstisnalara ekle",
+                "exclinfo": "İşlem adlarını virgülle ayırarak girin:",
+                "excltitle": "İşlem istisnaları",
+                "clear": "Temizle",
+                "save": "Kaydet",
+                "showall": "Hepsini göster",
                 "from50mb": "> 50 MB",
                 "from100mb": "> 100 MB",
                 "from300mb": "> 300 MB",
                 "from500mb": "> 500 MB",
                 "from1000mb": "> 1 GB",
                 "from2000mb": "> 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker, belirtilen süreçlerin ve uygulamaların başlatılmasını engellemenizi sağlar. Bunları virgülle ayırarak listeleyin ve program kısıtlamaları otomatik olarak uygular. Bir sürecin engelini kaldırmak için listeden silin ve değişiklikleri kaydedin.",
+                "excltitle": "Uygulama engelleme",
+                "applyban": "Engellemeyi uygula",
+                "howitworks": "Nasıl çalışır?",
+                "banyandex": "Yandex'i engelle",
+                "clear": "Temizle",
+                "makutnah": "Beni engelleme!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Koyu",
                 "st": "Stil",
                 "label": "Ayarlar",
-                "credL": "Fikir ve geliştirme:\nProgram simgesi:\nÖzel teşekkürler:",
+                "cfg_info": "Seçilen MakuTweaker ayarlarını .mktw dosyasına kaydedebilir, daha sonra yeni bir bilgisayarda içe aktararak uygulayabilir veya arkadaşlarınızla paylaşabilirsiniz. Uygulamadan sonra yeniden başlatma gerekir.",
+                "cfg_title": "Yapılandırmalar / Ön Ayarlar",
+                "cfg_save": "Kaydet",
+                "cfg_import": "Yükle",
+                "cfg_svsuccess": "Ayarlar başarıyla dosyaya kaydedildi.",
+                "cfg_ldsuccess": "Dosyadaki ayarlar başarıyla uygulandı. Yeniden başlatmanız önerilir.",
+                "cfg_error": "Dosya kaydedilirken hata oluştu.",
+                "cfg_error1": "Dosya okunurken hata oluştu.",
+                "credL": "Sürüm:\nFikir ve geliştirme:\nProgram simgesi:\nÖzel teşekkürler:",
                 "atop": "Resmi web sitesi"
             }
         },

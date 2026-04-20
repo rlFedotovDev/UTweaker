@@ -9,7 +9,7 @@
                 "sat": "Izslēgšanas taimeris",
                 "quick": "Ātrā Windows iestatīšana",
                 "act": "Windows aktivizēšana",
-                "cm": "Konteksta izvēlne",
+                "adv": "Paplašinātie iestatījumi",
                 "sr": "Sistēma un atkopšana",
                 "perf": "Veiktspēja",
                 "per": "Personalizēšana",
@@ -25,6 +25,12 @@
                 "on": "Iesl.",
                 "off": "Izsl.",
                 "apply": "Pielietot",
+                "applied": "Lietots",
+                "updatenotify": "Ir pieejams MakuTweaker atjauninājums!\nNoklikšķiniet uz paziņojuma, lai pārietu uz lejupielādes lapu.",
+                "updatedialog": "Ir pieejams MakuTweaker atjauninājums.\nIeteicams instalēt jaunāko versiju, lai piekļūtu jaunām funkcijām un kļūdu labojumiem. Noklikšķiniet uz «Atjaunināt», lai apmeklētu vietni un lejupielādētu jauno instalētāju.",
+                "updatebutton": "Atjaunināt",
+                "updatecancel": "Atlikt",
+                "updatecheckb": "Nerādīt atkārtoti līdz programmas atjaunināšanai",
                 "rebnotify": "Funkcijai, kuru pielietojāt, nepieciešama restartēšana.",
                 "rebnotifyexplorer": "Funkcijai, kuru pielietojāt, nepieciešama Explorer restartēšana.",
                 "rebnotifysfc": "Pēc procesa pabeigšanas restartējiet ierīci!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Ātrā Windows iestatīšana",
                 "b": "Palaist ātro iestatīšanu",
-                "info": "Izmantojiet izvēles rūtiņas, lai izvēlētos iestatījumus,\nkurus vēlaties pielietot automātiskajā iestatīšanā.",
+                "info": "Izmantojiet izvēles rūtiņas, lai izvēlētos iestatījumus,\nkurus vēlaties pielietot automātiskajā iestatīšanā.\nIestatījumi tiks paslēpti pēc piemērošanas.",
                 "infodone": "Ātrās iestatīšanas parametri ir beigušies!\nPēc to pielietošanas - neaizmirstiet restartēt datoru.\nVeiksmīgu sistēmas lietošanu!",
                 "uncheck": "Noņemt visu",
                 "checkall": "Aktivizēt visu",
@@ -175,21 +181,22 @@
                 "offierr": "Office nevar aktivizēt, izmantojot Ohook metodi. Pārinstalējiet Office un pēc tam mēģiniet vēlreiz."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Konteksta izvēlne",
-                "t1": "Ieslēgt veco konteksta izvēlni",
-                "t2": "Noņemt konteksta izvēlnes aizkavi",
-                "t3": "Atvērt terminālī",
-                "t4": "Pievienot izlasei",
-                "t5": "Kopīgot",
-                "t6": "Atjaunot iepriekšējo versiju",
-                "t8": "Nosūtīt",
-                "t10": "Kopēt kā ceļu",
-                "t11": "Piespraust sākuma ekrānam",
-                "t12": "Piespraust uzdevumjoslai",
-                "t13": "Atvērt jaunā cilnē",
-                "t14": "NVIDIA vadības panelis"
+                "deledge_title": "Atinstalēt Microsoft Edge",
+                "deledge_btn": "Atinstalēt",
+                "deledge_before": "Pirms Microsoft Edge atinstalēšanas pārliecinieties, vai jums ir cita pārlūkprogramma. Vai vēlaties doties uz Google Chrome lapu pirms atinstalēšanas?",
+                "deledge_sure": "Vai esat pārliecināts, ka vēlaties noņemt Microsoft Edge? Šo darbību nevarēs atcelt!",
+                "deledge_tooltip": "Pilnīga Microsoft Edge noņemšana, ieskaitot atjaunināšanas pakalpojumus un plānotāja uzdevumus. Edge WebView2 netiek ietekmēts, tāpēc kritiskie sistēmas komponenti paliek funkcionāli. Faktiski tiek noņemta tikai pati pārlūkprogramma – tomēr rīkojieties uz savu risku.",
+                "deledge_error": "Noņemot Microsoft Edge, radās kļūda. Iespējams, tā jau ir atinstalēta vai trūkst tās instalētāja failu.",
+                "deledge_done": "Microsoft Edge noņemšana ir pilnībā pabeigta.",
+                "index_title": "Atspējot diska indeksēšanas pakalpojumu",
+                "index_tooltip": "Ieteicams vecākiem datoriem un portatīvajiem datoriem ar HDD — var ievērojami samazināt diska slodzi un palielināt sistēmas atsaucību. Var paātrināt failu pārlūku jebkurā ierīcē, taču meklēšana sistēmā un pārlūkā kļūs lēnāka.",
+                "vbs": "Izslēgt Virtualization-based Security",
+                "oldbootloader": "Ieslēgt veco sistēmas ielādētāju",
+                "advancedboot": "Papildu parametri katrā sistēmas ielādē",
+                "swap": "Atspējot virtuālās atmiņas failu (swap)",
+                "ttl": "Ieslēgt interneta koplietošanas ierobežojumu apiešanu (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Izveidot akumulatora stāvokļa atskaiti",
                 "b2": "Atjaunot",
                 "b4": "Iztīrīt",
-                "oldbootloader": "Ieslēgt veco sistēmas ielādētāju",
-                "advancedboot": "Papildu parametri katrā sistēmas ielādē",
                 "bitlocker": "Izslēgt automātisko BitLocker šifrēšanu",
                 "coreisol": "Atspējot kodola izolāciju / atmiņas integritāti",
                 "hybern": "Atspējot hibernāciju",
-                "vbs": "Izslēgt Virtualization-based Security",
                 "sleeptimeout": "Atspējot miega režīma un displeja izslēgšanas taimeri",
-                "swap": "Atspējot virtuālās atmiņas failu (swap)",
                 "bing": "Atspējot tiešsaistes meklēšanu caur Bing",
                 "sticky": "Atspējot lipīgos taustiņus",
                 "uac": "Atspējot lietotāja konta kontroli (UAC)",
                 "smartscreen": "Atspējot Smart Screen",
                 "chkdsk": "Iestatīt Chkdsk taimautu uz 1 minūti",
                 "reportbutton": "Atskaite",
-                "telemetry": "Atspējot visu telemetriju un izsekošanu sistēmā",
-                "ttl": "Ieslēgt interneta koplietošanas ierobežojumu apiešanu (TTL 65)"
+                "telemetry": "Atspējot visu telemetriju un izsekošanu sistēmā"
             },
             "status": {
                 "o1b": "Jūs veiksmīgi izveidojāt akumulatora stāvokļa atskaiti.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Izslēgt Windows logotipu sistēmas ielādētājā",
                 "disableanim": "Izslēgt animāciju sistēmas ielādētājā",
                 "etask": "Pievienot pogu \"Beigt uzdevumu\" uzdevumjoslā",
+                "oldcont": "Ieslēgt veco konteksta izvēlni",
+                "delcont": "Noņemt konteksta izvēlnes aizkavi",
                 "newname": "Jauns fails",
                 "c1": "Standarta",
                 "c2": "Tirkīza",
@@ -269,8 +273,7 @@
                 "label": "Datora informācija",
                 "processorlabel": "Procesors",
                 "processorname": "Nosaukums:",
-                "processorcores": "Kodolu skaits:",
-                "processorthr": "Plūsmu skaits:",
+                "processorcores": "Kodolu un pavedienu skaits:",
                 "processorfreq": "Bāzes frekvence:",
                 "processorcache": "L3 līmeņa kešatmiņa:",
                 "ramlabel": "Operatīvā atmiņa",
@@ -284,7 +287,7 @@
                 "vlabel": "Videokarte",
                 "vname": "Nosaukums:",
                 "vmem": "Videoatmiņas daudzums:",
-                "ssdl": "SSD, HDD, USB zibatmiņas",
+                "ssdl": "Diska ierīces",
                 "sname": "Nosaukums:",
                 "smem": "Pilns apjoms:",
                 "benchtitle": "Benčmarki ar MakuTweaker",
@@ -295,8 +298,8 @@
                 "test1": "Vienkodola tests pabeigts.",
                 "test2": "Punkti:",
                 "test3": "operācijas izpildītas.",
-                "running": "Notiek vienkodola tests...\nUzgaidiet 10 sekundes.",
-                "running_multicore": "Notiek daudzkodolu tests...\nUzgaidiet 10 sekundes.",
+                "running": "Notiek vienkodola tests... Uzgaidiet 10 sekundes.",
+                "running_multicore": "Notiek daudzkodolu tests... Uzgaidiet 10 sekundes.",
                 "test1multi": "Daudzkodolu tests pabeigts.",
                 "tpmtitle": "TPM modulis:",
                 "tpmy": "Ir",
@@ -305,15 +308,10 @@
                 "manu": "Ražotājs:",
                 "capac": "Apjoms:",
                 "partnum": "Detaļas numurs:",
-                "branding": "Zīmols",
-                "modeln": "Modelis:",
-                "full_model": "Ierīce un modelis:",
-                "full_cpu": "Procesors:",
-                "full_gpu": "Videokarte:",
-                "full_ram": "Operatīvā atmiņa:",
-                "full_motherboard": "Mātesplate:",
-                "full_usbssd": "Visu disku apjoms:",
-                "tooltip": "Nospiediet F3, lai ieslēgtu lapas kompakto režīmu.\nVarat arī nospiest F5 vai Ctrl+S,\nlai saglabātu lapas saturu TXT failā."
+                "modeln": "Modelis",
+                "allvram": "Kopējā video atmiņa",
+                "devicemanu": "Ierīces ražotājs",
+                "tooltip": "Nospiediet F5 vai Ctrl+S, lai saglabātu lapas saturu TXT failā."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Beigt procesu",
                 "onlyfrozen": "Rādīt tikai uzkārušos procesus",
                 "location": "Faila atrašanās vieta",
+                "excl": "Pievienot izņēmumiem",
+                "exclinfo": "Ievadiet procesu nosaukumus, atdalītus ar komatiem:",
+                "excltitle": "Procesu izņēmumi",
+                "clear": "Notīrīt",
+                "save": "Saglabāt",
+                "showall": "Rādīt visu",
                 "from50mb": "no 50 MB",
                 "from100mb": "no 100 MB",
                 "from300mb": "no 300 MB",
                 "from500mb": "no 500 MB",
                 "from1000mb": "no 1 GB",
                 "from2000mb": "no 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker ļauj bloķēt norādīto procesu un lietotņu palaišanu. Uzskaitiet tos, atdalot ar komatiem, un programma automātiski piemēros ierobežojumus. Lai atbloķētu procesu, noņemiet to no saraksta un saglabājiet izmaiņas.",
+                "excltitle": "Lietotņu bloķēšana",
+                "applyban": "Piemērot bloķēšanu",
+                "howitworks": "Kā tas darbojas?",
+                "banyandex": "Bloķēt Yandex",
+                "clear": "Notīrīt",
+                "makutnah": "Nebloķē mani!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Tumšā",
                 "st": "Stils",
                 "label": "Iestatījumi",
-                "credL": "Ideja un izstrāde:\nProgrammas ikona:\nĪpašs paldies:",
+                "cfg_info": "Varat saglabāt izvēlētos MakuTweaker iestatījumus .mktw failā, lai vēlāk tos importētu un piemērotu jaunā datorā vai kopīgotu ar draugiem. Pēc piemērošanas nepieciešama restartēšana.",
+                "cfg_title": "Konfigurācijas / Preseti",
+                "cfg_save": "Saglabāt",
+                "cfg_import": "Ielādēt",
+                "cfg_svsuccess": "Iestatījumi veiksmīgi saglabāti failā.",
+                "cfg_ldsuccess": "Iestatījumi no faila veiksmīgi piemēroti. Ieteicams restartēt ierīci.",
+                "cfg_error": "Kļūda saglabājot failu.",
+                "cfg_error1": "Kļūda lasot failu.",
+                "credL": "Versija:\nIdeja un izstrāde:\nProgrammas ikona:\nĪpašs paldies:",
                 "atop": "Oficiālā vietne"
             }
         },

@@ -9,7 +9,7 @@
                 "sat": "Pengatur waktu mati",
                 "quick": "Pengaturan cepat Windows",
                 "act": "Aktivasi Windows",
-                "cm": "Menu konteks",
+                "adv": "Pengaturan lanjutan",
                 "sr": "Sistem dan Pemulihan",
                 "perf": "Performa",
                 "per": "Personalisasi",
@@ -25,6 +25,12 @@
                 "on": "Aktif",
                 "off": "Nonaktif",
                 "apply": "Terapkan",
+                "applied": "Diterapkan",
+                "updatenotify": "Pembaruan MakuTweaker tersedia!\nKlik notifikasi untuk membuka halaman unduhan.",
+                "updatedialog": "Pembaruan MakuTweaker tersedia.\nDisarankan untuk menginstal versi terbaru agar mendapatkan fitur baru dan perbaikan bug. Klik «Perbarui» untuk membuka situs dan mengunduh installer baru.",
+                "updatebutton": "Perbarui",
+                "updatecancel": "Nanti",
+                "updatecheckb": "Jangan tampilkan lagi hingga program diperbarui",
                 "rebnotify": "Fitur yang Anda terapkan memerlukan mulai ulang.",
                 "rebnotifyexplorer": "Fitur yang Anda terapkan memerlukan mulai ulang Explorer.",
                 "rebnotifysfc": "Setelah proses selesai, mulai ulang perangkat Anda!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Pengaturan cepat Windows",
                 "b": "Jalankan pengaturan cepat",
-                "info": "Gunakan kotak centang untuk memilih pengaturan\nyang ingin Anda terapkan dalam pengaturan otomatis.",
+                "info": "Gunakan kotak centang untuk memilih pengaturan\nyang ingin Anda terapkan dalam pengaturan otomatis.\nPengaturan akan disembunyikan setelah diterapkan.",
                 "infodone": "Parameter pengaturan cepat selesai!\nSetelah menerapkannya - jangan lupa untuk memulai ulang.\nSelamat menggunakan sistem!",
                 "uncheck": "Hapus semua",
                 "checkall": "Aktifkan semua",
@@ -175,21 +181,22 @@
                 "offierr": "Office tidak dapat diaktifkan menggunakan metode Ohook. Instal ulang Office lalu coba lagi."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Menu konteks",
-                "t1": "Aktifkan menu konteks lama",
-                "t2": "Hapus penundaan menu konteks",
-                "t3": "Buka di Terminal",
-                "t4": "Tambahkan ke favorit",
-                "t5": "Bagikan",
-                "t6": "Pulihkan versi sebelumnya",
-                "t8": "Kirim ke",
-                "t10": "Salin sebagai jalur",
-                "t11": "Sematkan ke layar Mulai",
-                "t12": "Sematkan ke bilah tugas",
-                "t13": "Buka di tab baru",
-                "t14": "Panel Kontrol NVIDIA"
+                "deledge_title": "Hapus Instalan Microsoft Edge",
+                "deledge_btn": "Hapus",
+                "deledge_before": "Sebelum menghapus instalan Microsoft Edge, pastikan Anda memiliki browser lain. Apakah Anda ingin pergi ke halaman Google Chrome sebelum menghapus instalan?",
+                "deledge_sure": "Apakah Anda yakin ingin menghapus Microsoft Edge? Tindakan ini tidak dapat dibatalkan!",
+                "deledge_tooltip": "Penghapusan lengkap Microsoft Edge, termasuk layanan pembaruan dan tugas penjadwal. Edge WebView2 tidak terpengaruh, sehingga komponen sistem yang kritis tetap berfungsi. Secara efektif, hanya browser itu sendiri yang dihapus - namun, lakukan tindakan dengan risiko Anda sendiri.",
+                "deledge_error": "Terjadi kesalahan saat menghapus Microsoft Edge. Mungkin sudah dihapus atau file penginstalnya tidak ada.",
+                "deledge_done": "Penghapusan instalan Microsoft Edge telah selesai sepenuhnya.",
+                "index_title": "Nonaktifkan layanan pengindeksan disk",
+                "index_tooltip": "Direkomendasikan untuk komputer lama dan laptop dengan HDD - dapat secara signifikan mengurangi beban disk dan meningkatkan responsivitas sistem. Ini dapat mempercepat penjelajah file pada perangkat apa pun, tetapi pencarian di sistem dan penjelajah akan menjadi lebih lambat.",
+                "vbs": "Nonaktifkan Keamanan Berbasis Virtualisasi",
+                "oldbootloader": "Aktifkan pemuat sistem lama",
+                "advancedboot": "Parameter tambahan pada setiap pemuatan sistem",
+                "swap": "Nonaktifkan file swap",
+                "ttl": "Aktifkan bypass batasan tethering internet (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Buat laporan karakteristik baterai",
                 "b2": "Pulihkan",
                 "b4": "Bersihkan",
-                "oldbootloader": "Aktifkan pemuat sistem lama",
-                "advancedboot": "Parameter tambahan pada setiap pemuatan sistem",
                 "bitlocker": "Nonaktifkan enkripsi otomatis BitLocker",
                 "coreisol": "Nonaktifkan isolasi inti / integritas memori",
                 "hybern": "Nonaktifkan hibernasi",
-                "vbs": "Nonaktifkan Keamanan Berbasis Virtualisasi",
                 "sleeptimeout": "Nonaktifkan pengatur waktu mode tidur dan layar mati",
-                "swap": "Nonaktifkan file swap",
                 "bing": "Nonaktifkan pencarian online melalui Bing",
                 "sticky": "Nonaktifkan tombol lengket (Sticky Keys)",
                 "uac": "Nonaktifkan Kontrol Akun Pengguna (UAC)",
                 "smartscreen": "Nonaktifkan Smart Screen",
                 "chkdsk": "Atur batas waktu Chkdsk ke 1 menit",
                 "reportbutton": "Laporan",
-                "telemetry": "Nonaktifkan semua telemetri dan pelacakan di sistem",
-                "ttl": "Aktifkan bypass batasan tethering internet (TTL 65)"
+                "telemetry": "Nonaktifkan semua telemetri dan pelacakan di sistem"
             },
             "status": {
                 "o1b": "Anda telah berhasil membuat laporan karakteristik baterai.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Nonaktifkan logo Windows di pemuat sistem",
                 "disableanim": "Nonaktifkan animasi di pemuat sistem",
                 "etask": "Tambahkan tombol \"Akhiri tugas\" di bilah tugas",
+                "oldcont": "Aktifkan menu konteks lama",
+                "delcont": "Hapus penundaan menu konteks",
                 "newname": "File baru",
                 "c1": "Standar",
                 "c2": "Pirus",
@@ -269,8 +273,7 @@
                 "label": "Informasi PC",
                 "processorlabel": "Prosesor",
                 "processorname": "Nama:",
-                "processorcores": "Jumlah inti:",
-                "processorthr": "Jumlah utas:",
+                "processorcores": "Jumlah inti dan thread:",
                 "processorfreq": "Frekuensi dasar:",
                 "processorcache": "Cache L3:",
                 "ramlabel": "Memori RAM",
@@ -284,7 +287,7 @@
                 "vlabel": "Kartu Grafis",
                 "vname": "Nama:",
                 "vmem": "Jumlah memori video:",
-                "ssdl": "SSD, HDD, USB flash drive",
+                "ssdl": "Drive disk",
                 "sname": "Nama:",
                 "smem": "Volume penuh:",
                 "benchtitle": "Benchmark dengan MakuTweaker",
@@ -295,8 +298,8 @@
                 "test1": "Tes inti tunggal selesai.",
                 "test2": "Skor:",
                 "test3": "operasi selesai.",
-                "running": "Sedang menjalankan tes inti tunggal...\nTunggu 10 detik.",
-                "running_multicore": "Sedang menjalankan tes multi-inti...\nTunggu 10 detik.",
+                "running": "Sedang menjalankan tes inti tunggal... Tunggu 10 detik.",
+                "running_multicore": "Sedang menjalankan tes multi-inti... Tunggu 10 detik.",
                 "test1multi": "Tes multi-inti selesai.",
                 "tpmtitle": "Modul TPM:",
                 "tpmy": "Ada",
@@ -305,15 +308,10 @@
                 "manu": "Produsen:",
                 "capac": "Volume:",
                 "partnum": "Nomor bagian:",
-                "branding": "Branding",
-                "modeln": "Model:",
-                "full_model": "Perangkat dan model:",
-                "full_cpu": "Prosesor:",
-                "full_gpu": "Kartu Grafis:",
-                "full_ram": "Memori RAM:",
-                "full_motherboard": "Motherboard:",
-                "full_usbssd": "Kapasitas Total:",
-                "tooltip": "Tekan F3 untuk mengaktifkan mode ringkas halaman.\nAnda juga dapat menekan F5 atau Ctrl+S,\nuntuk menyimpan konten halaman ke file TXT."
+                "modeln": "Model",
+                "allvram": "Total memori video",
+                "devicemanu": "Produsen perangkat",
+                "tooltip": "Tekan F5 atau Ctrl+S untuk menyimpan konten halaman sebagai file TXT."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Akhiri proses",
                 "onlyfrozen": "Tampilkan hanya proses yang macet",
                 "location": "Lokasi file",
+                "excl": "Tambahkan ke pengecualian",
+                "exclinfo": "Masukkan nama proses dipisahkan dengan koma:",
+                "excltitle": "Pengecualian proses",
+                "clear": "Bersihkan",
+                "save": "Simpan",
+                "showall": "Tampilkan semua",
                 "from50mb": "dari 50 MB",
                 "from100mb": "dari 100 MB",
                 "from300mb": "dari 300 MB",
                 "from500mb": "dari 500 MB",
                 "from1000mb": "dari 1 GB",
                 "from2000mb": "dari 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker memungkinkan Anda memblokir peluncuran proses dan aplikasi tertentu. Daftarkan dengan dipisahkan koma, dan program akan otomatis menerapkan pembatasan. Untuk membuka blokir proses, hapus dari daftar dan simpan perubahan.",
+                "excltitle": "Pemblokiran aplikasi",
+                "applyban": "Terapkan pemblokiran",
+                "howitworks": "Bagaimana cara kerjanya?",
+                "banyandex": "Blokir Yandex",
+                "clear": "Bersihkan",
+                "makutnah": "Jangan blokir saya!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Gelap",
                 "st": "Gaya",
                 "label": "Pengaturan",
-                "credL": "Ide dan pengembangan:\nIkon program:\nTerima kasih khusus:",
+                "cfg_info": "Anda dapat menyimpan pengaturan MakuTweaker yang dipilih ke file .mktw untuk kemudian diimpor dan diterapkan di komputer baru atau dibagikan dengan teman. Setelah diterapkan, diperlukan restart.",
+                "cfg_title": "Konfigurasi / Preset",
+                "cfg_save": "Simpan",
+                "cfg_import": "Muat",
+                "cfg_svsuccess": "Pengaturan berhasil disimpan ke file.",
+                "cfg_ldsuccess": "Pengaturan dari file berhasil diterapkan. Disarankan untuk memulai ulang perangkat.",
+                "cfg_error": "Terjadi kesalahan saat menyimpan file.",
+                "cfg_error1": "Terjadi kesalahan saat membaca file.",
+                "credL": "Versi:\nIde dan pengembangan:\nIkon program:\nTerima kasih khusus:",
                 "atop": "Situs web resmi"
             }
         },

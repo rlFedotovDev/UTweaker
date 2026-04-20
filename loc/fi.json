@@ -9,7 +9,7 @@
                 "sat": "Sammutusajastin",
                 "quick": "Windowsin pika-asetukset",
                 "act": "Windowsin aktivointi",
-                "cm": "Kontekstivalikko",
+                "adv": "Lisäasetukset",
                 "sr": "Järjestelmä ja palautus",
                 "perf": "Suorituskyky",
                 "per": "Personointi",
@@ -25,6 +25,12 @@
                 "on": "Päällä",
                 "off": "Pois",
                 "apply": "Käytä",
+                "applied": "Sovellettu",
+                "updatenotify": "MakuTweaker-päivitys on saatavilla!\nNapsauta ilmoitusta siirtyäksesi lataussivulle.",
+                "updatedialog": "MakuTweaker-päivitys on saatavilla.\nOn suositeltavaa asentaa uusin versio, jotta saat käyttöösi uudet ominaisuudet ja virhekorjaukset. Napsauta «Päivitä» siirtyäksesi sivustolle ja ladataksesi uuden asennusohjelman.",
+                "updatebutton": "Päivitä",
+                "updatecancel": "Myöhemmin",
+                "updatecheckb": "Älä näytä uudelleen ennen ohjelman päivittämistä",
                 "rebnotify": "Käyttämäsi toiminto vaatii uudelleenkäynnistyksen.",
                 "rebnotifyexplorer": "Käyttämäsi toiminto vaatii Resurssienhallinnan uudelleenkäynnistyksen.",
                 "rebnotifysfc": "Käynnistä laite uudelleen prosessin päätyttyä!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Windowsin pika-asetukset",
                 "b": "Käynnistä pika-asetukset",
-                "info": "Käytä valintaruutuja valitaksesi asetukset,\njoita haluat käyttää automaattisessa määrityksessä.",
+                "info": "Käytä valintaruutuja valitaksesi asetukset,\njoita haluat käyttää automaattisessa määrityksessä.\nAsetukset piilotetaan käytön jälkeen.",
                 "infodone": "Pika-asetukset on suoritettu!\nMuista käynnistää tietokone uudelleen niiden soveltamisen jälkeen.\nNauti järjestelmästäsi!",
                 "uncheck": "Poista kaikki valinnat",
                 "checkall": "Aktivoi kaikki",
@@ -175,21 +181,22 @@
                 "offierr": "Officea ei voi aktivoida Ohook-menetelmällä. Asenna Office uudelleen ja yritä sitten uudelleen."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Kontekstivalikko",
-                "t1": "Ota käyttöön vanha kontekstivalikko",
-                "t2": "Poista kontekstivalikon viive",
-                "t3": "Avaa terminaalissa",
-                "t4": "Lisää suosikkeihin",
-                "t5": "Jaa",
-                "t6": "Palauta aiempi versio",
-                "t8": "Lähetä",
-                "t10": "Kopioi polkuna",
-                "t11": "Kiinnitä aloitusnäyttöön",
-                "t12": "Kiinnitä tehtäväpalkkiin",
-                "t13": "Avaa uudessa välilehdessä",
-                "t14": "NVIDIA-ohjauspaneeli"
+                "deledge_title": "Poista Microsoft Edgen asennus",
+                "deledge_btn": "Poista",
+                "deledge_before": "Varmista ennen Microsoft Edgen poistamista, että sinulla on toinen selain. Haluatko mennä Google Chrome -sivulle ennen poistamista?",
+                "deledge_sure": "Haluatko varmasti poistaa Microsoft Edgen? Tätä toimintoa ei voi peruuttaa!",
+                "deledge_tooltip": "Microsoft Edgen täydellinen poistaminen, mukaan lukien päivityspalvelut ja ajoitetut tehtävät. Edge WebView2:een tämä ei vaikuta, joten järjestelmän kriittiset osat pysyvät toiminnassa. Käytännössä vain selain itse poistetaan - toimi kuitenkin omalla vastuullasi.",
+                "deledge_error": "Virhe poistettaessa Microsoft Edgeä. Se on saattanut jo poistua tai asennustiedostot puuttuvat.",
+                "deledge_done": "Microsoft Edgen poistaminen on suoritettu kokonaan.",
+                "index_title": "Poista levyjen indeksointipalvelu käytöstä",
+                "index_tooltip": "Suositellaan vanhemmille tietokoneille ja HDD-kiintolevyllä varustetuille kannettaville - voi vähentää huomattavasti levyn kuormitusta ja parantaa järjestelmän vastenopeutta. Voi nopeuttaa resurssienhallintaa kaikilla laitteilla, mutta haku järjestelmässä ja resurssienhallinnassa hidastuu.",
+                "vbs": "Poista Virtualization-based Security käytöstä",
+                "oldbootloader": "Ota käyttöön vanha järjestelmän käynnistyslataaja",
+                "advancedboot": "Lisäasetukset jokaisella käynnistyksellä",
+                "swap": "Poista sivutustiedosto käytöstä",
+                "ttl": "Ota käyttöön internetin jakamisen rajoitusten ohitus (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Luo akkuraportti",
                 "b2": "Palauta",
                 "b4": "Tyhjennä",
-                "oldbootloader": "Ota käyttöön vanha järjestelmän käynnistyslataaja",
-                "advancedboot": "Lisäasetukset jokaisella käynnistyksellä",
                 "bitlocker": "Poista BitLocker-automaattisalaus käytöstä",
                 "coreisol": "Poista ytimen eristys / muistin eheys käytöstä",
                 "hybern": "Poista lepotila (hibernation) käytöstä",
-                "vbs": "Poista Virtualization-based Security käytöstä",
                 "sleeptimeout": "Poista lepotilan ja näytön sammutusajastin käytöstä",
-                "swap": "Poista sivutustiedosto käytöstä",
                 "bing": "Poista Bing-verkkohaku käytöstä",
                 "sticky": "Poista näppäinten suodatus käytöstä",
                 "uac": "Poista käyttäjätilien valvonta (UAC) käytöstä",
                 "smartscreen": "Poista SmartScreen käytöstä",
                 "chkdsk": "Aseta Chkdsk-aikakatkaisuksi 1 minuutti",
                 "reportbutton": "Raportti",
-                "telemetry": "Poista kaikki telemetria ja seuranta järjestelmästä",
-                "ttl": "Ota käyttöön internetin jakamisen rajoitusten ohitus (TTL 65)"
+                "telemetry": "Poista kaikki telemetria ja seuranta järjestelmästä"
             },
             "status": {
                 "o1b": "Akkuraportti luotiin onnistuneesti.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Poista Windows-logo järjestelmän käynnistyslataajasta",
                 "disableanim": "Poista animaatiot järjestelmän käynnistyslataajasta",
                 "etask": "Lisää \"Lopeta tehtävä\" -painike tehtäväpalkkiin",
+                "oldcont": "Ota käyttöön vanha kontekstivalikko",
+                "delcont": "Poista kontekstivalikon viive",
                 "newname": "Uusi tiedosto",
                 "c1": "Vakio",
                 "c2": "Turkoosi",
@@ -269,8 +273,7 @@
                 "label": "PC-tiedot",
                 "processorlabel": "Prosessori",
                 "processorname": "Nimi:",
-                "processorcores": "Ytimien määrä:",
-                "processorthr": "Säikeiden määrä:",
+                "processorcores": "Ytimien ja säikeiden määrä:",
                 "processorfreq": "Perustaajuus:",
                 "processorcache": "L3-välimuisti:",
                 "ramlabel": "RAM-muisti",
@@ -284,7 +287,7 @@
                 "vlabel": "Näytönohjain",
                 "vname": "Nimi:",
                 "vmem": "Videomuistin määrä:",
-                "ssdl": "SSD, HDD, USB-tikut",
+                "ssdl": "Levyasemat",
                 "sname": "Nimi:",
                 "smem": "Kokonaiskapasiteetti:",
                 "benchtitle": "Suorituskykytestit MakuTweakerilla",
@@ -295,8 +298,8 @@
                 "test1": "Yhden ytimen testi valmis.",
                 "test2": "Pisteet:",
                 "test3": "operaatiota suoritettu.",
-                "running": "Yhden ytimen testi käynnissä...\nOdota 10 sekuntia.",
-                "running_multicore": "Monen ytimen testi käynnissä...\nOdota 10 sekuntia.",
+                "running": "Yhden ytimen testi käynnissä... Odota 10 sekuntia.",
+                "running_multicore": "Monen ytimen testi käynnissä... Odota 10 sekuntia.",
                 "test1multi": "Monen ytimen testi valmis.",
                 "tpmtitle": "TPM-moduuli:",
                 "tpmy": "Löytyy",
@@ -305,15 +308,10 @@
                 "manu": "Valmistaja:",
                 "capac": "Kapasiteetti:",
                 "partnum": "Osanumero:",
-                "branding": "Brändäys",
-                "modeln": "Malli:",
-                "full_model": "Laite ja malli:",
-                "full_cpu": "Prosessori:",
-                "full_gpu": "Näytönohjain:",
-                "full_ram": "RAM-muisti:",
-                "full_motherboard": "Emolevy:",
-                "full_usbssd": "Kokonaiskapasiteetti:",
-                "tooltip": "Paina F3 ottaaksesi käyttöön sivun kompaktin tilan.\nVoit myös painaa F5 tai Ctrl+S,\ntallentaaksesi sivun sisällön TXT-tiedostoon."
+                "modeln": "Malli",
+                "allvram": "Videomuistin kokonaismäärä",
+                "devicemanu": "Laitteen valmistaja",
+                "tooltip": "Paina F5 tai Ctrl+S tallentaaksesi sivun sisällön TXT-tiedostoksi."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Lopeta prosessi",
                 "onlyfrozen": "Näytä vain jumiutuneet prosessit",
                 "location": "Tiedoston sijainti",
+                "excl": "Lisää poikkeuksiin",
+                "exclinfo": "Anna prosessien nimet pilkuilla erotettuna:",
+                "excltitle": "Prosessipoikkeukset",
+                "clear": "Tyhjennä",
+                "save": "Tallenna",
+                "showall": "Näytä kaikki",
                 "from50mb": "yli 50 MB",
                 "from100mb": "yli 100 MB",
                 "from300mb": "yli 300 MB",
                 "from500mb": "yli 500 MB",
                 "from1000mb": "yli 1 GB",
                 "from2000mb": "yli 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker mahdollistaa määritettyjen prosessien ja sovellusten käynnistyksen estämisen. Listaa ne pilkuilla erotettuna, ja ohjelma ottaa rajoitukset automaattisesti käyttöön. Poista prosessi listasta ja tallenna muutokset poistaaksesi eston.",
+                "excltitle": "Sovellusten estäminen",
+                "applyban": "Ota esto käyttöön",
+                "howitworks": "Miten tämä toimii?",
+                "banyandex": "Estä Yandex",
+                "clear": "Tyhjennä",
+                "makutnah": "Älä estä minua!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Tumma",
                 "st": "Tyyli",
                 "label": "Asetukset",
-                "credL": "Idea ja kehitys:\nOhjelman kuvake:\nErityiskiitokset:",
+                "cfg_info": "Voit tallentaa valitut MakuTweaker-asetukset .mktw-tiedostoon, jotta voit myöhemmin tuoda ja käyttää niitä uudella tietokoneella tai jakaa ystävien kanssa. Käytön jälkeen vaaditaan uudelleenkäynnistys.",
+                "cfg_title": "Asetukset / Esiasetukset",
+                "cfg_save": "Tallenna",
+                "cfg_import": "Lataa",
+                "cfg_svsuccess": "Asetukset tallennettiin onnistuneesti tiedostoon.",
+                "cfg_ldsuccess": "Tiedoston asetukset otettiin käyttöön onnistuneesti. Uudelleenkäynnistys on suositeltavaa.",
+                "cfg_error": "Virhe tallennettaessa tiedostoa.",
+                "cfg_error1": "Virhe luettaessa tiedostoa.",
+                "credL": "Versio:\nIdea ja kehitys:\nOhjelman kuvake:\nErityiskiitokset:",
                 "atop": "Virallinen sivusto"
             }
         },

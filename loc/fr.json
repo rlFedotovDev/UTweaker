@@ -9,7 +9,7 @@
                 "sat": "Minuteur d'arrêt",
                 "quick": "Configuration rapide de Windows",
                 "act": "Activation de Windows",
-                "cm": "Menu contextuel",
+                "adv": "Paramètres avancés",
                 "sr": "Système et récupération",
                 "perf": "Performances",
                 "per": "Personnalisation",
@@ -25,6 +25,12 @@
                 "on": "Activé",
                 "off": "Désactivé",
                 "apply": "Appliquer",
+                "applied": "Appliqué",
+                "updatenotify": "Une mise à jour de MakuTweaker est disponible !\nCliquez sur la notification pour accéder à la page de téléchargement.",
+                "updatedialog": "Une mise à jour de MakuTweaker est disponible.\nIl est recommandé d’installer la dernière version pour accéder aux nouvelles fonctionnalités et corrections de bugs. Cliquez sur « Mettre à jour » pour accéder au site et télécharger le nouvel installateur.",
+                "updatebutton": "Mettre à jour",
+                "updatecancel": "Plus tard",
+                "updatecheckb": "Ne plus afficher jusqu’à la mise à jour du programme",
                 "rebnotify": "La fonction que vous avez appliquée nécessite un redémarrage.",
                 "rebnotifyexplorer": "La fonction que vous avez appliquée nécessite un redémarrage de l'Explorateur.",
                 "rebnotifysfc": "Une fois le processus terminé, redémarrez l'appareil !"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Configuration rapide de Windows",
                 "b": "Lancer la configuration rapide",
-                "info": "Utilisez les cases à cocher pour sélectionner les paramètres\nque vous souhaitez appliquer lors de la configuration automatique.",
+                "info": "Utilisez les cases à cocher pour sélectionner les paramètres\nque vous souhaitez appliquer lors de la configuration automatique.\nLes paramètres seront masqués après l'application.",
                 "infodone": "Les paramètres de configuration rapide sont terminés !\nAprès les avoir appliqués, n'oubliez pas de redémarrer.\nBonne utilisation du système !",
                 "uncheck": "Tout décocher",
                 "checkall": "Tout activer",
@@ -175,21 +181,22 @@
                 "offierr": "Office ne peut pas être activé via la méthode Ohook. Réinstallez Office puis réessayez."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Menu contextuel",
-                "t1": "Activer l'ancien menu contextuel",
-                "t2": "Supprimer le délai du menu contextuel",
-                "t3": "Ouvrir dans le terminal",
-                "t4": "Ajouter aux favoris",
-                "t5": "Partager",
-                "t6": "Restaurer la version précédente",
-                "t8": "Envoyer vers",
-                "t10": "Copier en tant que chemin d'accès",
-                "t11": "Épingler à l'écran de démarrage",
-                "t12": "Épingler à la barre des tâches",
-                "t13": "Ouvrir dans un nouvel onglet",
-                "t14": "Panneau de configuration NVIDIA"
+                "deledge_title": "Désinstaller Microsoft Edge",
+                "deledge_btn": "Désinstaller",
+                "deledge_before": "Avant de désinstaller Microsoft Edge, assurez-vous d'avoir un autre navigateur. Voulez-vous aller sur la page de Google Chrome avant la désinstallation ?",
+                "deledge_sure": "Êtes-vous sûr de vouloir supprimer Microsoft Edge ? Cette action est irréversible !",
+                "deledge_tooltip": "Suppression complète de Microsoft Edge, y compris les services de mise à jour et les tâches du planificateur. Edge WebView2 n'est pas affecté, les composants système critiques restent donc fonctionnels. En fait, seul le navigateur lui-même est supprimé - agissez toutefois à vos propres risques.",
+                "deledge_error": "Une erreur s'est produite lors de la suppression de Microsoft Edge. Il est peut-être déjà désinstallé ou les fichiers de l'installateur sont manquants.",
+                "deledge_done": "La désinstallation de Microsoft Edge est totalement terminée.",
+                "index_title": "Désactiver le service d'indexation des disques",
+                "index_tooltip": "Recommandé pour les anciens ordinateurs et ordinateurs portables avec HDD - peut réduire considérablement la charge du disque et augmenter la réactivité du système. Peut accélérer l'explorateur de fichiers sur n'importe quel appareil, mais la recherche dans le système et l'explorateur deviendra plus lente.",
+                "vbs": "Désactiver la sécurité basée sur la virtualisation (VBS)",
+                "oldbootloader": "Activer l'ancien chargeur de démarrage",
+                "advancedboot": "Options avancées à chaque démarrage",
+                "swap": "Désactiver le fichier d'échange",
+                "ttl": "Activer le contournement des restrictions de partage de connexion (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Générer un rapport sur l'état de la batterie",
                 "b2": "Réparer",
                 "b4": "Nettoyer",
-                "oldbootloader": "Activer l'ancien chargeur de démarrage",
-                "advancedboot": "Options avancées à chaque démarrage",
                 "bitlocker": "Désactiver le chiffrement automatique BitLocker",
                 "coreisol": "Désactiver l'isolation du noyau / intégrité de la mémoire",
                 "hybern": "Désactiver l'hibernation",
-                "vbs": "Désactiver la sécurité basée sur la virtualisation (VBS)",
                 "sleeptimeout": "Désactiver la mise en veille et l'extinction de l'écran",
-                "swap": "Désactiver le fichier d'échange",
                 "bing": "Désactiver la recherche en ligne via Bing",
                 "sticky": "Désactiver les touches rémanentes",
                 "uac": "Désactiver le contrôle de compte d'utilisateur (UAC)",
                 "smartscreen": "Désactiver SmartScreen",
                 "chkdsk": "Définir le délai d'attente Chkdsk à 1 minute",
                 "reportbutton": "Rapport",
-                "telemetry": "Désactiver toute la télémétrie et le suivi système",
-                "ttl": "Activer le contournement des restrictions de partage de connexion (TTL 65)"
+                "telemetry": "Désactiver toute la télémétrie et le suivi système"
             },
             "status": {
                 "o1b": "Vous avez généré avec succès le rapport sur l'état de la batterie.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Désactiver le logo Windows au démarrage",
                 "disableanim": "Désactiver l'animation au démarrage",
                 "etask": "Ajouter le bouton \"Terminer la tâche\" dans la barre des tâches",
+                "oldcont": "Activer l'ancien menu contextuel",
+                "delcont": "Supprimer le délai du menu contextuel",
                 "newname": "Nouveau fichier",
                 "c1": "Standard",
                 "c2": "Turquoise",
@@ -269,8 +273,7 @@
                 "label": "Informations PC",
                 "processorlabel": "Processeur",
                 "processorname": "Nom:",
-                "processorcores": "Nombre de cœurs:",
-                "processorthr": "Nombre de threads:",
+                "processorcores": "Nombre de cœurs et de threads:",
                 "processorfreq": "Fréquence de base:",
                 "processorcache": "Cache L3:",
                 "ramlabel": "Mémoire vive (RAM)",
@@ -284,7 +287,7 @@
                 "vlabel": "Carte graphique",
                 "vname": "Nom:",
                 "vmem": "Mémoire vidéo:",
-                "ssdl": "SSD, HDD, clés USB",
+                "ssdl": "Lecteurs de disque",
                 "sname": "Nom:",
                 "smem": "Capacité totale:",
                 "benchtitle": "Benchmarks avec MakuTweaker",
@@ -295,8 +298,8 @@
                 "test1": "Test monocœur terminé.",
                 "test2": "Score:",
                 "test3": "opérations effectuées.",
-                "running": "Test monocœur en cours...\nVeuillez patienter 10 secondes.",
-                "running_multicore": "Test multicœur en cours...\nVeuillez patienter 10 secondes.",
+                "running": "Test monocœur en cours... Veuillez patienter 10 secondes.",
+                "running_multicore": "Test multicœur en cours... Veuillez patienter 10 secondes.",
                 "test1multi": "Test multicœur terminé.",
                 "tpmtitle": "Module TPM:",
                 "tpmy": "Présent",
@@ -305,15 +308,10 @@
                 "manu": "Fabricant:",
                 "capac": "Capacité:",
                 "partnum": "Référence:",
-                "branding": "Marque",
-                "modeln": "Modèle:",
-                "full_model": "Appareil et modèle:",
-                "full_cpu": "Processeur:",
-                "full_gpu": "Carte graphique:",
-                "full_ram": "Mémoire vive:",
-                "full_motherboard": "Carte mère:",
-                "full_usbssd": "Capacité totale des disques:",
-                "tooltip": "Appuyez sur F3 pour activer le mode compact.\nVous pouvez également appuyer sur F5 ou Ctrl+S\npour enregistrer le contenu de la page dans un fichier TXT."
+                "modeln": "Modèle",
+                "allvram": "Mémoire vidéo totale",
+                "devicemanu": "Fabricant de l'appareil",
+                "tooltip": "Appuyez sur F5 ou Ctrl+S pour enregistrer le contenu de la page dans un fichier TXT."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Terminer le processus",
                 "onlyfrozen": "Afficher uniquement les processus gelés",
                 "location": "Emplacement du fichier",
+                "excl": "Ajouter aux exclusions",
+                "exclinfo": "Entrez les noms des processus séparés par des virgules :",
+                "excltitle": "Exclusions de processus",
+                "clear": "Effacer",
+                "save": "Enregistrer",
+                "showall": "Tout afficher",
                 "from50mb": "> 50 Mo",
                 "from100mb": "> 100 Mo",
                 "from300mb": "> 300 Mo",
                 "from500mb": "> 500 Mo",
                 "from1000mb": "> 1 Go",
                 "from2000mb": "> 2 Go"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker permet de bloquer le lancement des processus et applications spécifiés. Listez-les séparés par des virgules, et le programme appliquera automatiquement les restrictions. Pour débloquer un processus, supprimez-le de la liste et enregistrez les modifications.",
+                "excltitle": "Blocage des applications",
+                "applyban": "Appliquer le blocage",
+                "howitworks": "Comment ça fonctionne?",
+                "banyandex": "Bloquer Yandex",
+                "clear": "Effacer",
+                "makutnah": "Ne me bloque pas!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Sombre",
                 "st": "Style",
                 "label": "Paramètres",
-                "credL": "Idée et développement:\nIcône du programme:\nRemerciements particuliers:",
+                "cfg_info": "Vous pouvez enregistrer les paramètres MakuTweaker sélectionnés dans un fichier .mktw afin de les importer et les appliquer sur un nouvel ordinateur ou les partager avec des amis. Un redémarrage est requis après l'application.",
+                "cfg_title": "Configurations / Préréglages",
+                "cfg_save": "Enregistrer",
+                "cfg_import": "Charger",
+                "cfg_svsuccess": "Les paramètres ont été enregistrés avec succès dans le fichier.",
+                "cfg_ldsuccess": "Les paramètres du fichier ont été appliqués avec succès. Un redémarrage est recommandé.",
+                "cfg_error": "Une erreur s'est produite lors de l'enregistrement du fichier.",
+                "cfg_error1": "Une erreur s'est produite lors de la lecture du fichier.",
+                "credL": "Version:\nIdée et développement:\nIcône du programme:\nRemerciements particuliers:",
                 "atop": "Site officiel"
             }
         },

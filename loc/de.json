@@ -9,7 +9,7 @@
                 "sat": "Herunterfahr-Timer",
                 "quick": "Schnelleinstellungen",
                 "act": "Windows Aktivieren",
-                "cm": "Kontextmenü",
+                "adv": "Erweiterte Einstellungen",
                 "sr": "System und Wiederherstellung",
                 "perf": "Leistung",
                 "per": "Personalisierung",
@@ -25,6 +25,12 @@
                 "on": "An",
                 "off": "Aus",
                 "apply": "Übernehmen",
+                "applied": "Angewendet",
+                "updatenotify": "Ein Update für MakuTweaker ist verfügbar!\nKlicken Sie auf die Benachrichtigung, um zur Download-Seite zu gelangen.",
+                "updatedialog": "Ein Update für MakuTweaker ist verfügbar.\nEs wird empfohlen, die neueste Version zu installieren, um Zugriff auf neue Funktionen und Fehlerbehebungen zu erhalten. Klicken Sie auf «Aktualisieren», um die Website zu öffnen und den neuen Installer herunterzuladen.",
+                "updatebutton": "Aktualisieren",
+                "updatecancel": "Später",
+                "updatecheckb": "Bis zur Aktualisierung des Programms nicht mehr anzeigen",
                 "rebnotify": "Zum Anwenden ist ein Neustart erforderlich",
                 "rebnotifyexplorer": "Zum Anwenden ist ein Neustart des Explorers erforderlich.",
                 "rebnotifysfc": "Nach Abschluss des Vorgangs starten Sie das Gerät neu"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Schnelleinstellungen",
                 "b": "Schnelleinstellungen starten",
-                "info": "Benutzen Sie Häkchen, um Einstellungen auszuwählen,\ndie Sie übernehmen wollen.",
+                "info": "Benutzen Sie Häkchen, um Einstellungen auszuwählen,\ndie Sie übernehmen wollen.\nDie Einstellungen werden nach der Anwendung ausgeblendet.",
                 "infodone": "Die Schnelleinstellungen sind abgeschlossen.\nNach dem Anwenden nicht vergessen, neu zu starten.\nViel Spaß bei der Benutzung des Systems!",
                 "uncheck": "Alle entfernen",
                 "checkall": "Alle aktivieren",
@@ -175,21 +181,22 @@
                 "offierr": "Office konnte nicht mit der Ohook Methode aktiviert werden. Installieren Sie Office erneut und versuchen Sie erneut"
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Kontextmenü",
-                "t1": "Altes Kontextmenü aktivieren",
-                "t2": "Verzögerung des Kontextmenü entfernen",
-                "t3": "Im Terminal öffnet",
-                "t4": "In Favoriten hinzufügen",
-                "t5": "Weiterleiten",
-                "t6": "Vorherige Version wiederherstellen",
-                "t8": "Schicken",
-                "t10": "Als Pfad kopieren",
-                "t11": "Am Startbildschirm anheften",
-                "t12": "An Taskleiste anheften",
-                "t13": "In einem neuem Tab öffnen",
-                "t14": "NVIDIA Systemsteuerung"
+                "deledge_title": "Microsoft Edge deinstallieren",
+                "deledge_btn": "Deinstallieren",
+                "deledge_before": "Stellen Sie sicher, dass Sie einen anderen Browser haben, bevor Sie Microsoft Edge deinstallieren. Möchten Sie vor der Deinstallation die Google Chrome-Seite aufrufen?",
+                "deledge_sure": "Sind Sie sicher, dass Sie Microsoft Edge deinstallieren möchten? Diese Aktion kann nicht rückgängig gemacht werden!",
+                "deledge_tooltip": "Vollständige Entfernung von Microsoft Edge, einschließlich Update-Diensten und Scheduler-Aufgaben. Edge WebView2 ist davon nicht betroffen, sodass kritische Systemkomponenten funktionsfähig bleiben. Tatsächlich wird nur der Browser selbst entfernt – die Durchführung erfolgt jedoch auf eigene Gefahr.",
+                "deledge_error": "Beim Entfernen von Microsoft Edge ist ein Fehler aufgetreten. Möglicherweise ist es bereits deinstalliert oder die Installer-Dateien fehlen.",
+                "deledge_done": "Die Deinstallation von Microsoft Edge wurde erfolgreich abgeschlossen.",
+                "index_title": "Indizierungsdienst für Laufwerke deaktivieren",
+                "index_tooltip": "Empfohlen für ältere Computer und Laptops mit HDD – kann die Festplattenlast spürbar reduzieren und die Systemreaktionszeit verbessern. Kann den Explorer auf jedem Gerät beschleunigen, macht jedoch die Suche im System und im Explorer langsamer.",
+                "vbs": "Virtualization-based Security deaktivieren",
+                "oldbootloader": "Alten Bootloader aktivieren",
+                "advancedboot": "Erweiterte Optionen bei jedem Systemstart",
+                "swap": "Auslagerungsdatei deaktivieren",
+                "ttl": "Umgehung der Tethering-Beschränkungen aktivieren(TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Akkubericht erstellen",
                 "b2": "Wiederherstellen",
                 "b4": "Leeren",
-                "oldbootloader": "Alten Bootloader aktivieren",
-                "advancedboot": "Erweiterte Optionen bei jedem Systemstart",
                 "bitlocker": "BitLocker-Verschlüsselung deaktivieren",
                 "coreisol": "Core-Isolation/ Memory Integrity deaktivieren",
                 "hybern": "Ruhezustand deaktivieren",
-                "vbs": "Virtualization-based Security deaktivieren",
                 "sleeptimeout": "Schlafmodus- und Bildschirmabschalt- Timer deaktivieren",
-                "swap": "Auslagerungsdatei deaktivieren",
                 "bing": "Online Suche über Bing deaktivieren",
                 "sticky": "Einrastfunktion deaktivieren",
                 "uac": "Benutzerkontensteuerung (UAC) deaktivieren",
                 "smartscreen": "Smart Screen deaktivieren",
                 "chkdsk": "Chkdsk-Time-Out auf 1 Minute stellen",
                 "reportbutton": "Bericht",
-                "telemetry": "Alle Telemetrie und Überwachung im System deaktivieren",
-                "ttl": "Umgehung der Tethering-Beschränkungen aktivieren(TTL 65)"
+                "telemetry": "Alle Telemetrie und Überwachung im System deaktivieren"
             },
             "status": {
                 "o1b": "Der Bericht über die Akkueigenschaften wurde erfolgreich erstellt",
@@ -247,6 +249,8 @@
                 "disablelogo": "Windows-Logo im Systemstart deaktivieren",
                 "disableanim": "Animation im Systemstart deaktivieren",
                 "etask": "Eine Schaltfläche \"Task beenden\" an der Taskleiste aktivieren",
+                "oldcont": "Altes Kontextmenü aktivieren",
+                "delcont": "Verzögerung des Kontextmenü entfernen",
                 "newname": "Neue Datei",
                 "c1": "Standard",
                 "c2": "Türkis",
@@ -269,8 +273,7 @@
                 "label": "Info zu diesem PC",
                 "processorlabel": "CPU:",
                 "processorname": "Name:",
-                "processorcores": "Cores-Anzahl:",
-                "processorthr": "Threads-Anzahl:",
+                "processorcores": "Anzahl der Kerne und Threads:",
                 "processorfreq": "Basis-Frequenz:",
                 "processorcache": "L3-Cache:",
                 "ramlabel": "Arbeitsspeicher",
@@ -284,7 +287,7 @@
                 "vlabel": "GPU",
                 "vname": "Name:",
                 "vmem": "VRAM insgesamt:",
-                "ssdl": "SSD, HDD, USB-Sticks",
+                "ssdl": "Datenträger",
                 "sname": "Name:",
                 "smem": "Gesamtkapazität:",
                 "benchtitle": "Benchmarks mithilfe von MakuTweaker",
@@ -295,8 +298,8 @@
                 "test1": "Single-Core-Test ist vorbei.",
                 "test2": "Punktzahl:",
                 "test3": "Vorgänge abgeschlossen",
-                "running": "Single-Core-Test läuft...\n Bitte warten Sie 10 Sekunden.",
-                "running_multicore": "Multi-Core-Test läuft...\n Bitte warten Sie 10 Sekunden.",
+                "running": "Single-Core-Test läuft... Bitte warten Sie 10 Sekunden.",
+                "running_multicore": "Multi-Core-Test läuft... Bitte warten Sie 10 Sekunden.",
                 "test1multi": "Multi-Core-Test ist vorbei.",
                 "tpmtitle": "TPM Modul:",
                 "tpmy": "Vorhanden",
@@ -305,15 +308,10 @@
                 "manu": "Hersteller:",
                 "capac": "Kapazität:",
                 "partnum": "Teilenummer:",
-                "branding": "Branding",
-                "modeln": "Modell:",
-                "full_model": "Gerät und Modell:",
-                "full_cpu": "CPU:",
-                "full_gpu": "GPU:",
-                "full_ram": "RAM:",
-                "full_motherboard": "Mainboard:",
-                "full_usbssd": "Kapazität aller Datenträger:",
-                "tooltip": "Drücken Sie F3, um den kompakten Seitenmodus zu aktivieren.\nSie können auch F5 oder Strg+S drücken,\num den Seiteninhalt in einer TXT-Datei zu speichern."
+                "modeln": "Modell",
+                "allvram": "Gesamter Videospeicher",
+                "devicemanu": "Gerätehersteller",
+                "tooltip": "Drücken Sie F5 oder Strg+S, um den Seiteninhalt als TXT-Datei zu speichern."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Prozess beenden",
                 "onlyfrozen": "Nur nicht reagierende Prozesse anzeigen",
                 "location": "Dateispeicherort",
+                "excl": "Zu Ausnahmen hinzufügen",
+                "exclinfo": "Geben Sie Prozessnamen durch Kommas getrennt ein:",
+                "excltitle": "Prozessausnahmen",
+                "clear": "Löschen",
+                "save": "Speichern",
+                "showall": "Alle anzeigen",
                 "from50mb": "ab 50 MB",
                 "from100mb": "ab 100 MB",
                 "from300mb": "ab 300 MB",
                 "from500mb": "ab 500 MB",
                 "from1000mb": "ab 1 GB",
                 "from2000mb": "ab 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker ermöglicht das Blockieren des Starts angegebener Prozesse und Anwendungen. Listen Sie sie durch Kommas getrennt auf, und das Programm wendet die Einschränkungen automatisch an. Um einen Prozess freizugeben, entfernen Sie ihn aus der Liste und speichern Sie die Änderungen.",
+                "excltitle": "Anwendungsblockierung",
+                "applyban": "Blockierung anwenden",
+                "howitworks": "Wie funktioniert das?",
+                "banyandex": "Yandex blockieren",
+                "clear": "Löschen",
+                "makutnah": "Blockiere mich nicht!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Dunkel",
                 "st": "Stil",
                 "label": "Einstellungen",
-                "credL": "Idee und Entwicklung :\nProgrammsymbol:\nBesonderer Dank:",
+                "cfg_info": "Sie können ausgewählte MakuTweaker-Einstellungen in einer .mktw-Datei speichern, um sie später auf einem neuen Computer zu importieren und anzuwenden oder mit Freunden zu teilen. Nach dem Anwenden ist ein Neustart erforderlich.",
+                "cfg_title": "Konfigurationen / Presets",
+                "cfg_save": "Speichern",
+                "cfg_import": "Laden",
+                "cfg_svsuccess": "Einstellungen wurden erfolgreich in der Datei gespeichert.",
+                "cfg_ldsuccess": "Einstellungen aus der Datei wurden erfolgreich angewendet. Ein Neustart wird empfohlen.",
+                "cfg_error": "Beim Speichern der Datei ist ein Fehler aufgetreten.",
+                "cfg_error1": "Beim Lesen der Datei ist ein Fehler aufgetreten.",
+                "credL": "Version:\nIdee und Entwicklung :\nProgrammsymbol:\nBesonderer Dank:",
                 "atop": "Offizielle Website"
             }
         },

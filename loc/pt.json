@@ -9,7 +9,7 @@
                 "sat": "Temporizador de desligamento",
                 "quick": "Configuração rápida do Windows",
                 "act": "Ativação do Windows",
-                "cm": "Menu de contexto",
+                "adv": "Configurações avançadas",
                 "sr": "Sistema e recuperação",
                 "perf": "Desempenho",
                 "per": "Personalização",
@@ -25,6 +25,12 @@
                 "on": "Ligado",
                 "off": "Desligado",
                 "apply": "Aplicar",
+                "applied": "Aplicado",
+                "updatenotify": "Uma atualização do MakuTweaker está disponível!\nClique na notificação para ir à página de download.",
+                "updatedialog": "Uma atualização do MakuTweaker está disponível.\nRecomenda-se instalar a versão mais recente para acessar novos recursos e correções de erros. Clique em «Atualizar» para acessar o site e baixar o novo instalador.",
+                "updatebutton": "Atualizar",
+                "updatecancel": "Depois",
+                "updatecheckb": "Não mostrar novamente até que o programa seja atualizado",
                 "rebnotify": "A função que você aplicou requer uma reinicialização.",
                 "rebnotifyexplorer": "A função que você aplicou requer a reinicialização do Explorador.",
                 "rebnotifysfc": "Após a conclusão do processo, reinicie o dispositivo!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Configuração rápida do Windows",
                 "b": "Iniciar configuração rápida",
-                "info": "Use as caixas de seleção para escolher as configurações\nque você gostaria de aplicar na configuração automática.",
+                "info": "Use as caixas de seleção para escolher as configurações\nque você gostaria de aplicar na configuração automática.\nAs configurações serão ocultadas após a aplicação.",
                 "infodone": "As opções de configuração rápida terminaram!\nApós aplicá-las, não se esqueça de reiniciar.\nBoa sorte com o sistema!",
                 "uncheck": "Desmarcar tudo",
                 "checkall": "Ativar tudo",
@@ -175,21 +181,22 @@
                 "offierr": "O Office não pode ser ativado usando o método Ohook. Reinstale o Office e tente novamente."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Menu de contexto",
-                "t1": "Ativar menu de contexto clássico",
-                "t2": "Remover atraso do menu de contexto",
-                "t3": "Abrir no Terminal",
-                "t4": "Adicionar aos favoritos",
-                "t5": "Compartilhar",
-                "t6": "Restaurar versão anterior",
-                "t8": "Enviar para",
-                "t10": "Copiar como caminho",
-                "t11": "Fixar na tela inicial",
-                "t12": "Fixar na barra de tarefas",
-                "t13": "Abrir em nova guia",
-                "t14": "Painel de Controle NVIDIA"
+                "deledge_title": "Desinstalar o Microsoft Edge",
+                "deledge_btn": "Desinstalar",
+                "deledge_before": "Antes de desinstalar o Microsoft Edge, certifique-se de ter outro navegador. Deseja ir para a página do Google Chrome antes da desinstalação?",
+                "deledge_sure": "Tem certeza de que deseja remover o Microsoft Edge? Esta ação não pode ser desfeita!",
+                "deledge_tooltip": "Remoção completa do Microsoft Edge, incluindo serviços de atualização e tarefas do agendador. O Edge WebView2 não é afetado, portanto, os componentes críticos do sistema permanecem funcionais. Efetivamente, apenas o navegador em si é removido - no entanto, realize as ações por sua conta e risco.",
+                "deledge_error": "Ocorreu um erro ao remover o Microsoft Edge. Ele pode já estar desinstalado ou os arquivos do instalador estão ausentes.",
+                "deledge_done": "A desinstalação do Microsoft Edge foi totalmente concluída.",
+                "index_title": "Desativar o serviço de indexação de disco",
+                "index_tooltip": "Recomendado para computadores antigos e laptops com HDD - pode reduzir significativamente a carga do disco e aumentar a capacidade de resposta do sistema. Pode acelerar o explorador de ficheiros em qualquer dispositivo, mas a pesquisa no sistema e no explorador tornar-se-á mais lenta.",
+                "vbs": "Desativar Virtualization-based Security",
+                "oldbootloader": "Ativar carregador de inicialização clássico",
+                "advancedboot": "Opções avançadas a cada inicialização do sistema",
+                "swap": "Desativar arquivo de paginação",
+                "ttl": "Ativar contorno de restrições de compartilhamento de internet (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Gerar relatório de bateria",
                 "b2": "Restaurar",
                 "b4": "Limpar",
-                "oldbootloader": "Ativar carregador de inicialização clássico",
-                "advancedboot": "Opções avançadas a cada inicialização do sistema",
                 "bitlocker": "Desativar criptografia automática BitLocker",
                 "coreisol": "Desativar isolamento de núcleo / integridade de memória",
                 "hybern": "Desativar hibernação",
-                "vbs": "Desativar Virtualization-based Security",
                 "sleeptimeout": "Desativar temporizador de suspensão e desligamento de tela",
-                "swap": "Desativar arquivo de paginação",
                 "bing": "Desativar pesquisa online via Bing",
                 "sticky": "Desativar teclas de aderência",
                 "uac": "Desativar Controle de Conta de Usuário (UAC)",
                 "smartscreen": "Desativar SmartScreen",
                 "chkdsk": "Definir tempo limite do Chkdsk para 1 minuto",
                 "reportbutton": "Relatório",
-                "telemetry": "Desativar toda a telemetria e rastreamento no sistema",
-                "ttl": "Ativar contorno de restrições de compartilhamento de internet (TTL 65)"
+                "telemetry": "Desativar toda a telemetria e rastreamento no sistema"
             },
             "status": {
                 "o1b": "Você gerou com sucesso o relatório de bateria.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Desativar logotipo do Windows no carregador do sistema",
                 "disableanim": "Desativar animação no carregador do sistema",
                 "etask": "Adicionar botão \"Finalizar tarefa\" na barra de tarefas",
+                "oldcont": "Ativar menu de contexto clássico",
+                "delcont": "Remover atraso do menu de contexto",
                 "newname": "Novo arquivo",
                 "c1": "Padrão",
                 "c2": "Turquesa",
@@ -269,8 +273,7 @@
                 "label": "Informações do PC",
                 "processorlabel": "Processador",
                 "processorname": "Nome:",
-                "processorcores": "Número de núcleos:",
-                "processorthr": "Número de threads:",
+                "processorcores": "Número de núcleos e threads:",
                 "processorfreq": "Frequência base:",
                 "processorcache": "Cache L3:",
                 "ramlabel": "Memória RAM",
@@ -284,7 +287,7 @@
                 "vlabel": "Placa de vídeo",
                 "vname": "Nome:",
                 "vmem": "Quantidade de memória de vídeo:",
-                "ssdl": "SSD, HDD, Pen drives USB",
+                "ssdl": "Unidades de disco",
                 "sname": "Nome:",
                 "smem": "Capacidade total:",
                 "benchtitle": "Benchmarks com MakuTweaker",
@@ -295,8 +298,8 @@
                 "test1": "Teste single-core concluído.",
                 "test2": "Pontuação:",
                 "test3": "operações concluídas.",
-                "running": "Executando teste single-core...\nAguarde 10 segundos.",
-                "running_multicore": "Executando teste multi-core...\nAguarde 10 segundos.",
+                "running": "Executando teste single-core... Aguarde 10 segundos.",
+                "running_multicore": "Executando teste multi-core... Aguarde 10 segundos.",
                 "test1multi": "Teste multi-core concluído.",
                 "tpmtitle": "Módulo TPM:",
                 "tpmy": "Presente",
@@ -305,15 +308,10 @@
                 "manu": "Fabricante:",
                 "capac": "Capacidade:",
                 "partnum": "Número da peça:",
-                "branding": "Branding",
-                "modeln": "Modelo:",
-                "full_model": "Dispositivo e modelo:",
-                "full_cpu": "Processador:",
-                "full_gpu": "Placa de vídeo:",
-                "full_ram": "Memória RAM:",
-                "full_motherboard": "Placa-mãe:",
-                "full_usbssd": "Total dos drives:",
-                "tooltip": "Pressione F3 para ativar o modo compacto da página.\nVocê também pode pressionar F5 ou Ctrl+S\npara salvar o conteúdo da página em um arquivo TXT."
+                "modeln": "Modelo",
+                "allvram": "Memória de vídeo total",
+                "devicemanu": "Fabricante do dispositivo",
+                "tooltip": "Pressione F5 ou Ctrl+S para salvar o conteúdo da página como um arquivo TXT."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Finalizar processo",
                 "onlyfrozen": "Mostrar apenas processos travados",
                 "location": "Localização do arquivo",
+                "excl": "Adicionar às exclusões",
+                "exclinfo": "Insira nomes de processos separados por vírgulas:",
+                "excltitle": "Exclusões de processos",
+                "clear": "Limpar",
+                "save": "Salvar",
+                "showall": "Mostrar tudo",
                 "from50mb": "> 50 MB",
                 "from100mb": "> 100 MB",
                 "from300mb": "> 300 MB",
                 "from500mb": "> 500 MB",
                 "from1000mb": "> 1 GB",
                 "from2000mb": "> 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "O MakuTweaker permite bloquear a execução de processos e aplicações especificados. Liste-os separados por vírgulas e o programa aplicará automaticamente as restrições. Para desbloquear um processo, remova-o da lista e salve as alterações.",
+                "excltitle": "Bloqueio de aplicativos",
+                "applyban": "Aplicar bloqueio",
+                "howitworks": "Como funciona?",
+                "banyandex": "Bloquear Yandex",
+                "clear": "Limpar",
+                "makutnah": "Não me bloqueie!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Escuro",
                 "st": "Estilo",
                 "label": "Configurações",
-                "credL": "Ideia e desenvolvimento:\nÍcone do programa:\nAgradecimentos especiais:",
+                "cfg_info": "Você pode salvar as configurações selecionadas do MakuTweaker em um arquivo .mktw para importá-las e aplicá-las em um novo computador ou compartilhá-las com amigos. Após aplicar, é necessário reiniciar.",
+                "cfg_title": "Configurações / Presets",
+                "cfg_save": "Salvar",
+                "cfg_import": "Carregar",
+                "cfg_svsuccess": "As configurações foram salvas com sucesso no arquivo.",
+                "cfg_ldsuccess": "As configurações do arquivo foram aplicadas com sucesso. Recomenda-se reiniciar o dispositivo.",
+                "cfg_error": "Ocorreu um erro ao salvar o arquivo.",
+                "cfg_error1": "Ocorreu um erro ao ler o arquivo.",
+                "credL": "Versão:\nIdeia e desenvolvimento:\nÍcone do programa:\nAgradecimentos especiais:",
                 "atop": "Site oficial"
             }
         },

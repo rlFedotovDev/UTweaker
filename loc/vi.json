@@ -9,7 +9,7 @@
                 "sat": "Hẹn giờ tắt máy",
                 "quick": "Cấu hình nhanh Windows",
                 "act": "Kích hoạt Windows",
-                "cm": "Menu ngữ cảnh",
+                "adv": "Cài đặt nâng cao",
                 "sr": "Hệ thống và Khôi phục",
                 "perf": "Hiệu suất",
                 "per": "Cá nhân hóa",
@@ -25,6 +25,12 @@
                 "on": "Bật",
                 "off": "Tắt",
                 "apply": "Áp dụng",
+                "applied": "Đã áp dụng",
+                "updatenotify": "Đã có bản cập nhật MakuTweaker!\nNhấn vào thông báo để truy cập trang tải xuống.",
+                "updatedialog": "Đã có bản cập nhật MakuTweaker.\nNên cài đặt phiên bản mới nhất để truy cập các tính năng mới và sửa lỗi. Nhấn «Cập nhật» để truy cập trang web và tải xuống trình cài đặt mới.",
+                "updatebutton": "Cập nhật",
+                "updatecancel": "Để sau",
+                "updatecheckb": "Không hiển thị lại cho đến khi chương trình được cập nhật",
                 "rebnotify": "Tính năng bạn vừa áp dụng yêu cầu khởi động lại.",
                 "rebnotifyexplorer": "Tính năng bạn vừa áp dụng yêu cầu khởi động lại Explorer.",
                 "rebnotifysfc": "Sau khi hoàn tất quá trình, hãy khởi động lại thiết bị!"
@@ -147,7 +153,7 @@
             "main": {
                 "label": "Cấu hình nhanh Windows",
                 "b": "Chạy cấu hình nhanh",
-                "info": "Sử dụng các ô kiểm để chọn các cài đặt\nmà bạn muốn áp dụng trong cấu hình tự động.",
+                "info": "Sử dụng các ô kiểm để chọn các cài đặt\nmà bạn muốn áp dụng trong cấu hình tự động.\nCài đặt sẽ bị ẩn sau khi áp dụng.",
                 "infodone": "Đã hoàn tất các thông số cấu hình nhanh!\nSau khi áp dụng - đừng quên khởi động lại.\nChúc bạn sử dụng hệ thống vui vẻ!",
                 "uncheck": "Bỏ chọn tất cả",
                 "checkall": "Kích hoạt tất cả",
@@ -175,21 +181,22 @@
                 "offierr": "Office không thể được kích hoạt bằng phương pháp Ohook. Hãy cài đặt lại Office và thử lại."
             }
         },
-        "cm": {
+        "adv": {
             "main": {
-                "label": "Menu ngữ cảnh",
-                "t1": "Bật menu ngữ cảnh cũ",
-                "t2": "Loại bỏ độ trễ của menu ngữ cảnh",
-                "t3": "Mở trong Terminal",
-                "t4": "Thêm vào mục yêu thích",
-                "t5": "Chia sẻ",
-                "t6": "Khôi phục phiên bản cũ",
-                "t8": "Gửi đến",
-                "t10": "Sao chép dưới dạng đường dẫn",
-                "t11": "Ghim vào Start",
-                "t12": "Ghim vào thanh tác vụ",
-                "t13": "Mở trong tab mới",
-                "t14": "Bảng điều khiển NVIDIA"
+                "deledge_title": "Gỡ cài đặt Microsoft Edge",
+                "deledge_btn": "Gỡ cài đặt",
+                "deledge_before": "Trước khi gỡ cài đặt Microsoft Edge, hãy đảm bảo bạn có trình duyệt khác. Bạn có muốn truy cập trang Google Chrome trước khi gỡ cài đặt không?",
+                "deledge_sure": "Bạn có chắc chắn muốn xóa Microsoft Edge không? Hành động này không thể hoàn tác!",
+                "deledge_tooltip": "Xóa hoàn toàn Microsoft Edge, bao gồm các dịch vụ cập nhật và tác vụ lập lịch. Edge WebView2 không bị ảnh hưởng, vì vậy các thành phần hệ thống quan trọng vẫn hoạt động tốt. Thực tế chỉ có trình duyệt bị xóa - tuy nhiên, hãy tự chịu rủi ro khi thực hiện.",
+                "deledge_error": "Đã xảy ra lỗi khi xóa Microsoft Edge. Có thể nó đã được gỡ cài đặt hoặc thiếu các tệp cài đặt.",
+                "deledge_done": "Việc gỡ cài đặt Microsoft Edge đã hoàn tất hoàn toàn.",
+                "index_title": "Tắt dịch vụ lập chỉ mục đĩa",
+                "index_tooltip": "Được đề xuất cho máy tính cũ và máy tính xách tay chạy HDD - có thể giảm đáng kể tải đĩa và tăng khả năng phản hồi của hệ thống. Có thể tăng tốc trình khám phá tệp trên mọi thiết bị, nhưng việc tìm kiếm trong hệ thống và trình khám phá sẽ trở nên chậm hơn.",
+                "vbs": "Tắt Virtualization-based Security",
+                "oldbootloader": "Bật trình khởi động hệ thống cũ",
+                "advancedboot": "Tùy chọn nâng cao mỗi khi khởi động hệ thống",
+                "swap": "Tắt tệp hoán đổi (Swap file)",
+                "ttl": "Bật vượt giới hạn chia sẻ Internet (TTL 65)"
             }
         },
         "sr": {
@@ -201,22 +208,17 @@
                 "batterylabel": "Tạo báo cáo thông số pin",
                 "b2": "Khôi phục",
                 "b4": "Dọn dẹp",
-                "oldbootloader": "Bật trình khởi động hệ thống cũ",
-                "advancedboot": "Tùy chọn nâng cao mỗi khi khởi động hệ thống",
                 "bitlocker": "Tắt tự động mã hóa BitLocker",
                 "coreisol": "Tắt cách ly nhân / toàn vẹn bộ nhớ",
                 "hybern": "Tắt chế độ ngủ đông (Hibernation)",
-                "vbs": "Tắt Virtualization-based Security",
                 "sleeptimeout": "Tắt hẹn giờ chế độ ngủ và tắt màn hình",
-                "swap": "Tắt tệp hoán đổi (Swap file)",
                 "bing": "Tắt tìm kiếm trực tuyến qua Bing",
                 "sticky": "Tắt phím dính (Sticky Keys)",
                 "uac": "Tắt kiểm soát tài khoản người dùng (UAC)",
                 "smartscreen": "Tắt Smart Screen",
                 "chkdsk": "Đặt thời gian chờ cho Chkdsk là 1 phút",
                 "reportbutton": "Báo cáo",
-                "telemetry": "Tắt toàn bộ telemetry và theo dõi trong hệ thống",
-                "ttl": "Bật vượt giới hạn chia sẻ Internet (TTL 65)"
+                "telemetry": "Tắt toàn bộ telemetry và theo dõi trong hệ thống"
             },
             "status": {
                 "o1b": "Bạn đã tạo thành công báo cáo thông số pin.",
@@ -247,6 +249,8 @@
                 "disablelogo": "Tắt logo Windows trong trình khởi động hệ thống",
                 "disableanim": "Tắt hoạt ảnh trong trình khởi động hệ thống",
                 "etask": "Thêm nút \"Kết thúc tác vụ\" trên thanh tác vụ",
+                "oldcont": "Bật menu ngữ cảnh cũ",
+                "delcont": "Loại bỏ độ trễ của menu ngữ cảnh",
                 "newname": "Tệp mới",
                 "c1": "Mặc định",
                 "c2": "Xanh ngọc",
@@ -269,8 +273,7 @@
                 "label": "Thông tin PC",
                 "processorlabel": "Bộ xử lý",
                 "processorname": "Tên:",
-                "processorcores": "Số nhân:",
-                "processorthr": "Số luồng:",
+                "processorcores": "Số lượng lõi và luồng:",
                 "processorfreq": "Tần số cơ bản:",
                 "processorcache": "Bộ nhớ đệm L3:",
                 "ramlabel": "Bộ nhớ RAM",
@@ -284,7 +287,7 @@
                 "vlabel": "Card đồ họa",
                 "vname": "Tên:",
                 "vmem": "Dung lượng VRAM:",
-                "ssdl": "SSD, HDD, USB",
+                "ssdl": "Ổ đĩa",
                 "sname": "Tên:",
                 "smem": "Tổng dung lượng:",
                 "benchtitle": "Điểm chuẩn (Benchmark) với MakuTweaker",
@@ -295,8 +298,8 @@
                 "test1": "Kiểm tra đơn nhân hoàn tất.",
                 "test2": "Điểm:",
                 "test3": "thao tác đã thực hiện.",
-                "running": "Đang kiểm tra đơn nhân...\nVui lòng đợi 10 giây.",
-                "running_multicore": "Đang kiểm tra đa nhân...\nVui lòng đợi 10 giây.",
+                "running": "Đang kiểm tra đơn nhân... Vui lòng đợi 10 giây.",
+                "running_multicore": "Đang kiểm tra đa nhân... Vui lòng đợi 10 giây.",
                 "test1multi": "Kiểm tra đa nhân hoàn tất.",
                 "tpmtitle": "Mô-đun TPM:",
                 "tpmy": "Có",
@@ -305,15 +308,10 @@
                 "manu": "Nhà sản xuất:",
                 "capac": "Dung lượng:",
                 "partnum": "Số hiệu:",
-                "branding": "Thương hiệu",
-                "modeln": "Mẫu:",
-                "full_model": "Thiết bị và mẫu:",
-                "full_cpu": "Bộ xử lý:",
-                "full_gpu": "Card đồ họa:",
-                "full_ram": "Bộ nhớ RAM:",
-                "full_motherboard": "Bo mạch chủ:",
-                "full_usbssd": "Tổng dung lượng lưu trữ:",
-                "tooltip": "Nhấn F3 để bật chế độ thu gọn trang.\nBạn cũng có thể nhấn F5 hoặc Ctrl+S\nđể lưu nội dung trang vào tệp TXT."
+                "modeln": "Mẫu",
+                "allvram": "Tổng bộ nhớ video",
+                "devicemanu": "Nhà sản xuất thiết bị",
+                "tooltip": "Nhấn F5 hoặc Ctrl+S để lưu nội dung trang dưới dạng tệp TXT."
             }
         },
         "pmgr": {
@@ -322,12 +320,29 @@
                 "endprocess": "Kết thúc tiến trình",
                 "onlyfrozen": "Chỉ hiển thị các tiến trình bị treo",
                 "location": "Vị trí tệp",
+                "excl": "Thêm vào ngoại lệ",
+                "exclinfo": "Nhập tên tiến trình, phân tách bằng dấu phẩy:",
+                "excltitle": "Ngoại lệ tiến trình",
+                "clear": "Xóa",
+                "save": "Lưu",
+                "showall": "Hiển thị tất cả",
                 "from50mb": "từ 50 MB",
                 "from100mb": "từ 100 MB",
                 "from300mb": "từ 300 MB",
                 "from500mb": "từ 500 MB",
                 "from1000mb": "từ 1 GB",
                 "from2000mb": "từ 2 GB"
+            }
+        },
+        "myan": {
+            "main": {
+                "info": "MakuTweaker cho phép bạn chặn việc khởi chạy các tiến trình và ứng dụng đã chỉ định. Liệt kê chúng bằng dấu phẩy, và chương trình sẽ tự động áp dụng các hạn chế. Để bỏ chặn, hãy xóa khỏi danh sách và lưu thay đổi.",
+                "excltitle": "Chặn ứng dụng",
+                "applyban": "Áp dụng chặn",
+                "howitworks": "Nó hoạt động như thế nào?",
+                "banyandex": "Chặn Yandex",
+                "clear": "Xóa",
+                "makutnah": "Đừng chặn tôi!"
             }
         },
         "ab": {
@@ -339,7 +354,15 @@
                 "d": "Tối",
                 "st": "Kiểu",
                 "label": "Cài đặt",
-                "credL": "Ý tưởng và phát triển:\nBiểu tượng chương trình:\nĐặc biệt cảm ơn:",
+                "cfg_info": "Bạn có thể lưu các cài đặt MakuTweaker đã chọn vào tệp .mktw để sau đó nhập và áp dụng trên máy tính mới hoặc chia sẻ với bạn bè. Sau khi áp dụng cần khởi động lại.",
+                "cfg_title": "Cấu hình / Preset",
+                "cfg_save": "Lưu",
+                "cfg_import": "Tải",
+                "cfg_svsuccess": "Cài đặt đã được lưu thành công vào tệp.",
+                "cfg_ldsuccess": "Cài đặt từ tệp đã được áp dụng thành công. Nên khởi động lại thiết bị.",
+                "cfg_error": "Đã xảy ra lỗi khi lưu tệp.",
+                "cfg_error1": "Đã xảy ra lỗi khi đọc tệp.",
+                "credL": "Phiên bản:\nÝ tưởng và phát triển:\nBiểu tượng chương trình:\nĐặc biệt cảm ơn:",
                 "atop": "Trang web chính thức"
             }
         },

@@ -10,7 +10,7 @@
       d:DesignHeight="702" d:DesignWidth="704.04"
       Title="Desktop">
 
-    <Grid>
+    <Grid Grid.IsSharedSizeScope="True">
         <StackPanel>
             <TextBlock x:Name="label" HorizontalAlignment="Left" Margin="24,11,0,0" TextWrapping="Wrap" Text="Windows Components" VerticalAlignment="Top" FontSize="32" FontFamily="Segoe UI Semibold"/>
 
@@ -23,9 +23,29 @@
                 </controls:Button>
             </StackPanel>
 
-            <controls:Button x:Name="dp" Margin="24,5,589,0" Content="Install" Height="28" VerticalAlignment="Top" Click="dp_Click"/>
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="dp" Padding="20,5" Content="Install" Height="28" Click="dp_Click"/>
+            </Grid>
+
             <TextBlock x:Name="framework" HorizontalAlignment="Left" Margin="24,10,0,0" TextWrapping="Wrap" Text="Install .NET Framework 2.0, 3.0, 3.5" VerticalAlignment="Top" FontSize="16"/>
-            <controls:Button x:Name="dnet" Margin="24,5,589,0" Content="Install" Height="28" VerticalAlignment="Top" Click="dnet_Click"/>
+
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="dnet" Padding="20,5" Content="Install" Height="28" Click="dnet_Click"/>
+            </Grid>
+
+            <TextBlock x:Name="winsxs" HorizontalAlignment="Left" Margin="24,10,0,0" TextWrapping="Wrap" Text="Reset Outdated Components And WinSxS Cache" VerticalAlignment="Top" FontSize="16"/>
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="sxs" Padding="20,5" Content="Reset" Height="28" Click="sxs_Click"/>
+            </Grid>
 
             <StackPanel Orientation="Horizontal" Margin="24,10,0,0">
                 <TextBlock x:Name="photoviewer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Enable Old Windows Photo Viewer" VerticalAlignment="Top" FontSize="16"/>
@@ -36,9 +56,21 @@
                 </controls:Button>
             </StackPanel>
 
-            <controls:Button x:Name="pv" Margin="24,5,589,0" Content="Enable" Height="28" VerticalAlignment="Top" Click="pv_Click"/>
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="pv" Padding="20,5" Content="Enable" Height="28" Click="pv_Click"/>
+            </Grid>
+
             <TextBlock x:Name="gpedit" HorizontalAlignment="Left" Margin="24,10,0,0" TextWrapping="Wrap" Visibility="Collapsed" Text="Enable Local Group Policy Editor" VerticalAlignment="Top" FontSize="16"/>
-            <controls:Button x:Name="lgp" Margin="24,5,589,0" Content="Enable" Height="28" VerticalAlignment="Top" Visibility="Collapsed" Click="lgp_Click"/>
+
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="lgp" Content="Enable" Height="28" Visibility="Collapsed" Click="lgp_Click"/>
+            </Grid>
 
             <StackPanel Orientation="Horizontal" Margin="24,10,0,0">
                 <TextBlock x:Name="powershellscr" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Enable Third-Party PowerShell Scripts" VerticalAlignment="Top" FontSize="16"/>
@@ -49,7 +81,12 @@
                 </controls:Button>
             </StackPanel>
 
-            <controls:Button x:Name="pwsh" Margin="24,5,589,0" Content="Enable" Height="28" VerticalAlignment="Top" Click="pwsh_Click" />
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="pwsh" Padding="20,5" Content="Enable" Height="28" Click="pwsh_Click" />
+            </Grid>
 
             <StackPanel Orientation="Horizontal" Margin="24,10,0,0">
                 <TextBlock x:Name="xboxdvr" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Disable Xbox DVR Requirement" VerticalAlignment="Top" FontSize="16"/>
@@ -60,7 +97,12 @@
                 </controls:Button>
             </StackPanel>
 
-            <controls:Button x:Name="dvr" Margin="24,5,589,0" Content="Apply" Height="28" VerticalAlignment="Top" Click="dvr_Click" />
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="dvr" Padding="20,5" Content="Apply" Height="28" Click="dvr_Click" />
+            </Grid>
 
             <StackPanel Orientation="Horizontal" Margin="24,10,0,0">
                 <TextBlock x:Name="forcedis" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Force Hyper-V Disable" VerticalAlignment="Top" FontSize="16"/>
@@ -71,9 +113,12 @@
                 </controls:Button>
             </StackPanel>
 
-            <controls:Button x:Name="hypervdis" Margin="24,5,589,0" Content="Apply" Height="28" VerticalAlignment="Top" Click="hypervdis_Click" />
-            <TextBlock x:Name="winsxs" HorizontalAlignment="Left" Margin="24,10,0,0" TextWrapping="Wrap" Text="Reset Outdated Components And WinSxS Cache" VerticalAlignment="Top" FontSize="16"/>
-            <controls:Button x:Name="sxs" Margin="24,5,589,0" Content="Reset" Height="28" VerticalAlignment="Top" Click="sxs_Click"/>
+            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
+                </Grid.ColumnDefinitions>
+                <controls:Button x:Name="hypervdis" Padding="20,5" Content="Apply" Height="28" Click="hypervdis_Click" />
+            </Grid>
         </StackPanel>
     </Grid>
 </Page>

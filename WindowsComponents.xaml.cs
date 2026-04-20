@@ -36,6 +36,41 @@ namespace MakuTweakerNew
             {
                 pwsh.IsEnabled = (key?.GetValue("ExecutionPolicy")?.ToString() ?? "") != "RemoteSigned";
             }
+
+            using (var key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations"))
+            {
+                pv.IsEnabled = (key?.GetValue(".jpg")?.ToString() != "PhotoViewer.FileAssoc.Tiff");
+            }
+
+            try
+            {
+                string bcdOutput = GetCmdOutput("bcdedit", "");
+                hypervdis.IsEnabled = !bcdOutput.Contains("hypervisorlaunchtype    Off");
+            }
+            catch
+            {
+                hypervdis.IsEnabled = true;
+            }
+        }
+
+        private string GetCmdOutput(string command, string arguments)
+        {
+            try
+            {
+                using (Process p = new Process())
+                {
+                    p.StartInfo.FileName = command;
+                    p.StartInfo.Arguments = arguments;
+                    p.StartInfo.UseShellExecute = false;
+                    p.StartInfo.RedirectStandardOutput = true;
+                    p.StartInfo.CreateNoWindow = true;
+                    p.Start();
+                    string output = p.StandardOutput.ReadToEnd();
+                    p.WaitForExit();
+                    return output;
+                }
+            }
+            catch { return ""; }
         }
 
         private string checkWinEd()
@@ -49,12 +84,19 @@ namespace MakuTweakerNew
                 return value.ToString();
             }
         }
+
+        private void SetBtn(Button btn, string normalText, string appliedText)
+        {
+            btn.Content = btn.IsEnabled ? normalText : appliedText;
+        }
+
         private void LoadLang(string lang)
         {
             var languageCode = Properties.Settings.Default.lang ?? "en";
             var basel = MainWindow.Localization.LoadLocalization(languageCode, "base");
             var compon = MainWindow.Localization.LoadLocalization(languageCode, "compon");
             var tooltips = MainWindow.Localization.LoadLocalization(languageCode, "tooltips");
+            string applied = basel["def"]["applied"];
 
             label.Text = compon["main"]["label"];
             directplay.Text = compon["main"]["directplay"];
@@ -65,14 +107,15 @@ namespace MakuTweakerNew
             forcedis.Text = compon["main"]["forcedis"];
             winsxs.Text = compon["main"]["winsxs"];
             gpedit.Text = compon["main"]["gpedit"];
-            dp.Content = compon["main"]["install"];
-            dnet.Content = compon["main"]["install"];
-            sxs.Content = compon["main"]["reset"];
-            lgp.Content = compon["main"]["enable"];
-            dvr.Content = basel["def"]["apply"];
-            hypervdis.Content = basel["def"]["apply"];
-            pv.Content = compon["main"]["enable"];
-            pwsh.Content = compon["main"]["enable"];
+
+            SetBtn(dp, compon["main"]["install"], applied);
+            SetBtn(dnet, compon["main"]["install"], applied);
+            SetBtn(sxs, compon["main"]["reset"], applied);
+            SetBtn(lgp, compon["main"]["enable"], applied);
+            SetBtn(pv, compon["main"]["enable"], applied);
+            SetBtn(pwsh, compon["main"]["enable"], applied);
+            SetBtn(dvr, basel["def"]["apply"], applied);
+            SetBtn(hypervdis, basel["def"]["apply"], applied);
 
             sys_tooltip_photo.Content = tooltips["main"]["photow"];
             sys_tooltip_powershell.Content = tooltips["main"]["powershell"];
@@ -83,24 +126,25 @@ namespace MakuTweakerNew
         private void pwsh_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("powershell", "-Command Set-ExecutionPolicy RemoteSigned -Force") { CreateNoWindow = true, UseShellExecute = false });
-            pwsh.IsEnabled = false;
+            mw.RebootNotify(1);
+            MarkApplied(pwsh);
         }
         private void dp_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", "/C dism /online /Enable-Feature /FeatureName:DirectPlay /All");
-            dp.IsEnabled = false;
+            MarkApplied(dp);
         }
 
         private void dnet_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("powershell.exe", "/C Add-WindowsCapability -Online -Name NetFx3~~~~"));
-            dnet.IsEnabled = false;
+            MarkApplied(dnet);
         }
         private void sxs_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", "/C dism /Online /Cleanup-Image /StartComponentCleanup /ResetBase");
             mw.RebootNotify(3);
-            sxs.IsEnabled = false;
+            MarkApplied(sxs);
         }
         private void lgp_Click(object sender, RoutedEventArgs e)
         {
@@ -130,7 +174,7 @@ namespace MakuTweakerNew
             {
 
             }
-            lgp.IsEnabled = false;
+            MarkApplied(lgp);
         }
         private void pv_Click(object sender, RoutedEventArgs e)
         {
@@ -155,11 +199,11 @@ namespace MakuTweakerNew
                     key.SetValue(".jpg", "PhotoViewer.FileAssoc.Tiff");
                     key.SetValue(".png", "PhotoViewer.FileAssoc.Tiff");
                 }
-                pv.IsEnabled = false;
+                MarkApplied(pv);
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show($"Ошибка: {ex.Message}");
+                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"{ex.Message}");
             }
         }
 
@@ -167,15 +211,20 @@ namespace MakuTweakerNew
         {
             Registry.CurrentUser.CreateSubKey(@"System\GameConfigStore").SetValue("GameDVR_Enabled", 0, RegistryValueKind.DWord);
             Registry.LocalMachine.CreateSubKey(@"SOFTWARE\Policies\Microsoft\Windows\GameDVR").SetValue("AllowGameDVR", 0, RegistryValueKind.DWord);
-            dvr.IsEnabled = false;
-
+            MarkApplied(dvr);
         }
 
         private void hypervdis_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", "/c \"bcdedit /set hypervisorlaunchtype off\"");
-            hypervdis.IsEnabled = false;
+            MarkApplied(hypervdis);
+        }
 
+        private void MarkApplied(Button btn)
+        {
+            btn.IsEnabled = false;
+            var basel = MainWindow.Localization.LoadLocalization(Properties.Settings.Default.lang, "base");
+            btn.Content = basel["def"]["applied"];
         }
     }
 }

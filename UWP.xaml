@@ -38,16 +38,16 @@
         <ui:ToggleSwitch IsEnabled="False" Margin="252,242,251,0" OnContent="Weather" OffContent="Weather" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u19" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="252,178,251,0" OnContent="Sticky Notes" OffContent="Sticky Notes" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u20" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="24,274,0,0" OnContent="Feedback Hub" OffContent="Feedback Hub" VerticalAlignment="Top" x:Name="u6" Grid.Row="1" Width="201" Opacity="0" IsTabStop="False"/>
-        <ui:ProgressBar x:Name="p" Visibility="Collapsed" Margin="0,514,0,0" Grid.Row="1" VerticalAlignment="Top" Width="665" HorizontalAlignment="Center" Height="12" Maximum="27"/>
+        <ui:ProgressBar x:Name="p" Visibility="Collapsed" Margin="0,514,0,0" Grid.Row="1" VerticalAlignment="Top" Width="705" HorizontalAlignment="Center" Height="12" Maximum="27"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="24,465,479,0" OnContent="Get Started / Tips" OffContent="Get Started / Tips" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u21" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="252,274,251,0" OnContent="Sound Recorder" OffContent="Sound Recorder" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u22" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="24,434,479,0" OnContent="People" OffContent="People" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u25" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="24,146,0,0" OnContent="Skype" OffContent="Skype" VerticalAlignment="Top" x:Name="u26" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <TextBlock x:Name="t" Visibility="Collapsed" HorizontalAlignment="Left" Margin="40,494,0,0" TextWrapping="Wrap" Text="Checking installed UWP apps..." VerticalAlignment="Top" FontSize="12" FontFamily="Segoe UI" Grid.Row="1"/>
-        <controls:Button x:Name="b"  Content="Start Removing UWP" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1" Width="200" Height="34" Margin="519,493,0,0" Grid.Row="1" Opacity="0" Click="b_Click" IsEnabled="False" IsTabStop="False" />
+        <controls:Button x:Name="b"  Content="Start Removing UWP" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1" Width="200" Height="34" Margin="550,503,0,0" Grid.Row="1" Opacity="0" Click="b_Click" IsEnabled="False" IsTabStop="False" />
         <ui:ToggleSwitch IsEnabled="False" Margin="480,82,27,0" OnContent="Microsoft Store" OffContent="Microsoft Store" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u23" Grid.Row="1" Opacity="0" IsTabStop="False"/>
         <ui:ToggleSwitch IsEnabled="False" Margin="480,114,19,0" OnContent="Xbox" OffContent="Xbox" VerticalAlignment="Top" HorizontalAlignment="Stretch" x:Name="u24" Grid.Row="1" Opacity="0" IsTabStop="False"/>
-        <ComboBox x:Name="view" HorizontalAlignment="Left" Margin="519,457,0,0" FontSize="14"  Width="200" VerticalAlignment="Top" MinWidth="200" MaxWidth="200" Grid.Row="1" Opacity="0" SelectionChanged="view_SelectionChanged" IsTabStop="False">
+        <ComboBox x:Name="view" HorizontalAlignment="Left" Margin="550,467,0,0" FontSize="14"  Width="200" VerticalAlignment="Top" MinWidth="200" MaxWidth="200" Grid.Row="1" Opacity="0" SelectionChanged="view_SelectionChanged" IsTabStop="False">
             <ComboBoxItem x:Name="mode1" Content=" Only Bloatware" IsSelected="True"/>
             <ComboBoxItem x:Name="mode2" Content=" Show Popular Apps"/>
             <ComboBoxItem x:Name="mode3" Content=" Show Necessary Apps"/>

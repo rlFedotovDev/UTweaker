@@ -220,7 +220,7 @@ namespace MakuTweakerNew
                 catch (Exception ex)
                 {
                     Application.Current.Dispatcher.Invoke(() =>
-                        System.Windows.MessageBox.Show($"PowerShell error: {ex.Message}")
+                    iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"PowerShell error: {ex.Message}")
                     );
                 }
 
@@ -378,7 +378,7 @@ namespace MakuTweakerNew
                 }
                 p.IsIndeterminate = false;
                 t.Text = $"{uwp["status"]["started"]} 0/{count}";
-                mw.Category.IsEnabled = false;
+                mw.NavigationView_Root.IsEnabled = false;
                 mw.ABCB.IsEnabled = false;
                 p.Maximum = count;
                 p.Value = 0;
@@ -456,7 +456,7 @@ namespace MakuTweakerNew
                 FadeOutAll1();
                 SystemSounds.Asterisk.Play();
                 mw.ChSt(uwp["status"]["complete"]);
-                mw.Category.IsEnabled = true;
+                mw.NavigationView_Root.IsEnabled = true;
                 mw.ABCB.IsEnabled = true;
                 foreach (var toggle in AllToggles)
                 {

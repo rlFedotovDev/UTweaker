@@ -87,11 +87,7 @@ namespace MakuTweakerNew
             }
             else
             {
-                MessageBox.Show(
-                    $"{r1.Error}\n{r2.Error}\n{r3.Error}",
-                    "MakuTweaker Error",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error);
+                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"{r1.Error}\n{r2.Error}\n{r3.Error}", "MakuTweaker Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

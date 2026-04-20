@@ -11,9 +11,7 @@
       Title="Performance">
 
     <StackPanel Margin="24,11,24,0">
-
         <TextBlock x:Name="label" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Performance" FontSize="32" FontFamily="Segoe UI Semibold" Margin="0,0,0,10"/>
-
         <TextBlock x:Name="infolabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TEXT" FontSize="20" FontFamily="Segoe UI Semilight" Margin="0,0,0,15"/>
 
         <WrapPanel Margin="0,0,0,0">
@@ -22,20 +20,21 @@
             <controls:Button x:Name="maxpercent" Content="Max_Percent" Height="30" Width="208" Click="maxpercent_Click" Margin="0,0,8,4"/>
         </WrapPanel>
 
-        <Grid Margin="-24,0,-24,0">
-            <Slider x:Name="percentslider" Margin="26,0,82,0" Minimum="1" Maximum="10" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Height="72" VerticalAlignment="Top" Value="6"/>
+        <Grid Margin="0,0,0,0" HorizontalAlignment="Left">
+            <Slider x:Name="percentslider" Width="640" Margin="0,0,0,0" Minimum="1" Maximum="10" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Height="72" VerticalAlignment="Top" Value="6" AutoToolTipPlacement="None" HorizontalAlignment="Left"/>
 
-            <TextBlock HorizontalAlignment="Left" Margin="26,32,0,0" TextWrapping="Wrap" x:Name="prc10" Text="10%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="94,32,0,0" TextWrapping="Wrap" x:Name="prc20" Text="20%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="162,32,0,0" TextWrapping="Wrap" x:Name="prc30" Text="30%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="231,32,0,0" TextWrapping="Wrap" x:Name="prc40" Text="40%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="299,32,0,0" TextWrapping="Wrap" x:Name="prc50" Text="50%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="368,32,0,0" TextWrapping="Wrap" x:Name="prc60" Text="60%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="436,32,0,0" TextWrapping="Wrap" x:Name="prc70" Text="70%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="505,32,0,0" TextWrapping="Wrap" x:Name="prc80" Text="80%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="572,32,0,0" TextWrapping="Wrap" x:Name="prc90" Text="90%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="30" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="637,32,0,0" TextWrapping="Wrap" x:Name="prc100" Text="100%" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI" Width="38" Height="20"/>
+            <UniformGrid Columns="10" Width="640" Margin="0,32,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock Text="10%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="-2,0,0,0"/>
+                <TextBlock Text="20%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="2,0,0,0"/>
+                <TextBlock Text="30%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="9,0,0,0"/>
+                <TextBlock Text="40%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="12,0,0,0"/>
+                <TextBlock Text="50%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="18,0,0,0"/>
+                <TextBlock Text="60%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="23,0,0,0"/>
+                <TextBlock Text="70%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="28,0,0,0"/>
+                <TextBlock Text="80%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="33,0,0,0"/>
+                <TextBlock Text="90%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="37,0,0,0" Width="30"/>
+                <TextBlock Text="100%" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe UI" Margin="29,0,0,0" Width="38"/>
+            </UniformGrid>
         </Grid>
-
     </StackPanel>
 </Page>

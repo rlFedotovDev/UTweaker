@@ -1,12 +1,13 @@
 ﻿using Hardcodet.Wpf.TaskbarNotification;
+using iNKORE.UI.WPF.Modern.Controls;
 using MakuTweakerNew.Properties;
 using MicaWPF.Controls;
 using MicaWPF.Core.Enums;
 using MicaWPF.Core.Helpers;
 using MicaWPF.Core.Services;
 using Microsoft.Win32;
-using ModernWpf;
-using ModernWpf.Media.Animation;
+using iNKORE.UI.WPF.Modern;
+using iNKORE.UI.WPF.Modern.Media.Animation;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Drawing;
@@ -88,13 +89,6 @@ namespace MakuTweakerNew
                 }
                 Application.Current.Shutdown();
             }
-            string buildVersion;
-            var assembly = Assembly.GetExecutingAssembly();
-            using (Stream stream = assembly.GetManifestResourceStream("MakuTweakerNew.BuildLab.txt"))
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                buildVersion = reader.ReadToEnd();
-            }
 
             ExpTimer();
             if (Properties.Settings.Default.firRun)
@@ -163,13 +157,11 @@ namespace MakuTweakerNew
             {
                 ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
                 this.Foreground = System.Windows.Media.Brushes.White;
-                this.Separator.Stroke = System.Windows.Media.Brushes.White;
             }
             else
             {
                 ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
                 this.Foreground = System.Windows.Media.Brushes.Black;
-                this.Separator.Stroke = System.Windows.Media.Brushes.Black;
             }
         }
 
@@ -180,39 +172,62 @@ namespace MakuTweakerNew
             ExpRestart.Tick += ExpRestart_Tick;
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            if (Category.SelectedIndex == -1) return;
-
-            _transitionInfo = new EntranceNavigationTransitionInfo();
-            switch (Category.SelectedIndex)
+            if (args.SelectedItem is NavigationViewItem selectedItem && selectedItem.Tag != null)
             {
-                case 0: MainFrame.Navigate(typeof(Explorer), null, _transitionInfo); break;
-                case 1: MainFrame.Navigate(typeof(WindowsUpdate), null, _transitionInfo); break;
-                case 2: MainFrame.Navigate(typeof(SysAndRec), null, _transitionInfo); break;
-                case 3: MainFrame.Navigate(typeof(UWP), null, _transitionInfo); break;
-                case 4: MainFrame.Navigate(typeof(Personalization), null, _transitionInfo); break;
-                case 5: MainFrame.Navigate(typeof(ContextMenu), null, _transitionInfo); break;
-                case 6: MainFrame.Navigate(typeof(QuickSet), null, _transitionInfo); break;
-                case 7: MainFrame.Navigate(typeof(WindowsComponents), null, _transitionInfo); break;
-                case 8: MainFrame.Navigate(typeof(Act), null, _transitionInfo); break;
-                case 9: MainFrame.Navigate(typeof(Perf), null, _transitionInfo); break;
-                case 10: MainFrame.Navigate(typeof(SAT), null, _transitionInfo); break;
-                case 11: MainFrame.Navigate(typeof(ProcessMGR), null, _transitionInfo); break;
-                case 12: MainFrame.Navigate(typeof(PCI), null, _transitionInfo); break;
-            }
+                string tag = selectedItem.Tag.ToString();
+                Type pageType = tag switch
+                {
+                    "exp" => typeof(Explorer),
+                    "wu" => typeof(WindowsUpdate),
+                    "sys" => typeof(SysAndRec),
+                    "uwp" => typeof(UWP),
+                    "per" => typeof(Personalization),
+                    "adv" => typeof(Advanced),
+                    "quick" => typeof(QuickSet),
+                    "compon" => typeof(WindowsComponents),
+                    "act" => typeof(Act),
+                    "perf" => typeof(Perf),
+                    "sat" => typeof(SAT),
+                    "pmgr" => typeof(ProcessMGR),
+                    "pci" => typeof(PCI),
+                    _ => null
+                };
 
-            Properties.Settings.Default.lastPage = Category.SelectedIndex;
-            Settings.Default.Save();
+                if (pageType != null)
+                {
+                    MainFrame.Navigate(pageType, null, _transitionInfo);
+                    Properties.Settings.Default.lastPageTag = tag;
+                    Properties.Settings.Default.Save();
+                }
+            }
         }
 
-		private void MicaWindow_Loaded(object sender, RoutedEventArgs e)
-		{
-            Category.SelectedIndex = Properties.Settings.Default.lastPage;
+        private void MicaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            string lastTag = Properties.Settings.Default.lastPageTag;
+
+            if (!string.IsNullOrEmpty(lastTag))
+            {
+                var itemToSelect = NavigationView_Root.MenuItems
+                    .OfType<NavigationViewItem>()
+                    .FirstOrDefault(i => i.Tag?.ToString() == lastTag);
+
+                if (itemToSelect != null)
+                {
+                    NavigationView_Root.SelectedItem = itemToSelect;
+                }
+            }
+            else
+            {
+                NavigationView_Root.SelectedItem = c1;
+            }
 
             Enum.TryParse(Settings.Default.style, out BackdropType bd);
             MicaWPFServiceUtility.ThemeService.EnableBackdrop(this, bd);
         }
+
         private bool isAnimating = false;
 
         public async void ChSt(string st)
@@ -247,7 +262,7 @@ namespace MakuTweakerNew
                 c3.Content = basel["catname"]["sr"];
                 c4.Content = basel["catname"]["uwp"];
                 c5.Content = basel["catname"]["per"];
-                c6.Content = basel["catname"]["cm"];
+                c6.Content = basel["catname"]["adv"];
                 c7.Content = basel["catname"]["quick"];
                 c8.Content = basel["catname"]["compon"];
                 c9.Content = basel["catname"]["act"];
@@ -255,12 +270,12 @@ namespace MakuTweakerNew
                 c11.Content = basel["catname"]["sat"];
                 c12.Content = basel["catname"]["procmgr"];
                 c13.Content = basel["catname"]["pci"];
-                rexplorer.Label = basel["lowtabs"]["rexp"];
-                settingsButton.Label = basel["lowtabs"]["set"];
+                rexplorerText.Text = basel["lowtabs"]["rexp"];
+                settingsText.Text = basel["lowtabs"]["set"];
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "MakuTweaker Error", MessageBoxButton.OK, MessageBoxImage.Stop);
+                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show(ex.Message, "MakuTweaker Error", MessageBoxButton.OK, MessageBoxImage.Stop);
                 System.Windows.Forms.Application.Restart();
                 System.Windows.Application.Current.Shutdown();
             }
@@ -340,13 +355,13 @@ namespace MakuTweakerNew
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
         {
-            Category.SelectedIndex = -1;
+            NavigationView_Root.SelectedItem = null;
             MainFrame.Navigate(typeof(SettingsAbout), null, _transitionInfo);
         }
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-            if (Category.SelectedIndex == -1)
+            if (NavigationView_Root.SelectedItem == null)
             {
                 settingsButton.IsEnabled = false;
             }
@@ -378,10 +393,12 @@ namespace MakuTweakerNew
 
         private async Task CheckForUpd()
         {
+            if (Properties.Settings.Default.disableUpdateNotify) return;
+
             int ThisBuild = int.Parse(new StreamReader(Assembly.GetExecutingAssembly()
-            .GetManifestResourceStream("MakuTweakerNew.BuildNumber.txt")!)
-            .ReadToEnd()
-            .Trim());
+                .GetManifestResourceStream("MakuTweakerNew.BuildNumber.txt")!)
+                .ReadToEnd()
+                .Trim());
 
             string url = "https://raw.githubusercontent.com/AdderlyMark/MakuTweaker/refs/heads/main/ver.json";
 
@@ -391,65 +408,94 @@ namespace MakuTweakerNew
                 {
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
-
                     string jsonString = await response.Content.ReadAsStringAsync();
+                    var jsonData = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
 
-                    try
+                    if (jsonData != null && jsonData.ContainsKey("build"))
                     {
-                        var jsonData = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
-
-                        if (jsonData.ContainsKey("build"))
+                        int latestBuild = int.Parse(jsonData["build"]);
+                        if (latestBuild > ThisBuild)
                         {
-                            string lb = jsonData["build"];
-                            if (int.Parse(lb) > ThisBuild)
+                            Properties.Settings.Default.updIgnoredCount++;
+                            Properties.Settings.Default.Save();
+                            Application.Current.Dispatcher.Invoke(() =>
                             {
-                                Application.Current.Dispatcher.Invoke(() =>
+                                var languageCode = Properties.Settings.Default.lang ?? "en";
+                                var basel = Localization.LoadLocalization(languageCode, "base");
+                                string title = "MakuTweaker Update";
+                                string msg = basel["def"]["updatedialog"];
+                                string trayMsg = basel["def"]["updatenotify"];
+                                string dontShowText = basel["def"]["updatecheckb"];
+
+                                if (Properties.Settings.Default.updIgnoredCount >= 5)
                                 {
-                                    Icon trayIcon = new Icon(GetResourceStream("assets/icons/MakuT.ico"));
-                                    TaskbarIcon _trayIcon = new TaskbarIcon
+                                    var content = new StackPanel();
+                                    var messageText = new TextBlock
                                     {
-                                        ToolTipText = "MakuTweaker",
-                                        Icon = trayIcon
+                                        Text = msg,
+                                        TextWrapping = TextWrapping.Wrap,
+                                        Margin = new Thickness(0, 0, 0, 15),
+                                        FontSize = 16,
+                                        FontFamily = new System.Windows.Media.FontFamily("Segoe UI Variable Display")
                                     };
 
-                                    string currentLang = Properties.Settings.Default.lang;
-                                    if (currentLang is "ru" or "uk" or "be" or "kk" or "az")
+                                    content.Children.Add(messageText);
+                                    var dontShowCheckBox = new CheckBox
                                     {
-                                        _trayIcon.ShowBalloonTip("MakuTweaker", "Доступно обновление MakuTweaker!\nНажмите на уведомление, чтобы перейти на страницу загрузки.", BalloonIcon.Info);
-                                    }
-                                    else
+                                        Content = dontShowText,
+                                        FontSize = 14
+                                    };
+                                    content.Children.Add(dontShowCheckBox);
+
+                                    var dialog = new iNKORE.UI.WPF.Modern.Controls.ContentDialog
                                     {
-                                        _trayIcon.ShowBalloonTip("MakuTweaker", "An update for MakuTweaker is available!\nClick the notification to go to the download page.", BalloonIcon.Info);
-                                    }
+                                        Title = title,
+                                        Content = content,
+                                        PrimaryButtonText = basel["def"]["updatebutton"],
+                                        CloseButtonText = basel["def"]["updatecancel"],
+                                        DefaultButton = iNKORE.UI.WPF.Modern.Controls.ContentDialogButton.Primary
+                                    };
+
+                                    _ = dialog.ShowAsync().ContinueWith(t => {
+                                        if (t.Result == iNKORE.UI.WPF.Modern.Controls.ContentDialogResult.Primary)
+                                        {
+                                            Application.Current.Dispatcher.Invoke(() => {
+                                                if (dontShowCheckBox.IsChecked == true)
+                                                {
+                                                    Properties.Settings.Default.disableUpdateNotify = true;
+                                                }
+                                                Properties.Settings.Default.Save();
+                                                Process.Start(new ProcessStartInfo("https://adderly.top/makutweaker") { UseShellExecute = true });
+                                            });
+                                        }
+                                    });
+                                }
+                                else
+                                {
+                                    Icon trayIcon = new Icon(GetResourceStream("assets/icons/MakuT.ico"));
+                                    TaskbarIcon _trayIcon = new TaskbarIcon { ToolTipText = "MakuTweaker", Icon = trayIcon };
+                                    _trayIcon.ShowBalloonTip("MakuTweaker", trayMsg, BalloonIcon.Info);
 
                                     _trayIcon.TrayBalloonTipClicked += (sender, args) =>
                                     {
                                         Process.Start(new ProcessStartInfo("https://adderly.top/makutweaker") { UseShellExecute = true });
                                     };
 
-                                    Task.Delay(8000).ContinueWith(t =>
-                                    {
-                                        _trayIcon.Dispatcher.Invoke(() => _trayIcon.Dispose());
-                                    });
-                                });
-                            }
-                            else
-                            {
-                            }
+                                    Task.Delay(8000).ContinueWith(t => _trayIcon.Dispatcher.Invoke(() => _trayIcon.Dispose()));
+                                }
+                            });
                         }
                         else
                         {
+                            Properties.Settings.Default.updIgnoredCount = 0;
+                            Properties.Settings.Default.Save();
                         }
                     }
-                    catch (JsonException ex)
-                    {
-                    }
                 }
-                catch (HttpRequestException e)
-                {
-                }
+                catch { }
             }
         }
+
         private int checkWinVer()
         {
             string keyPath = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";

@@ -21,7 +21,7 @@
                 "set": "Paramètres / À propos"
             },
             "def": {
-                "statusdef": "Informations sur la dernière action dans MakuTweaker...",
+                "search": "Recherche de tweaks, paramètres et fonctionnalités",
                 "on": "Activé",
                 "off": "Désactivé",
                 "apply": "Appliquer",
@@ -53,7 +53,6 @@
                 "showall": "Tout afficher"
             },
             "status": {
-                "e8": "MakuTweaker a corrigé la duplication des disques dans l'Explorateur.",
                 "hdInfo1": "Sélectionnez les lettres de lecteur que vous souhaitez masquer.",
                 "hdInfo2": "Notez que le disque reste accessible en saisissant sa lettre suivie de deux-points dans la barre d'adresse de l'Explorateur.",
                 "hide": "Masquer les lettres sélectionnées",
@@ -86,11 +85,10 @@
                 "wu5": "Suspendre le service Windows Update",
                 "wu6": "Désactiver le stockage réservé pour les mises à jour",
                 "wu5b": "Suspendre",
-                "wu6b": "Bloquer"
-            },
-            "status": {
-                "wu4": "Vous avez bloqué avec succès les mises à jour sur cette version de Windows.",
-                "wu5": "Vous pourrez à tout moment accéder à Windows Update et cliquer sur \"Reprendre les mises à jour\"."
+                "wu6b": "Bloquer",
+                "wu6u": "Déverrouiller",
+                "status": "Nettoyage du cache de Windows Update en cours... Cela peut prendre un peu de temps.",
+                "statusdis": "Modification de l'état de Windows Update en cours... Cela peut prendre un peu de temps."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Bloc-notes",
                 "u22": "Enregistreur vocal",
                 "u27": "Horloges et alarmes",
-                "mode1": "Bloatware uniquement",
-                "mode2": "Afficher les populaires",
-                "mode3": "Afficher les nécessaires",
+                "mode1": "Applications inutiles",
+                "mode2": "Populaires",
+                "mode3": "Nécessaires",
                 "b": "Démarrer la suppression UWP",
                 "chk": "Vérification des applications UWP installées...",
                 "is": "installé...",
@@ -155,11 +153,14 @@
                 "b": "Lancer la configuration rapide",
                 "info": "Utilisez les cases à cocher pour sélectionner les paramètres\nque vous souhaitez appliquer lors de la configuration automatique.\nLes paramètres seront masqués après l'application.",
                 "infodone": "Les paramètres de configuration rapide sont terminés !\nAprès les avoir appliqués, n'oubliez pas de redémarrer.\nBonne utilisation du système !",
-                "uncheck": "Tout décocher",
                 "checkall": "Tout activer",
                 "hidewidget": "Masquer les boutons \"Affichage des tâches\" et \"Widgets\"",
                 "removeads": "Supprimer les publicités dans le menu Démarrer et la barre des tâches",
-                "clipboard": "Activer le presse-papiers"
+                "clipboard": "Activer le presse-papiers",
+                "title": "Paramètres populaires",
+                "title2": "Fonctions rarement utilisées",
+                "makuos": "Activer les paramètres MakuOS",
+                "makuos_tooltip": "Dans les versions de Windows nommées MakuOS, développées jusqu'en novembre 2025, les paramètres suivants ont été appliqués :\n\nOuvrir la page \"Ce PC\" au lieu de \"Accueil\" dans l'Explorateur de fichiers\nAfficher les fichiers, dossiers et lecteurs cachés\nAfficher les extensions de fichiers\nAfficher l'icône \"Ce PC\" sur le bureau\nDésactiver les publicités et les suggestions dans le menu Démarrer\nDésactiver le chiffrement automatique du disque avec Bitlocker\nDésactiver les touches rémanentes\nDésactiver le délai du menu contextuel\nDésactiver le redémarrage automatique lors d'un écran bleu de la mort\nDésactiver diverses télémétries\n\nEn cliquant sur le bouton, vous appliquerez le préréglage MakuOS."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Paramètres avancés",
                 "deledge_title": "Désinstaller Microsoft Edge",
                 "deledge_btn": "Désinstaller",
                 "deledge_before": "Avant de désinstaller Microsoft Edge, assurez-vous d'avoir un autre navigateur. Voulez-vous aller sur la page de Google Chrome avant la désinstallation ?",
@@ -221,8 +223,6 @@
                 "telemetry": "Désactiver toute la télémétrie et le suivi système"
             },
             "status": {
-                "o1b": "Vous avez généré avec succès le rapport sur l'état de la batterie.",
-                "sr8": "L'éditeur de stratégie de groupe a été restauré avec succès !",
                 "uacwarn": "En activant l'option \"Désactiver le contrôle de compte d'utilisateur (UAC)\", le glisser-déposer dans la barre des tâches cesse de fonctionner sous Windows 11. MakuTweaker n'est pas responsable de ce problème. Voulez-vous vraiment continuer ?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Bleu",
                 "c8": "Noir",
                 "b2": "Par défaut"
-            },
-            "status": {
-                "apN": "Vous avez modifié avec succès le nom par défaut des nouveaux fichiers et dossiers.",
-                "stN": "Vous avez restauré avec succès le nom par défaut des nouveaux fichiers et dossiers.",
-                "apC": "Vous avez modifié avec succès la couleur de sélection."
             }
         },
         "pci": {

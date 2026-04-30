@@ -21,7 +21,7 @@
                 "set": "Nastavení / O programu"
             },
             "def": {
-                "statusdef": "Informace o poslední akci v MakuTweaker...",
+                "search": "Tweaks, nastavení a funkcí vyhledávání",
                 "on": "Zap.",
                 "off": "Vyp.",
                 "apply": "Použít",
@@ -53,7 +53,6 @@
                 "showall": "Zobrazit všechna"
             },
             "status": {
-                "e8": "MakuTweaker vyloučil duplicitní disky v Průzkumníku.",
                 "hdInfo1": "Vyberte písmena disků, která chcete skrýt.",
                 "hdInfo2": "Vezměte na vědomí, že disk lze stále otevřít zadáním jeho písmene a dvojtečky do adresního řádku Průzkumníka.",
                 "hide": "Skrýt vybraná písmena",
@@ -86,11 +85,10 @@
                 "wu5": "Pozastavit službu Windows Update",
                 "wu6": "Vypnout rezervované úložiště pro aktualizace systému",
                 "wu5b": "Pozastavit",
-                "wu6b": "Zablokovat"
-            },
-            "status": {
-                "wu4": "Úspěšně jste zablokovali aktualizace na konkrétní verzi Windows.",
-                "wu5": "Kdykoliv můžete přejít do Windows Update a kliknout \"Pokračovat v aktualizacích\"."
+                "wu6b": "Zablokovat",
+                "wu6u": "Odemknout",
+                "status": "Probíhá čištění mezipaměti služby Windows Update... To může chvíli trvat.",
+                "statusdis": "Probíhá změna stavu služby Windows Update... To může chvíli trvat."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Rychlé poznámky",
                 "u22": "Záznam zvuku",
                 "u27": "Alarmy a hodiny",
-                "mode1": "Jenom Bloatware",
-                "mode2": "Zobrazit populární",
-                "mode3": "Zobrazit nezbytné",
+                "mode1": "Zbytečné aplikace",
+                "mode2": "Populární",
+                "mode3": "Nezbytné",
                 "b": "Začít vymazání UWP",
                 "chk": "Kontrola nainstalovaných aplikací UWP...",
                 "is": "nainstalován...",
@@ -155,11 +153,14 @@
                 "b": "Zapnout rychlé nastavení",
                 "info": "Použijte zaškrtávací políčka pro výběr nastavení,\nkterá byste chtěli použít při automatickém nastavení.\nParametry budou po použití skryty.",
                 "infodone": "Žádné další možnosti rychlého nastavení!\nPo jejich použití nezapomeňte restartovat počítač.\nUžijte si používání systému!",
-                "uncheck": "Deaktivovat vše",
                 "checkall": "Aktivovat všechno",
                 "hidewidget": "Skrýt tlačítka \"Zobrazení úloh\" a \"Widgety\"",
                 "removeads": "Odstranit reklamu v \"Nabídce Start\" a na hlavním panelu",
-                "clipboard": "Zapnout schránku"
+                "clipboard": "Zapnout schránku",
+                "title": "Oblíbená nastavení",
+                "title2": "Zřídka používané funkce",
+                "makuos": "Aktivovat nastavení MakuOS",
+                "makuos_tooltip": "V sestaveních Windows s názvem MakuOS, vyvíjených do listopadu 2025, byla použita následující nastavení:\n\nOtevírat v Průzkumníku stránku \"Tento počítač\" místo \"Domů\"\nZobrazovat skryté soubory, složky a jednotky\nZobrazovat přípony souborů\nZobrazovat ikonu \"Tento počítač\" na ploše\nVypnout reklamy a návrhy v nabídce Start\nVypnout automatické šifrování disku pomocí Bitlocker\nVypnout funkci Jedním prstem (Sticky Keys)\nVypnout zpoždění v kontextové nabídce\nVypnout automatický restart při modré obrazovce smrti\nVypnout různé telemetrie\n\nKliknutím na tlačítko použijete hotovou předvolbu MakuOS."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Pokročilá nastavení",
                 "deledge_title": "Odinstalovat Microsoft Edge",
                 "deledge_btn": "Odinstalovat",
                 "deledge_before": "Před odinstalováním Microsoft Edge se ujistěte, že máte jiný prohlížeč. Chcete před odinstalací přejít na stránku Google Chrome?",
@@ -221,8 +223,6 @@
                 "telemetry": "Vypnout veškerou telemetrii a sledování v systému"
             },
             "status": {
-                "o1b": "Zpráva o stavu baterie byla úspěšně vytvořena.",
-                "sr8": "Editor místních zásad skupiny byl úspěšně obnoven!",
                 "uacwarn": "Při zapnutí možnosti \"Vypnout Řízení uživatelských účtů (UAC)\", přestane ve Windows 11 fungovat přetahování (Drag-and-Drop) na hlavním panelu. MakuTweaker za tento problém nenese odpovědnost. Opravdu chcete pokračovat?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Modrá",
                 "c8": "Černá",
                 "b2": "Standard"
-            },
-            "status": {
-                "apN": "Úspěšně jste změnili výchozí název pro nové soubory a složky.",
-                "stN": "Úspěšně jste obnovili výchozí název pro nové soubory a složky.",
-                "apC": "Úspěšně jste změnili barvu výběru."
             }
         },
         "pci": {

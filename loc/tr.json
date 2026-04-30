@@ -21,7 +21,7 @@
                 "set": "Ayarlar / Hakkında"
             },
             "def": {
-                "statusdef": "MakuTweaker'daki son işlem hakkında bilgi...",
+                "search": "Tweaks, ayarlar ve özellikler arama",
                 "on": "Açık",
                 "off": "Kapalı",
                 "apply": "Uygula",
@@ -53,7 +53,6 @@
                 "showall": "Tüm harfleri göster"
             },
             "status": {
-                "e8": "MakuTweaker, Gezgin'deki sürücü yinelemelerini düzeltti.",
                 "hdInfo1": "Gizlemek istediğiniz sürücü harflerini seçin.",
                 "hdInfo2": "Sürücünün, Gezgin adres çubuğuna harfini ve iki nokta üst üste işaretini yazarak hala açılabileceğini unutmayın.",
                 "hide": "Seçili harfleri gizle",
@@ -86,11 +85,10 @@
                 "wu5": "Windows Update hizmetini duraklat",
                 "wu6": "Güncellemeler için ayrılmış depolama alanını devre dışı bırak",
                 "wu5b": "Duraklat",
-                "wu6b": "Engelle"
-            },
-            "status": {
-                "wu4": "Güncellemeleri belirli bir Windows sürümünde başarıyla engellediniz.",
-                "wu5": "Windows Update'e gidip istediğiniz zaman \"Güncellemeleri devam ettir\"e tıklayabilirsiniz."
+                "wu6b": "Engelle",
+                "wu6u": "Kilidi aç",
+                "status": "Windows Update önbelleği temizleniyor... Bu biraz zaman alabilir.",
+                "statusdis": "Windows Update durumu değiştiriliyor... Bu biraz zaman alabilir."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Yapışkan Notlar",
                 "u22": "Ses Kaydedicisi",
                 "u27": "Alarmlar ve Saat",
-                "mode1": "Sadece Bloatware",
-                "mode2": "Popülerleri göster",
-                "mode3": "Gerekli olanları göster",
+                "mode1": "Gereksiz uygulamalar",
+                "mode2": "Popüler",
+                "mode3": "Gerekli",
                 "b": "UWP kaldırmayı başlat",
                 "chk": "Yüklü UWP uygulamaları kontrol ediliyor...",
                 "is": "yüklü...",
@@ -155,11 +153,14 @@
                 "b": "Hızlı ayarları başlat",
                 "info": "Otomatik yapılandırmada uygulamak istediğiniz ayarları\nseçmek için onay kutularını kullanın.\nAyarlar uygulandıktan sonra gizlenecektir.",
                 "infodone": "Hızlı ayar parametreleri sona erdi!\nUyguladıktan sonra yeniden başlatmayı unutmayın.\nSisteminizi iyi günlerde kullanın!",
-                "uncheck": "Tümünün seçimini kaldır",
                 "checkall": "Tümünü etkinleştir",
                 "hidewidget": "\"Görev Görünümü\" ve \"Araçlar\" düğmelerini gizle",
                 "removeads": "\"Başlat Menüsü\" ve görev çubuğundaki reklamları kaldır",
-                "clipboard": "Pano geçmişini etkinleştir"
+                "clipboard": "Pano geçmişini etkinleştir",
+                "title": "Popüler ayarlar",
+                "title2": "Nadiren kullanılan işlevler",
+                "makuos": "MakuOS ayarlarını etkinleştir",
+                "makuos_tooltip": "Kasım 2025'e kadar geliştirilen MakuOS adlı Windows derlemelerinde aşağıdaki ayarlar uygulanmıştı:\n\nDosya Gezgini'nde \"Giriş\" yerine \"Bu bilgisayar\" sayfasını aç\nGizli dosyaları, klasörleri ve sürücüleri göster\nDosya uzantılarını göster\nMasaüstünde \"Bu bilgisayar\" simgesini göster\nBaşlat Menüsündeki reklamları ve önerileri devre dışı bırak\nBitlocker ile otomatik disk şifrelemeyi devre dışı bırak\nYapışkan Tuşları devre dışı bırak\nBağlam menüsü gecikmesini devre dışı bırak\nMavi ekran hatasında otomatik yeniden başlatmayı devre dışı bırak\nÇeşitli telemetrileri devre dışı bırak\n\nDüğmeye tıklayarak hazır MakuOS ön ayarını uygulayacaksınız."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Gelişmiş ayarlar",
                 "deledge_title": "Microsoft Edge'i Kaldır",
                 "deledge_btn": "Kaldır",
                 "deledge_before": "Microsoft Edge'i kaldırmadan önce başka bir tarayıcınız olduğundan emin olun. Kaldırmadan önce Google Chrome sayfasına gitmek ister misiniz?",
@@ -221,8 +223,6 @@
                 "telemetry": "Sistemdeki tüm telemetri ve takibi devre dışı bırak"
             },
             "status": {
-                "o1b": "Pil durumu raporunu başarıyla oluşturdunuz.",
-                "sr8": "Grup İlkesi Düzenleyicisi başarıyla geri yüklendi!",
                 "uacwarn": "\"Kullanıcı Hesabı Denetimini (UAC) devre dışı bırak\" seçeneğini etkinleştirdiğinizde, Windows 11'de görev çubuğuna sürükle-bırak özelliği çalışmayı durdurur. MakuTweaker'ın bu sorunla bir ilgisi yoktur. Devam etmek istiyor musunuz?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Mavi",
                 "c8": "Siyah",
                 "b2": "Standart"
-            },
-            "status": {
-                "apN": "Yeni dosyalar ve klasörler için varsayılan adı başarıyla değiştirdiniz.",
-                "stN": "Yeni dosyalar ve klasörler için varsayılan adı başarıyla geri yüklediniz.",
-                "apC": "Vurgu rengini başarıyla değiştirdiniz."
             }
         },
         "pci": {

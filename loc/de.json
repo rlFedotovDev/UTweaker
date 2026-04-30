@@ -21,7 +21,7 @@
                 "set": "Einstellungen / Über diese App"
             },
             "def": {
-                "statusdef": "Information über die letzte Handlung in MakuTweaker...",
+                "search": "Suche nach Tweaks, Einstellungen und Funktionen",
                 "on": "An",
                 "off": "Aus",
                 "apply": "Übernehmen",
@@ -53,7 +53,6 @@
                 "showall": "Alle anzeigen"
             },
             "status": {
-                "e8": "MakuTweaker hat doppelte Laufwerke im Explorer behoben.",
                 "hdInfo1": "Wählen Sie Laufwerkbuchstaben, die Sie ausblenden wollen.",
                 "hdInfo2": "Beachten Sie, dass das Laufwerk weiterhin geöffnet werden kann, indem Sie seinen Buchstaben und einen Doppelpunkt in die Adresszeile des Explorers eingeben.",
                 "hide": "Ausgewählte Buchstaben ausblenden",
@@ -86,11 +85,10 @@
                 "wu5": "Windows Update deaktivieren",
                 "wu6": "Reservierten Speicher für Updates deaktivieren",
                 "wu5b": "Deaktivieren",
-                "wu6b": "Blockieren"
-            },
-            "status": {
-                "wu4": "Sie haben die Updates für eine bestimmte Windows-Version erfolgreich blockiert",
-                "wu5": "Sie können jederzeit zu Windows Update gehen und auf \"Updates fortsetzen\" klicken."
+                "wu6b": "Blockieren",
+                "wu6u": "Entsperren",
+                "status": "Windows Update-Cache wird geleert... Dies kann einige Zeit dauern.",
+                "statusdis": "Windows Update-Status wird geändert... Dies kann einige Zeit dauern."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Notizen",
                 "u22": "Tonaufnahme",
                 "u27": "Alarme und Uhr",
-                "mode1": "Nur Bloatware",
-                "mode2": "Populäre anzeigen",
-                "mode3": "Notwendige anzeigen",
+                "mode1": "Überflüssige Apps",
+                "mode2": "Beliebt",
+                "mode3": "Erforderlich",
                 "b": "UWP-Apps Löschen starten",
                 "chk": "Überprüfung installierter UWP-Apps...",
                 "is": "installiert...",
@@ -155,11 +153,14 @@
                 "b": "Schnelleinstellungen starten",
                 "info": "Benutzen Sie Häkchen, um Einstellungen auszuwählen,\ndie Sie übernehmen wollen.\nDie Einstellungen werden nach der Anwendung ausgeblendet.",
                 "infodone": "Die Schnelleinstellungen sind abgeschlossen.\nNach dem Anwenden nicht vergessen, neu zu starten.\nViel Spaß bei der Benutzung des Systems!",
-                "uncheck": "Alle entfernen",
                 "checkall": "Alle aktivieren",
                 "hidewidget": "Schaltflächen \"Taskansicht\" und \"Widgets\" ausblenden",
                 "removeads": "Werbung im \"Start-Menü\" und in der Taskleiste blockieren",
-                "clipboard": "Zwischenablage aktivieren"
+                "clipboard": "Zwischenablage aktivieren",
+                "title": "Beliebte Einstellungen",
+                "title2": "Selten genutzte Funktionen",
+                "makuos": "MakuOS-Einstellungen aktivieren",
+                "makuos_tooltip": "In Windows-Builds namens MakuOS, die bis November 2025 entwickelt wurden, wurden die folgenden Einstellungen angewendet:\n\nIm Explorer \"Dieser PC\" anstelle von \"Start\" öffnen\nAusgeblendete Dateien, Ordner und Laufwerke anzeigen\nDateinamenerweiterungen anzeigen\nSymbol \"Dieser PC\" auf dem Desktop anzeigen\nWerbung und Vorschläge im Startmenü deaktivieren\nAutomatische Festplattenverschlüsselung mit Bitlocker deaktivieren\nEinrastfunktion deaktivieren\nVerzögerung im Kontextmenü deaktivieren\nAutomatischen Neustart bei Bluescreen deaktivieren\nVerschiedene Telemetrie deaktivieren\n\nDurch Klicken auf die Schaltfläche wenden Sie die vorgefertigte MakuOS-Voreinstellung an."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Erweiterte Einstellungen",
                 "deledge_title": "Microsoft Edge deinstallieren",
                 "deledge_btn": "Deinstallieren",
                 "deledge_before": "Stellen Sie sicher, dass Sie einen anderen Browser haben, bevor Sie Microsoft Edge deinstallieren. Möchten Sie vor der Deinstallation die Google Chrome-Seite aufrufen?",
@@ -221,8 +223,6 @@
                 "telemetry": "Alle Telemetrie und Überwachung im System deaktivieren"
             },
             "status": {
-                "o1b": "Der Bericht über die Akkueigenschaften wurde erfolgreich erstellt",
-                "sr8": "Der Gruppenrichtlinien-Editor wurde erfolgreich wiederhergestellt",
                 "uacwarn": "Beim Aktivieren der Option \"Benutzerkontensteuerung (UAC) deaktivieren\", funktioniert das Ziehen und Ablegen (Drag-and-Drop) auf der Taskleiste unter Windows 11 nicht mehr. MakuTweaker steht in keinem Zusammenhang mit diesem Problem. Möchten Sie wirklich fortfahren?"
             }
         },
@@ -261,17 +261,12 @@
                 "c7": "Blau",
                 "c8": "Schwarz",
                 "b2": "Standard"
-            },
-            "status": {
-                "apN": "Der Standardname für neue Dateien und Ordner wurde erfolgreich geändert.",
-                "stN": "Der Standardname für neue Dateien und Ordner wurde erfolgreich wiederhergestellt.",
-                "apC": "Die Markierungsfarbe wurde erfolgreich geändert."
             }
         },
         "pci": {
             "main": {
                 "label": "Info zu diesem PC",
-                "processorlabel": "CPU:",
+                "processorlabel": "CPU",
                 "processorname": "Name:",
                 "processorcores": "Anzahl der Kerne und Threads:",
                 "processorfreq": "Basis-Frequenz:",

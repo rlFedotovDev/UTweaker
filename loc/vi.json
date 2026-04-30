@@ -21,7 +21,7 @@
                 "set": "Cài đặt / Giới thiệu"
             },
             "def": {
-                "statusdef": "Thông tin về hành động gần nhất trong MakuTweaker...",
+                "search": "Tìm kiếm tweak, cài đặt và tính năng",
                 "on": "Bật",
                 "off": "Tắt",
                 "apply": "Áp dụng",
@@ -53,7 +53,6 @@
                 "showall": "Hiển thị tất cả ký tự"
             },
             "status": {
-                "e8": "MakuTweaker đã sửa lỗi trùng lặp ổ đĩa trong Explorer.",
                 "hdInfo1": "Chọn các ký tự ổ đĩa bạn muốn ẩn.",
                 "hdInfo2": "Lưu ý rằng ổ đĩa vẫn có thể được mở bằng cách nhập ký tự và dấu hai chấm vào thanh địa chỉ của Explorer.",
                 "hide": "Ẩn các ký tự đã chọn",
@@ -86,11 +85,10 @@
                 "wu5": "Tạm dừng dịch vụ Windows Update",
                 "wu6": "Tắt bộ nhớ dự trữ cho các bản cập nhật",
                 "wu5b": "Tạm dừng",
-                "wu6b": "Chặn"
-            },
-            "status": {
-                "wu4": "Bạn đã chặn thành công các bản cập nhật trên phiên bản Windows cụ thể.",
-                "wu5": "Bạn có thể vào Windows Update bất cứ lúc nào và nhấn \"Tiếp tục cập nhật\"."
+                "wu6b": "Chặn",
+                "wu6u": "Mở khóa",
+                "status": "Đang dọn dẹp bộ nhớ cache của Windows Update... Quá trình này có thể mất một chút thời gian.",
+                "statusdis": "Đang thay đổi trạng thái của Windows Update... Quá trình này có thể mất một chút thời gian."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Ghi chú",
                 "u22": "Ghi âm",
                 "u27": "Báo thức và Đồng hồ",
-                "mode1": "Chỉ Bloatware",
-                "mode2": "Hiển thị phổ biến",
-                "mode3": "Hiển thị cần thiết",
+                "mode1": "Ứng dụng dư thừa",
+                "mode2": "Phổ biến",
+                "mode3": "Cần thiết",
                 "b": "Bắt đầu gỡ cài đặt UWP",
                 "chk": "Đang kiểm tra các ứng dụng UWP đã cài đặt...",
                 "is": "đã cài đặt...",
@@ -155,11 +153,14 @@
                 "b": "Chạy cấu hình nhanh",
                 "info": "Sử dụng các ô kiểm để chọn các cài đặt\nmà bạn muốn áp dụng trong cấu hình tự động.\nCài đặt sẽ bị ẩn sau khi áp dụng.",
                 "infodone": "Đã hoàn tất các thông số cấu hình nhanh!\nSau khi áp dụng - đừng quên khởi động lại.\nChúc bạn sử dụng hệ thống vui vẻ!",
-                "uncheck": "Bỏ chọn tất cả",
                 "checkall": "Kích hoạt tất cả",
                 "hidewidget": "Ẩn nút \"Task View\" và \"Widgets\"",
                 "removeads": "Loại bỏ quảng cáo trong \"Start Menu\" và trên thanh tác vụ",
-                "clipboard": "Bật bộ nhớ tạm (Clipboard)"
+                "clipboard": "Bật bộ nhớ tạm (Clipboard)",
+                "title": "Các cài đặt phổ biến",
+                "title2": "Các chức năng hiếm khi được sử dụng",
+                "makuos": "Kích hoạt cài đặt MakuOS",
+                "makuos_tooltip": "Trong các bản dựng Windows có tên MakuOS, được phát triển cho đến tháng 11 năm 2025, các cài đặt sau đã được áp dụng:\n\nMở \"This PC\" thay vì \"Home\" trong File Explorer\nHiển thị các tệp, thư mục và ổ đĩa bị ẩn\nHiển thị phần mở rộng tệp\nHiển thị biểu tượng \"This PC\" trên màn hình nền\nTắt quảng cáo và đề xuất trong Menu Start\nTắt tự động mã hóa ổ đĩa bằng Bitlocker\nTắt Phím dính (Sticky Keys)\nTắt độ trễ của menu ngữ cảnh\nTắt tự động khởi động lại khi bị Màn hình xanh chết chóc\nTắt các phép đo từ xa (telemetry) khác nhau\n\nBằng cách nhấp vào nút, bạn sẽ áp dụng cài đặt trước MakuOS đã sẵn sàng."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Cài đặt nâng cao",
                 "deledge_title": "Gỡ cài đặt Microsoft Edge",
                 "deledge_btn": "Gỡ cài đặt",
                 "deledge_before": "Trước khi gỡ cài đặt Microsoft Edge, hãy đảm bảo bạn có trình duyệt khác. Bạn có muốn truy cập trang Google Chrome trước khi gỡ cài đặt không?",
@@ -221,8 +223,6 @@
                 "telemetry": "Tắt toàn bộ telemetry và theo dõi trong hệ thống"
             },
             "status": {
-                "o1b": "Bạn đã tạo thành công báo cáo thông số pin.",
-                "sr8": "Trình chỉnh sửa chính sách nhóm đã được khôi phục thành công!",
                 "uacwarn": "Khi bật tùy chọn \"Tắt kiểm soát tài khoản người dùng (UAC)\", tính năng kéo thả (Drag-and-Drop) trên thanh tác vụ sẽ ngừng hoạt động trên Windows 11. MakuTweaker không liên quan đến vấn đề này. Bạn có thực sự muốn tiếp tục?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Xanh dương",
                 "c8": "Đen",
                 "b2": "Mặc định"
-            },
-            "status": {
-                "apN": "Bạn đã thay đổi thành công tên mặc định cho tệp và thư mục mới.",
-                "stN": "Bạn đã khôi phục thành công tên mặc định cho tệp và thư mục mới.",
-                "apC": "Bạn đã thay đổi thành công màu nhấn."
             }
         },
         "pci": {

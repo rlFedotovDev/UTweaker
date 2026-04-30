@@ -21,7 +21,7 @@
                 "set": "Asetukset / Tietoja"
             },
             "def": {
-                "statusdef": "Tietoja viimeisimmästä MakuTweaker-toiminnosta...",
+                "search": "Säätöjen, asetusten ja toimintojen haku",
                 "on": "Päällä",
                 "off": "Pois",
                 "apply": "Käytä",
@@ -53,7 +53,6 @@
                 "showall": "Näytä kaikki kirjaimet"
             },
             "status": {
-                "e8": "MakuTweaker korjasi asemien duplikaatit Resurssienhallinnassa.",
                 "hdInfo1": "Valitse asemakirjaimet, jotka haluat piilottaa.",
                 "hdInfo2": "Huomaa, että aseman voi silti avata kirjoittamalla sen kirjaimen ja kaksoispisteen Resurssienhallinnan osoiteriville.",
                 "hide": "Piilota valitut kirjaimet",
@@ -86,11 +85,10 @@
                 "wu5": "Keskeytä Windows Update -palvelu",
                 "wu6": "Poista päivitysten varattu tallennustila käytöstä",
                 "wu5b": "Keskeytä",
-                "wu6b": "Estä"
-            },
-            "status": {
-                "wu4": "Päivitykset on estetty onnistuneesti tietyssä Windows-versiossa.",
-                "wu5": "Voit milloin tahansa mennä Windows Updateen ja valita \"Jatka päivityksiä\"."
+                "wu6b": "Estä",
+                "wu6u": "Avaa lukitus",
+                "status": "Tyhjennetään Windows Update -välimuistia... Tämä voi kestää jonkin aikaa.",
+                "statusdis": "Muutetaan Windows Update -tilaa... Tämä voi kestää jonkin aikaa."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Tarralaput",
                 "u22": "Ääninauhuri",
                 "u27": "Hälytykset ja kello",
-                "mode1": "Vain Bloatware",
-                "mode2": "Näytä suositut",
-                "mode3": "Näytä välttämättömät",
+                "mode1": "Tarpeettomat sovellukset",
+                "mode2": "Suositut",
+                "mode3": "Tarvittavat",
                 "b": "Aloita UWP-poisto",
                 "chk": "Tarkistetaan asennettuja UWP-sovelluksia...",
                 "is": "asennettu...",
@@ -155,11 +153,14 @@
                 "b": "Käynnistä pika-asetukset",
                 "info": "Käytä valintaruutuja valitaksesi asetukset,\njoita haluat käyttää automaattisessa määrityksessä.\nAsetukset piilotetaan käytön jälkeen.",
                 "infodone": "Pika-asetukset on suoritettu!\nMuista käynnistää tietokone uudelleen niiden soveltamisen jälkeen.\nNauti järjestelmästäsi!",
-                "uncheck": "Poista kaikki valinnat",
                 "checkall": "Aktivoi kaikki",
                 "hidewidget": "Piilota \"Tehtävien näkymä\" ja \"Widgetit\" -painikkeet",
                 "removeads": "Poista mainokset Käynnistä-valikosta ja tehtäväpalkista",
-                "clipboard": "Ota leikepöytä käyttöön"
+                "clipboard": "Ota leikepöytä käyttöön",
+                "title": "Suositut asetukset",
+                "title2": "Harvoin käytetyt toiminnot",
+                "makuos": "Aktivoi MakuOS-asetukset",
+                "makuos_tooltip": "MakuOS-nimisissä Windows-koontiversioissa, joita kehitettiin marraskuuhun 2025 asti, sovellettiin seuraavia asetuksia:\n\nAvaa Resurssienhallinnassa \"Tämä tietokone\" \"Aloitus\"-näkymän sijaan\nNäytä piilotetut tiedostot, kansiot ja asemat\nNäytä tiedostotunnisteet\nNäytä \"Tämä tietokone\" -kuvake työpöydällä\nPoista mainokset ja ehdotukset käytöstä Käynnistä-valikossa\nPoista automaattinen levyn salaus Bitlockerilla käytöstä\nPoista tarttuvat näppäimet käytöstä\nPoista kontekstivalikon viive käytöstä\nPoista automaattinen uudelleenkäynnistys Blue Screen of Death -virheessä käytöstä\nPoista erilainen telemetria käytöstä\n\nNapsauttamalla painiketta otat käyttöön valmiin MakuOS-esiasetuksen."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Lisäasetukset",
                 "deledge_title": "Poista Microsoft Edgen asennus",
                 "deledge_btn": "Poista",
                 "deledge_before": "Varmista ennen Microsoft Edgen poistamista, että sinulla on toinen selain. Haluatko mennä Google Chrome -sivulle ennen poistamista?",
@@ -221,8 +223,6 @@
                 "telemetry": "Poista kaikki telemetria ja seuranta järjestelmästä"
             },
             "status": {
-                "o1b": "Akkuraportti luotiin onnistuneesti.",
-                "sr8": "Ryhmäkäytäntöeditori palautettiin onnistuneesti!",
                 "uacwarn": "Kun \"Poista käyttäjätilien valvonta (UAC)\" on käytössä, Windows 11:n tehtäväpalkin raahaaminen (Drag-and-Drop) lakkaa toimimasta. MakuTweaker ei liity tähän ongelmaan. Haluatko varmasti jatkaa?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Sininen",
                 "c8": "Musta",
                 "b2": "Vakio"
-            },
-            "status": {
-                "apN": "Uusien tiedostojen ja kansioiden oletusnimi muutettu onnistuneesti.",
-                "stN": "Uusien tiedostojen ja kansioiden oletusnimi palautettu onnistuneesti.",
-                "apC": "Korostusväri muutettu onnistuneesti."
             }
         },
         "pci": {

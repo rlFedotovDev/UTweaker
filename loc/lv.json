@@ -21,7 +21,7 @@
                 "set": "Iestatījumi / Par programmu"
             },
             "def": {
-                "statusdef": "Informācija par pēdējo darbību MakuTweaker...",
+                "search": "Tweaks, iestatījumu un funkciju meklēšana",
                 "on": "Iesl.",
                 "off": "Izsl.",
                 "apply": "Pielietot",
@@ -53,7 +53,6 @@
                 "showall": "Rādīt visus burtus"
             },
             "status": {
-                "e8": "MakuTweaker novērsa disku dublēšanos Explorer.",
                 "hdInfo1": "Izvēlieties disku burtus, kurus vēlaties paslēpt.",
                 "hdInfo2": "Ņemiet vērā, ka disku joprojām var atvērt, ievadot tā burtu un kolu Explorer adreses joslā.",
                 "hide": "Paslēpt izvēlētos burtus",
@@ -86,11 +85,10 @@
                 "wu5": "Pauzēt Windows Update pakalpojumu",
                 "wu6": "Atspējot rezervēto krātuvi atjauninājumiem",
                 "wu5b": "Pauzēt",
-                "wu6b": "Bloķēt"
-            },
-            "status": {
-                "wu4": "Jūs veiksmīgi bloķējāt atjauninājumus noteiktai Windows versijai.",
-                "wu5": "Jūs jebkurā laikā varat doties uz Windows Update un nospiest \"Atsākt atjaunināšanu\"."
+                "wu6b": "Bloķēt",
+                "wu6u": "Atbloķēt",
+                "status": "Notiek Windows Update kešatmiņas tīrīšana... Tas var aizņemt kādu laiku.",
+                "statusdis": "Notiek Windows Update stāvokļa mainīšana... Tas var aizņemt kādu laiku."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Piezīmes",
                 "u22": "Skaņas ierakstītājs",
                 "u27": "Modinātāji un pulkstenis",
-                "mode1": "Tikai Bloatware",
-                "mode2": "Rādīt populārās",
-                "mode3": "Rādīt nepieciešamās",
+                "mode1": "Liekas lietotnes",
+                "mode2": "Populāras",
+                "mode3": "Nepieciešamas",
                 "b": "Sākt UWP noņemšanu",
                 "chk": "Pārbauda instalētās UWP lietotnes...",
                 "is": "instalēta...",
@@ -155,11 +153,14 @@
                 "b": "Palaist ātro iestatīšanu",
                 "info": "Izmantojiet izvēles rūtiņas, lai izvēlētos iestatījumus,\nkurus vēlaties pielietot automātiskajā iestatīšanā.\nIestatījumi tiks paslēpti pēc piemērošanas.",
                 "infodone": "Ātrās iestatīšanas parametri ir beigušies!\nPēc to pielietošanas - neaizmirstiet restartēt datoru.\nVeiksmīgu sistēmas lietošanu!",
-                "uncheck": "Noņemt visu",
                 "checkall": "Aktivizēt visu",
                 "hidewidget": "Paslēpt pogas \"Uzdevumu skats\" un \"Logrīki\"",
                 "removeads": "Noņemt reklāmas \"Sākuma izvēlnē\" un uzdevumjoslā",
-                "clipboard": "Ieslēgt starpliktuvi"
+                "clipboard": "Ieslēgt starpliktuvi",
+                "title": "Populārie iestatījumi",
+                "title2": "Reti izmantotās funkcijas",
+                "makuos": "Aktivizēt MakuOS iestatījumus",
+                "makuos_tooltip": "Windows būvējumos ar nosaukumu MakuOS, kas tika izstrādāti līdz 2025. gada novembrim, tika piemēroti šādi iestatījumi:\n\nFailu pārlūkā atvērt lapu \"Šis dators\", nevis \"Sākums\"\nRādīt slēptos failus, mapes un diskus\nRādīt failu paplašinājumus\nRādīt \"Šis dators\" ikonu uz darbvirsmas\nAtspējot reklāmas un ieteikumus sākuma izvēlnē\nAtspējot automātisko diska šifrēšanu ar Bitlocker\nAtspējot lipīgos taustiņus\nAtspējot kontekstizvēlnes aizkavi\nAtspējot automātisko restartēšanu zilā nāves ekrāna gadījumā\nAtspējot dažādu telemetriju\n\nNoklikšķinot uz pogas, jūs piemērosiet gatavo MakuOS sākotnējo iestatījumu."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Paplašinātie iestatījumi",
                 "deledge_title": "Atinstalēt Microsoft Edge",
                 "deledge_btn": "Atinstalēt",
                 "deledge_before": "Pirms Microsoft Edge atinstalēšanas pārliecinieties, vai jums ir cita pārlūkprogramma. Vai vēlaties doties uz Google Chrome lapu pirms atinstalēšanas?",
@@ -221,8 +223,6 @@
                 "telemetry": "Atspējot visu telemetriju un izsekošanu sistēmā"
             },
             "status": {
-                "o1b": "Jūs veiksmīgi izveidojāt akumulatora stāvokļa atskaiti.",
-                "sr8": "Grupas politikas redaktors veiksmīgi atgriezts!",
                 "uacwarn": "Ieslēdzot opciju \"Atspējot lietotāja konta kontroli (UAC)\", Windows 11 pārstāj darboties vilkšana (Drag-and-Drop) uz uzdevumjoslas. MakuTweaker nav saistīts ar šo problēmu. Vai tiešām vēlaties turpināt?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Zila",
                 "c8": "Melna",
                 "b2": "Standarts"
-            },
-            "status": {
-                "apN": "Jūs veiksmīgi mainījāt noklusējuma nosaukumu jauniem failiem un mapēm.",
-                "stN": "Jūs veiksmīgi atjaunojāt noklusējuma nosaukumu jauniem failiem un mapēm.",
-                "apC": "Jūs veiksmīgi mainījāt izcelšanas krāsu."
             }
         },
         "pci": {

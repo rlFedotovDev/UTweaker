@@ -21,7 +21,7 @@
                 "set": "Mga Setting / Tungkol sa"
             },
             "def": {
-                "statusdef": "Impormasyon tungkol sa huling aksyon sa MakuTweaker...",
+                "search": "Tweaks, setting at mga feature na paghahanap",
                 "on": "Naka-on",
                 "off": "Naka-off",
                 "apply": "Ilapat",
@@ -53,7 +53,6 @@
                 "showall": "Ipakita lahat"
             },
             "status": {
-                "e8": "Inayos ng MakuTweaker ang pagdoble ng mga drive sa Explorer.",
                 "hdInfo1": "Piliin ang mga drive letter na nais mong itago.",
                 "hdInfo2": "Tandaan na maaari pa ring buksan ang drive sa pamamagitan ng pag-type ng letra nito at colon sa address bar ng Explorer.",
                 "hide": "Itago ang mga napiling letra",
@@ -86,11 +85,10 @@
                 "wu5": "I-pause ang serbisyo ng Windows Update",
                 "wu6": "I-disable ang nakalaang storage para sa mga update",
                 "wu5b": "I-pause",
-                "wu6b": "I-block"
-            },
-            "status": {
-                "wu4": "Matagumpay mong na-block ang mga update sa isang partikular na bersyon ng Windows.",
-                "wu5": "Maaari kang pumunta sa Windows Update anumang oras at i-click ang \"Resume updates\"."
+                "wu6b": "I-block",
+                "wu6u": "I-unlock",
+                "status": "Nililinis ang cache ng Windows Update... Maaaring tumagal ito ng kaunti.",
+                "statusdis": "Binabago ang status ng Windows Update... Maaaring tumagal ito ng kaunti."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Sticky Notes",
                 "u22": "Voice Recorder",
                 "u27": "Clock",
-                "mode1": "Bloatware lamang",
-                "mode2": "Ipakita ang mga popular",
-                "mode3": "Ipakita ang mga kailangan",
+                "mode1": "Mga hindi kinakailangang app",
+                "mode2": "Sikat",
+                "mode3": "Kinakailangan",
                 "b": "Simulan ang pag-aalis ng UWP",
                 "chk": "Sinusuri ang mga naka-install na UWP app...",
                 "is": "naka-install...",
@@ -155,11 +153,14 @@
                 "b": "Simulan ang mabilis na pag-aayos",
                 "info": "Gamitin ang mga checkbox para piliin ang mga setting\nna nais mong ilapat sa auto-configuration.\nItatago ang mga setting pagkatapos ilapat.",
                 "infodone": "Tapos na ang mga parameter ng mabilis na pag-aayos!\nPagkatapos ilapat ang mga ito, huwag kalimutang mag-restart.\nEnjoy sa paggamit ng system!",
-                "uncheck": "Alisin ang lahat",
                 "checkall": "I-activate ang lahat",
                 "hidewidget": "Itago ang \"Task View\" at \"Widgets\" buttons",
                 "removeads": "Alisin ang mga ad sa \"Start Menu\" at taskbar",
-                "clipboard": "I-enable ang clipboard history"
+                "clipboard": "I-enable ang clipboard history",
+                "title": "Mga sikat na setting",
+                "title2": "Mga function na bihirang gamitin",
+                "makuos": "I-activate ang mga setting ng MakuOS",
+                "makuos_tooltip": "Sa mga Windows build na pinangalanang MakuOS, na ginawa hanggang Nobyembre 2025, ang mga sumusunod na setting ay inilapat:\n\nBuksan ang \"This PC\" sa halip na \"Home\" sa File Explorer\nIpakita ang mga naka-hide na file, folder, at drive\nIpakita ang mga file extension\nIpakita ang \"This PC\" icon sa desktop\nI-disable ang mga ad at mungkahi sa Start Menu\nI-disable ang awtomatikong disk encryption gamit ang Bitlocker\nI-disable ang Sticky Keys\nI-disable ang context menu delay\nI-disable ang awtomatikong pag-restart sa Blue Screen of Death\nI-disable ang iba't ibang telemetry\n\nSa pag-click sa button, ia-apply mo ang handang MakuOS preset."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Mga advanced na setting",
                 "deledge_title": "I-uninstall ang Microsoft Edge",
                 "deledge_btn": "I-uninstall",
                 "deledge_before": "Bago i-uninstall ang Microsoft Edge, tiyaking mayroon kang ibang browser. Gusto mo bang pumunta sa pahina ng Google Chrome bago i-uninstall?",
@@ -221,8 +223,6 @@
                 "telemetry": "I-disable ang lahat ng telemetry at pagsubaybay sa system"
             },
             "status": {
-                "o1b": "Matagumpay mong nagawa ang ulat ng baterya.",
-                "sr8": "Matagumpay na naibalik ang Group Policy Editor!",
                 "uacwarn": "Kapag na-enable ang \"I-disable ang User Account Control (UAC)\", ang Drag-and-Drop sa taskbar ay titigil sa paggana sa Windows 11. Ang MakuTweaker ay walang kinalaman sa problemang ito. Sigurado ka bang gusto mong magpatuloy?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Blue",
                 "c8": "Black",
                 "b2": "Standard"
-            },
-            "status": {
-                "apN": "Matagumpay mong nabago ang default na pangalan para sa mga bagong file at folder.",
-                "stN": "Matagumpay mong naibalik ang default na pangalan para sa mga bagong file at folder.",
-                "apC": "Matagumpay mong nabago ang kulay ng highlight."
             }
         },
         "pci": {

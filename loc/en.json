@@ -4,7 +4,7 @@
             "catname": {
                 "expl": "Explorer & Desktop",
                 "compon": "Windows Components",
-                "wu": "Windows Updates",
+                "wu": "Windows Update",
                 "uwp": "Remove UWP Apps",
                 "sat": "Shutdown Timer",
                 "quick": "Quick Windows Setup",
@@ -21,7 +21,7 @@
                 "set": "Settings / About"
             },
             "def": {
-                "statusdef": "Information About the Last Action in MakuTweaker...",
+                "search": "Search settings, features, and tweaks",
                 "on": "On",
                 "off": "Off",
                 "apply": "Apply",
@@ -53,7 +53,6 @@
                 "showall": "Show All"
             },
             "status": {
-                "e8": "MakuTweaker Has Fixed The Drive Duplication In File Explorer.",
                 "hdInfo1": "Choose The Drive Letters You Want To Hide.",
                 "hdInfo2": "Note that The Drive Can Still Be Accessed by Entering The Drive Letter and a Colon in The Explorer Address Bar.",
                 "hide": "Hide Selected Letters",
@@ -78,7 +77,7 @@
         },
         "wu": {
             "main": {
-                "label": "Windows Updates",
+                "label": "Windows Update",
                 "wu1": "Disable Windows Update",
                 "wu2": "Block Updates On a Specific Version of Windows",
                 "wu3": "Disable Driver Installation via Windows Update",
@@ -86,11 +85,10 @@
                 "wu5": "Pause Windows Update Service",
                 "wu6": "Disable Reserved Storage for Updates",
                 "wu5b": "Pause",
-                "wu6b": "Block"
-            },
-            "status": {
-                "wu4": "You Have Successfully Blocked Windows Update on a Specific Version.",
-                "wu5": "You Can Always Go To The Windows Update Tab And Click \"Resume Updates\" At Any Time."
+                "wu6b": "Block",
+                "wu6u": "Unlock",
+                "status": "Clearing Windows Update Cache... This may take some time.",
+                "statusdis": "Changing Windows Update Ctate... This may take some time."
             }
         },
         "uwp": {
@@ -112,11 +110,11 @@
                 "u20": "Sticky Notes",
                 "u22": "Sound Recorder",
                 "u27": "Alarms & Clock",
-                "mode1": "Only Bloatware",
-                "mode2": "Show Popular Apps",
-                "mode3": "Show Necessary Apps",
+                "mode1": "Unnecessary Apps",
+                "mode2": "Popular",
+                "mode3": "Necessary",
                 "b": "Start Removing UWP",
-                "chk": "Checking Installed UWP Apps | ",
+                "chk": "Checking Installed UWP Apps...",
                 "is": "is Installed...",
                 "isnt": "isn't Installed...",
                 "comp": "Checking Completed!",
@@ -153,13 +151,16 @@
             "main": {
                 "label": "Quick Windows Setup",
                 "b": "Start Quick Setup",
-                "uncheck": "Uncheck All",
                 "checkall": "Activate all",
                 "info": "Use Checkboxes To Select The Settings\nTo Be Applied For Windows Quick Setup.\nSettings will be hidden after applying.",
                 "infodone": "Quick setup is complete!\nDon't forget to restart your computer to apply the changes.\nEnjoy using your system!",
                 "hidewidget": "Hide The Task View And Widgets Button",
                 "removeads": "Remove Ads In Start Menu And Taskbar Search",
-                "clipboard": "Enable Clipboard"
+                "clipboard": "Enable Clipboard",
+                "title": "Popular settings",
+                "title2": "Rarely used features",
+                "makuos": "Activate MakuOS settings",
+                "makuos_tooltip": "In Windows builds named MakuOS, developed until November 2025, the following settings were applied:\n\nOpen \"This PC\" instead of \"Home\" in File Explorer\nShow hidden files, folders, and drives\nShow file extensions\nShow \"This PC\" icon on the desktop\nDisable ads and suggestions in the Start Menu\nDisable automatic disk encryption with Bitlocker\nDisable Sticky Keys\nDisable context menu delay\nDisable automatic restart on Blue Screen of Death\nDisable various telemetry\n\nBy clicking the button, you will apply the ready-made MakuOS preset."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Advanced Settings",
                 "deledge_title": "Uninstall Microsoft Edge",
                 "deledge_btn": "Uninstall",
                 "deledge_before": "Before uninstalling Microsoft Edge, make sure you have another browser. Do you want to go to the Google Chrome page before uninstalling?",
@@ -221,8 +223,6 @@
                 "telemetry": "Disable All Telemetry and tracking in the system"
             },
             "status": {
-                "o1b": "You Have Successfully Generated The Battery Report.",
-                "sr8": "You Have Successfully Enabled The Local Group Policy Editor.",
                 "uacwarn": "When the \"Disable User Account Control\" option is enabled, Drag-and-Drop on the taskbar stops working in Windows 11. MakuTweaker is not related to this issue. Are you sure you want to continue?"
             }
         },
@@ -232,7 +232,7 @@
                 "applyb": "Apply Limit",
                 "minb": "Minimum Performance",
                 "maxb": "Maximum Performance",
-                "info": "With MakuTweaker, you can increase your laptop's battery life by software-limiting the processor's power level.\nOn desktop PCs, this helps reduce heat, power consumption, and fan noise, making the system quieter and more stable.\nThe lower the percentage you set, the lower the performance will be, but the longer the battery life.\nPlease note that after unplugging the laptop from the charger,\nyou may need to set the limit again.",
+                "info": "With MakuTweaker, you can increase your laptop's battery life by software-limiting the processor's power level.\nOn desktop PCs, this helps reduce heat, power consumption, and fan noise, making the system quieter and more stable.\nThe lower the percentage you set, the lower the performance will be, but the longer the battery life.\nPlease note that after unplugging the laptop from the charger, you may need to set the limit again.",
                 "flyout": "Processor performance limit has been set to "
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Blue",
                 "c8": "Black",
                 "b2": "Standard"
-            },
-            "status": {
-                "apN": "You Have Successfully Changed The Default Name For New Files And Folders.",
-                "stN": "You Have Successfully Restored The Default Name For New Files And Folders.",
-                "apC": "You Have Successfully Changed The Highlight Color."
             }
         },
         "pci": {

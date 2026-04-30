@@ -21,7 +21,7 @@
                 "set": "Pengaturan / Tentang"
             },
             "def": {
-                "statusdef": "Informasi tentang tindakan terakhir di MakuTweaker...",
+                "search": "Tweaks, pengaturan, dan fitur pencarian",
                 "on": "Aktif",
                 "off": "Nonaktif",
                 "apply": "Terapkan",
@@ -53,7 +53,6 @@
                 "showall": "Tampilkan semua huruf"
             },
             "status": {
-                "e8": "MakuTweaker telah memperbaiki duplikasi drive di Explorer.",
                 "hdInfo1": "Pilih huruf drive yang ingin Anda sembunyikan.",
                 "hdInfo2": "Perhatikan bahwa drive masih dapat dibuka dengan memasukkan huruf drive dan titik dua di bilah alamat Explorer.",
                 "hide": "Sembunyikan huruf yang dipilih",
@@ -86,11 +85,10 @@
                 "wu5": "Jeda layanan Windows Update",
                 "wu6": "Nonaktifkan penyimpanan cadangan untuk pembaruan",
                 "wu5b": "Jeda",
-                "wu6b": "Blokir"
-            },
-            "status": {
-                "wu4": "Anda telah berhasil memblokir pembaruan pada versi Windows tertentu.",
-                "wu5": "Anda dapat masuk ke Windows Update kapan saja dan menekan \"Lanjutkan pembaruan\"."
+                "wu6b": "Blokir",
+                "wu6u": "Buka kunci",
+                "status": "Membersihkan cache Windows Update... Ini mungkin memakan waktu.",
+                "statusdis": "Mengubah status Windows Update... Ini mungkin memakan waktu."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Catatan Tempel",
                 "u22": "Perekam Suara",
                 "u27": "Alarm & Jam",
-                "mode1": "Hanya Bloatware",
-                "mode2": "Tampilkan populer",
-                "mode3": "Tampilkan yang diperlukan",
+                "mode1": "Aplikasi tidak perlu",
+                "mode2": "Populer",
+                "mode3": "Diperlukan",
                 "b": "Mulai hapus UWP",
                 "chk": "Memeriksa aplikasi UWP yang terinstal...",
                 "is": "terinstal...",
@@ -155,11 +153,14 @@
                 "b": "Jalankan pengaturan cepat",
                 "info": "Gunakan kotak centang untuk memilih pengaturan\nyang ingin Anda terapkan dalam pengaturan otomatis.\nPengaturan akan disembunyikan setelah diterapkan.",
                 "infodone": "Parameter pengaturan cepat selesai!\nSetelah menerapkannya - jangan lupa untuk memulai ulang.\nSelamat menggunakan sistem!",
-                "uncheck": "Hapus semua",
                 "checkall": "Aktifkan semua",
                 "hidewidget": "Sembunyikan tombol \"Tampilan tugas\" dan \"Widget\"",
                 "removeads": "Hapus iklan di \"Menu Mulai\" dan bilah tugas",
-                "clipboard": "Aktifkan papan klip"
+                "clipboard": "Aktifkan papan klip",
+                "title": "Pengaturan populer",
+                "title2": "Fungsi yang jarang digunakan",
+                "makuos": "Aktifkan pengaturan MakuOS",
+                "makuos_tooltip": "Dalam build Windows bernama MakuOS, yang dikembangkan hingga November 2025, pengaturan berikut diterapkan:\n\nBuka \"PC Ini\" alih-alih \"Beranda\" di File Explorer\nTampilkan file, folder, dan drive tersembunyi\nTampilkan ekstensi file\nTampilkan ikon \"PC Ini\" di desktop\nNonaktifkan iklan dan saran di Start Menu\nNonaktifkan enkripsi disk otomatis dengan Bitlocker\nNonaktifkan Sticky Keys\nNonaktifkan penundaan menu konteks\nNonaktifkan restart otomatis saat Blue Screen of Death\nNonaktifkan berbagai telemetri\n\nDengan mengklik tombol, Anda akan menerapkan preset MakuOS yang sudah jadi."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Pengaturan lanjutan",
                 "deledge_title": "Hapus Instalan Microsoft Edge",
                 "deledge_btn": "Hapus",
                 "deledge_before": "Sebelum menghapus instalan Microsoft Edge, pastikan Anda memiliki browser lain. Apakah Anda ingin pergi ke halaman Google Chrome sebelum menghapus instalan?",
@@ -221,8 +223,6 @@
                 "telemetry": "Nonaktifkan semua telemetri dan pelacakan di sistem"
             },
             "status": {
-                "o1b": "Anda telah berhasil membuat laporan karakteristik baterai.",
-                "sr8": "Editor Kebijakan Grup berhasil dikembalikan!",
                 "uacwarn": "Saat mengaktifkan opsi \"Nonaktifkan Kontrol Akun Pengguna (UAC)\", fitur seret-dan-lepas (Drag-and-Drop) pada bilah tugas di Windows 11 akan berhenti berfungsi. MakuTweaker tidak bertanggung jawab atas masalah ini. Apakah Anda benar-benar ingin melanjutkan?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Biru",
                 "c8": "Hitam",
                 "b2": "Standar"
-            },
-            "status": {
-                "apN": "Anda telah berhasil mengubah nama default untuk file dan folder baru.",
-                "stN": "Anda telah berhasil memulihkan nama default untuk file dan folder baru.",
-                "apC": "Anda telah berhasil mengubah warna sorotan."
             }
         },
         "pci": {

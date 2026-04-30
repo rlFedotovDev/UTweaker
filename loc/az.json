@@ -21,7 +21,7 @@
                 "set": "Ayarlar / Proqram haqqında"
             },
             "def": {
-                "statusdef": "MakuTweaker-də sonuncu əməliyyat haqqında məlumat...",
+                "search": "Axtarış: tweaklər, parametrlər və funksiyalar",
                 "on": "Aç.",
                 "off": "Bağ.",
                 "apply": "Tətbiq et",
@@ -53,7 +53,6 @@
                 "showall": "Bütün hərfləri göstər"
             },
             "status": {
-                "e8": "MakuTweaker Explorer-də disk dublikatlarını aradan qaldırdı.",
                 "hdInfo1": "Gizlətmək istədiyiniz disk hərflərini seçin.",
                 "hdInfo2": "Nəzərə alın ki, Explorer-in ünvan sətrinə disk hərfini və qoşa nöqtəni daxil etməklə diski hələ də açmaq olar.",
                 "hide": "Seçilmiş hərfləri gizlət",
@@ -86,11 +85,10 @@
                 "wu5": "Windows Update xidmətini dayandır",
                 "wu6": "Yeniləmələr üçün ayrılmış yaddaşı söndür",
                 "wu5b": "Dayandır",
-                "wu6b": "Blokla"
-            },
-            "status": {
-                "wu4": "Windows-un müəyyən versiyasında yeniləmələri uğurla blokladınız.",
-                "wu5": "İstənilən vaxt Windows Update-ə daxil olub \"Yeniləmələri davam et\" düyməsinə basa bilərsiniz."
+                "wu6b": "Blokla",
+                "wu6u": "Kilidi açmaq",
+                "status": "Windows Update keşi təmizlənir... Bu bir az vaxt apara bilər.",
+                "statusdis": "Windows Update mərkəzinin vəziyyəti dəyişdirilir... Bu bir az vaxt apara bilər."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Qeydlər",
                 "u22": "Səs yazıcı",
                 "u27": "Zəngli saat və saat",
-                "mode1": "Yalnız Bloatware",
-                "mode2": "Populyarları göstər",
-                "mode3": "Lazımlıları göstər",
+                "mode1": "Artıq tətbiqlər",
+                "mode2": "Populyar",
+                "mode3": "Lazımlı",
                 "b": "UWP silinməsinə başla",
                 "chk": "Quraşdırılmış UWP tətbiqləri yoxlanılır...",
                 "is": "quraşdırılıb...",
@@ -155,11 +153,14 @@
                 "b": "Sürətli sazlamanı işə sal",
                 "info": "Avtomatik sazlamada tətbiq etmək istədiyiniz\nayarları seçmək üçün qutuculardan istifadə edin.\nParametrlər tətbiq edildikdən sonra gizlədiləcək.",
                 "infodone": "Sürətli sazlama parametrləri bitdi!\nTətbiq etdikdən sonra yenidən başlatmağı unutmayın.\nSistemdən xoş istifadə!",
-                "uncheck": "Hamısını seçmə",
                 "checkall": "Hamısını aktivləşdir",
                 "hidewidget": "\"Tapşırıq görünüşü\" və \"Vidjetlər\" düymələrini gizlət",
                 "removeads": "\"Başlat\" menyusunda və tapşırıq panelində reklamları sil",
-                "clipboard": "Mübadilə buferini aktivləşdir"
+                "clipboard": "Mübadilə buferini aktivləşdir",
+                "title": "Populyar tənzimləmələr",
+                "title2": "Nadir hallarda istifadə olunan funksiyalar",
+                "makuos": "MakuOS tənzimləmələrini aktivləşdir",
+                "makuos_tooltip": "2025-ci ilin noyabr ayına qədər inkişaf etdirilən MakuOS adlı Windows yığmalarında aşağıdakı tənzimləmələr tətbiq edilirdi:\n\nFayl Bələdçisində \"Ev\" əvəzinə \"Bu Kompüter\" səhifəsini açmaq\nGizli faylları, qovluqları və diskləri göstərmək\nFayl uzantılarını göstərmək\nİş masasında \"Bu Kompüter\" ikonunu göstərmək\nBaşlat Menyusunda reklam və təklifləri söndürmək\nBitlocker ilə diskin avtomatik şifrələnməsini söndürmək\nSürtünən düymələri söndürmək\nKontekst menyusunda gecikməni söndürmək\nÖlümün Mavi Ekranında avtomatik yenidən başlatmanı söndürmək\nMüxtəlif telemetriyaları söndürmək\n\nDüyməni basmaqla siz hazır MakuOS şablonunu tətbiq edəcəksiniz."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Qabaqcıl parametrlər",
                 "deledge_title": "Microsoft Edge-i silin",
                 "deledge_btn": "Sil",
                 "deledge_before": "Microsoft Edge-i silməzdən əvvəl başqa brauzerinizin olduğundan əmin olun. Silməzdən əvvəl Google Chrome səhifəsinə keçmək istəyirsiniz?",
@@ -221,8 +223,6 @@
                 "telemetry": "Sistemdə bütün telemetriya və izləməni söndür"
             },
             "status": {
-                "o1b": "Batareya xüsusiyyətləri haqqında hesabatı uğurla yaratdınız.",
-                "sr8": "Qrup siyasəti redaktoru uğurla geri qaytarıldı!",
                 "uacwarn": "\"İstifadəçi hesabı nəzarətini (UAC) söndür\" funksiyasını aktivləşdirdikdə, Windows 11-də tapşırıq panelində sürüklə-burax (Drag-and-Drop) funksiyası işləmir. MakuTweaker-in bu problemlə əlaqəsi yoxdur. Həqiqətən davam etmək istəyirsiniz?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Mavi",
                 "c8": "Qara",
                 "b2": "Standart"
-            },
-            "status": {
-                "apN": "Yeni fayl və qovluqlar üçün standart adı uğurla dəyişdiniz.",
-                "stN": "Yeni fayl və qovluqlar üçün standart adı uğurla bərpa etdiniz.",
-                "apC": "Seçim rəngini uğurla dəyişdiniz."
             }
         },
         "pci": {

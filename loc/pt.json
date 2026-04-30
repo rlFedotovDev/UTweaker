@@ -21,7 +21,7 @@
                 "set": "Configurações / Sobre"
             },
             "def": {
-                "statusdef": "Informações sobre a última ação no MakuTweaker...",
+                "search": "Pesquisa de ajustes, configurações e funções",
                 "on": "Ligado",
                 "off": "Desligado",
                 "apply": "Aplicar",
@@ -53,7 +53,6 @@
                 "showall": "Mostrar tudo"
             },
             "status": {
-                "e8": "O MakuTweaker corrigiu a duplicação de unidades no Explorador.",
                 "hdInfo1": "Selecione as letras de unidade que deseja ocultar.",
                 "hdInfo2": "Observe que a unidade ainda pode ser aberta digitando sua letra e dois-pontos na barra de endereços do Explorador.",
                 "hide": "Ocultar letras selecionadas",
@@ -86,11 +85,10 @@
                 "wu5": "Pausar o serviço Windows Update",
                 "wu6": "Desativar armazenamento reservado para atualizações",
                 "wu5b": "Pausar",
-                "wu6b": "Bloquear"
-            },
-            "status": {
-                "wu4": "Você bloqueou com sucesso as atualizações em uma versão específica do Windows.",
-                "wu5": "Você pode acessar o Windows Update a qualquer momento e clicar em \"Retomar atualizações\"."
+                "wu6b": "Bloquear",
+                "wu6u": "Desbloquear",
+                "status": "Limpando o cache do Windows Update... Isso pode levar algum tempo.",
+                "statusdis": "Alterando o estado do Windows Update... Isso pode levar algum tempo."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Notas Autoadesivas",
                 "u22": "Gravador de Voz",
                 "u27": "Relógio e Alarme",
-                "mode1": "Apenas Bloatware",
-                "mode2": "Mostrar populares",
-                "mode3": "Mostrar necessários",
+                "mode1": "Zbędne aplikacje",
+                "mode2": "Popularne",
+                "mode3": "Niezbędne",
                 "b": "Iniciar remoção UWP",
                 "chk": "Verificando aplicativos UWP instalados...",
                 "is": "instalado...",
@@ -155,11 +153,14 @@
                 "b": "Iniciar configuração rápida",
                 "info": "Use as caixas de seleção para escolher as configurações\nque você gostaria de aplicar na configuração automática.\nAs configurações serão ocultadas após a aplicação.",
                 "infodone": "As opções de configuração rápida terminaram!\nApós aplicá-las, não se esqueça de reiniciar.\nBoa sorte com o sistema!",
-                "uncheck": "Desmarcar tudo",
                 "checkall": "Ativar tudo",
                 "hidewidget": "Ocultar botões \"Visão de Tarefas\" e \"Widgets\"",
                 "removeads": "Remover anúncios no \"Menu Iniciar\" e na barra de tarefas",
-                "clipboard": "Ativar área de transferência"
+                "clipboard": "Ativar área de transferência",
+                "title": "Configurações populares",
+                "title2": "Funções raramente usadas",
+                "makuos": "Ativar configurações do MakuOS",
+                "makuos_tooltip": "Nas compilações do Windows chamadas MakuOS, desenvolvidas até novembro de 2025, as seguintes configurações foram aplicadas:\n\nAbrir \"Este Computador\" em vez de \"Início\" no Explorador de Arquivos\nMostrar arquivos, pastas e unidades ocultas\nMostrar extensões de arquivo\nMostrar o ícone \"Este Computador\" na área de trabalho\nDesativar anúncios e sugestões no Menu Iniciar\nDesativar criptografia automática de disco com Bitlocker\nDesativar as Teclas de Aderência\nDesativar o atraso do menu de contexto\nDesativar reinicialização automática na Tela Azul da Morte\nDesativar várias telemetrias\n\nAo clicar no botão, você aplicará a predefinição pronta do MakuOS."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Configurações avançadas",
                 "deledge_title": "Desinstalar o Microsoft Edge",
                 "deledge_btn": "Desinstalar",
                 "deledge_before": "Antes de desinstalar o Microsoft Edge, certifique-se de ter outro navegador. Deseja ir para a página do Google Chrome antes da desinstalação?",
@@ -221,8 +223,6 @@
                 "telemetry": "Desativar toda a telemetria e rastreamento no sistema"
             },
             "status": {
-                "o1b": "Você gerou com sucesso o relatório de bateria.",
-                "sr8": "Editor de Política de Grupo restaurado com sucesso!",
                 "uacwarn": "Ao ativar a opção \"Desativar Controle de Conta de Usuário (UAC)\", o recurso de arrastar e soltar (Drag-and-Drop) na barra de tarefas para de funcionar no Windows 11. O MakuTweaker não tem relação com esse problema. Você realmente deseja continuar?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Azul",
                 "c8": "Preto",
                 "b2": "Padrão"
-            },
-            "status": {
-                "apN": "Você alterou com sucesso o nome padrão para novos arquivos e pastas.",
-                "stN": "Você restaurou com sucesso o nome padrão para novos arquivos e pastas.",
-                "apC": "Você alterou com sucesso a cor de destaque."
             }
         },
         "pci": {

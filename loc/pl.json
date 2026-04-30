@@ -21,7 +21,7 @@
                 "set": "Ustawienia / O programie"
             },
             "def": {
-                "statusdef": "Informacja o ostatniej akcji w MakuTweaker...",
+                "search": "Wyszukiwanie tweaków, ustawień i funkcji",
                 "on": "Wł.",
                 "off": "Wył.",
                 "apply": "Zastosuj",
@@ -53,7 +53,6 @@
                 "showall": "Pokaż Wszystkie"
             },
             "status": {
-                "e8": "MakuTweaker naprawił duplikowanie dysków w Eksploratorze.",
                 "hdInfo1": "Wybierz litery dysków, które chcesz ukryć.",
                 "hdInfo2": "Zauważ, że dysk nadal może być dostępny przez wpisanie litery dysku i dwukropka w pasku adresu Eksploratora.",
                 "hide": "Ukryj wybrane litery",
@@ -86,11 +85,10 @@
                 "wu5": "Wstrzymaj usługę Windows Update",
                 "wu6": "Wyłącz zarezerwowane magazynowanie dla aktualizacji",
                 "wu5b": "Wstrzymaj",
-                "wu6b": "Blokuj"
-            },
-            "status": {
-                "wu4": "Pomyślnie zablokowałeś aktualizacje na konkretnej wersji systemu Windows.",
-                "wu5": "Zawsze możesz przejść do karty Windows Update i kliknąć \"Wznów aktualizacje\" w dowolnym momencie."
+                "wu6b": "Blokuj",
+                "wu6u": "Odblokować",
+                "status": "Trwa czyszczenie pamięci podręcznej Windows Update... Może to chwilę potrwać.",
+                "statusdis": "Trwa zmiana stanu usługi Windows Update... Może to chwilę potrwać."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Sticky Notes",
                 "u22": "Rejestrator dźwięku",
                 "u27": "Alarmy i zegar",
-                "mode1": "Tylko Bloatware",
-                "mode2": "Pokaż popularne aplikacje",
-                "mode3": "Pokaż niezbędne aplikacje",
+                "mode1": "Zbędne aplikacje",
+                "mode2": "Popularne",
+                "mode3": "Niezbędne",
                 "b": "Rozpocznij Usuwanie UWP",
                 "chk": "Sprawdzanie Zainstalowanych Aplikacji UWP...",
                 "is": "zainstalowany...",
@@ -153,13 +151,16 @@
             "main": {
                 "label": "Szybka konfiguracja Windows",
                 "b": "Zacznij szybką konfigurację",
-                "uncheck": "Odznacz wszystkie",
                 "checkall": "Aktywuj wszystkie",
                 "info": "Użyj pól wyboru, aby wybrać ustawienia,\nktóre mają zostać zastosowane w szybkiej konfiguracji Windows.\nUstawienia zostaną ukryte po zastosowaniu.",
                 "infodone": "Szybka konfiguracja jest zakończona!\nNie zapomnij uruchomić ponownie komputera, aby zastosować zmiany.\nMiłego użytkowania systemem!",
                 "hidewidget": "Ukryj przycisk Widok Zadań i Widgety",
                 "removeads": "Usuń reklamy w menu Start i wyszukiwaniu na pasku zadań",
-                "clipboard": "Włącz historię schowka"
+                "clipboard": "Włącz historię schowka",
+                "title": "Popularne ustawienia",
+                "title2": "Rzadko używane funkcje",
+                "makuos": "Aktywuj ustawienia MakuOS",
+                "makuos_tooltip": "W kompilacjach systemu Windows o nazwie MakuOS, rozwijanych do listopada 2025 roku, zastosowano następujące ustawienia:\n\nOtwieranie strony \"Ten komputer\" zamiast \"Strona główna\" w Eksploratorze plików\nPokazywanie ukrytych plików, folderów i dysków\nPokazywanie rozszerzeń plików\nPokazywanie ikony \"Ten komputer\" na pulpicie\nWyłączenie reklam i sugestii w menu Start\nWyłączenie automatycznego szyfrowania dysku za pomocą Bitlocker\nWyłączenie klawiszy trwałych\nWyłączenie opóźnienia menu kontekstowego\nWyłączenie automatycznego ponownego uruchamiania przy niebieskim ekranie śmierci\nWyłączenie różnej telemetrii\n\nKlikając przycisk, zastosujesz gotowy preset MakuOS."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Ustawienia zaawansowane",
                 "deledge_title": "Odinstaluj Microsoft Edge",
                 "deledge_btn": "Odinstaluj",
                 "deledge_before": "Przed odinstalowaniem Microsoft Edge upewnij się, że masz inną przeglądarkę. Czy chcesz przejść do strony Google Chrome przed odinstalowaniem?",
@@ -221,8 +223,6 @@
                 "telemetry": "Wyłącz telemetrię i zbieranie danych"
             },
             "status": {
-                "o1b": "Pomyślnie wygenerowałeś raport baterii.",
-                "sr8": "Pomyślnie włączyłeś Lokalny Edytor Zasad Grupy.", 
                 "uacwarn": "Gdy opcja \"Wyłącz kontrolę konta użytkownika (UAC)\" jest włączona, funkcja przeciągnij i upuść(Drag-and-Drop) na pasku zadań przestaje działać w systemie Windows 11. MakuTweaker nie ma związku z tym błędem. Czy na pewno chcesz kontynuować?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Niebieski",
                 "c8": "Czarny",
                 "b2": "Standardowy"
-            },
-            "status": {
-                "apN": "Pomyślnie zmieniłeś domyślną nazwę dla nowych plików i folderów.",
-                "stN": "Pomyślnie przywróciłeś domyślną nazwę dla nowych plików i folderów.",
-                "apC": "Pomyślnie zmieniłeś kolor zaznaczenia."
             }
         },
         "pci": {

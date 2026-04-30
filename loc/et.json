@@ -21,7 +21,7 @@
                 "set": "Seaded / Programmist"
             },
             "def": {
-                "statusdef": "Info viimase toimingu kohta MakuTweakeris...",
+                "search": "Tweakide, seadete ja funktsioonide otsing",
                 "on": "Sees",
                 "off": "Väljas",
                 "apply": "Rakenda",
@@ -53,7 +53,6 @@
                 "showall": "Näita kõiki tähti"
             },
             "status": {
-                "e8": "MakuTweaker parandas ketaste dubleerimise failihalduris.",
                 "hdInfo1": "Valige kettatähed, mida soovite peita.",
                 "hdInfo2": "Pange tähele, et ketast saab siiski avada, sisestades selle tähe ja kooloni failihalduri aadressiribale.",
                 "hide": "Peida valitud tähed",
@@ -86,11 +85,10 @@
                 "wu5": "Peata Windows Update'i teenus",
                 "wu6": "Lülita välja reserveeritud salvestusruum uuenduste jaoks",
                 "wu5b": "Peatada",
-                "wu6b": "Blokeerida"
-            },
-            "status": {
-                "wu4": "Olete edukalt blokeerinud uuendused teatud Windows-versioonis.",
-                "wu5": "Võite igal ajal minna Windows Update'i ja klõpsata \"Uuenduste taastamine\"."
+                "wu6b": "Blokeerida",
+                "wu6u": "Avada lukustus",
+                "status": "Tühjendatakse Windows Update'i vahemälu... See võib veidi aega võtta.",
+                "statusdis": "Muudetakse Windows Update'i olekut... See võib veidi aega võtta."
             }
         },
         "uwp": {
@@ -112,9 +110,9 @@
                 "u20": "Märkmed",
                 "u22": "Helisalvestus",
                 "u27": "Äratuskellad ja kellad",
-                "mode1": "Ainult Bloatware",
-                "mode2": "Ainult populaarsed",
-                "mode3": "Ainult olulised",
+                "mode1": "Üleliigsed rakendused",
+                "mode2": "Populaarsed",
+                "mode3": "Vajalikud",
                 "b": "Alusta UWP eemaldamist",
                 "chk": "Paigaldatud UWP-rakenduste kontrollimine...",
                 "is": "paigaldatud...",
@@ -155,11 +153,14 @@
                 "b": "Käivita kiirseadistus",
                 "info": "Kasutage märkeruute, et valida seaded,\nmida soovite autotuningus kasutada.\nSeaded peidetakse pärast rakendamist.",
                 "infodone": "Kiirseadistuse valikud on lõppenud!\nPärast nende kasutamist ärge unustage süsteemi uuesti käivitada. \nHead kasutamist!",
-                "uncheck": "Võtta kõik maha",
                 "checkall": "Aktiveeri kõik",
                 "hidewidget": "Peida nupud \"Tegumivaade\" ja \"Vidinad\"",
                 "removeads": "Eemalda reklaamid \"Start-menüüst\" ja tegumiribalt",
-                "clipboard": "Luba lõikepuhver"
+                "clipboard": "Luba lõikepuhver",
+                "title": "Populaarsed seaded",
+                "title2": "Harva kasutatavad funktsioonid",
+                "makuos": "Aktiveeri MakuOS seaded",
+                "makuos_tooltip": "Windowsi versioonides nimega MakuOS, mida arendati kuni 2025. aasta novembrini, rakendati järgmisi seadeid:\n\nAva failihalduris \"See arvuti\" asemel \"Avaleht\"\nNäita peidetud faile, kaustu ja kettaid\nNäita faililaiendeid\nNäita töölaual ikooni \"See arvuti\"\nKeela reklaamid ja soovitused Start-menüüs\nKeela ketta automaatne krüptimine Bitlockeri abil\nKeela kleepuvad klahvid\nKeela kontekstimenüü viivitus\nKeela automaatne taaskäivitamine sinise surmaekraani korral\nKeela erinev telemeetria\n\nNupule vajutades rakendate valmis MakuOS-i eelseadistuse."
             }
         },
         "act": {
@@ -183,6 +184,7 @@
         },
         "adv": {
             "main": {
+                "label": "Täpsemad seaded",
                 "deledge_title": "Eemalda Microsoft Edge",
                 "deledge_btn": "Eemalda",
                 "deledge_before": "Enne Microsoft Edge'i eemaldamist veenduge, et teil on mõni muu brauser. Kas soovite enne eemaldamist minna Google Chrome'i lehele?",
@@ -221,8 +223,6 @@
                 "telemetry": "Keela kogu telemeetria ja jälgimine süsteemis"
             },
             "status": {
-                "o1b": "Aku seisundi aruanne loodi edukalt.",
-                "sr8": "Rühmapoliitika redaktor taastati edukalt!",
                 "uacwarn": "Kui lubate valiku \"Keela kasutajakonto kontroll (UAC)\", ei tööta Windows 11-s enam failide lohistamine tegumiribale. See ei ole seotud MakuTweakeriga. Kas soovite jätkata?"
             }
         },
@@ -261,11 +261,6 @@
                 "c7": "Sinine",
                 "c8": "Must",
                 "b2": "Standardne"
-            },
-            "status": {
-                "apN": "Uute failide ja kaustade vaikimisi nimi muudeti edukalt.",
-                "stN": "Uute failide ja kaustade vaikimisi nimi taastati edukalt.",
-                "apC": "Esiletõstmise värv muudeti edukalt."
             }
         },
         "pci": {

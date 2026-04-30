@@ -75,6 +75,148 @@ namespace MakuTweakerNew
                 Settings.Default.lang = "en";
                 throw new KeyNotFoundException($"Cannot find category '{category}' in localization {resourceName}");
             }
+            
+            public static List<TweakSuggestion> GetAllTweaksForSearch(string language)
+            {
+                var tweaks = new List<TweakSuggestion>();
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = $"MakuTweakerNew.loc.{language}.json";
+
+                using Stream stream = assembly.GetManifestResourceStream(resourceName);
+                if (stream == null) return tweaks;
+
+                using StreamReader reader = new StreamReader(stream);
+                var jsonContent = reader.ReadToEnd();
+
+                var fullData = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(jsonContent);
+                var categoriesRoot = fullData["categories"];
+    
+                var catNames = categoriesRoot["base"]["catname"].ToObject<Dictionary<string, string>>();
+
+                var ignoredKeys = new HashSet<string>
+                {
+                    "label", "choose", "showall", "info1", "info2", "info3", "chk", "comp", "b",
+                    "mode1", "mode2", "mode3", "tpmy", "tpmn", "tooltip", "test1multi",
+                    "running_multicore", "running", "test1", "test2", "test3", "benchtip",
+                    "info", "flyout", "reportbutton", "b2", "b4", "deledge_done", "deledge_error",
+                    "deledge_tooltip", "deledge_sure", "deledge_before", "deledge_btn",
+                    "makuos_tooltip", "infodone", "title", "title2", "os", "oned", "tenM",
+                    "thirtyM", "oneH", "twoH", "fourH", "sixH", "suredialogT1", "suredialogT2",
+                    "suredialogT3", "suredialogT4", "suredialogNS", "isnt", "is", "wu5b", "wu6b",
+                    "install", "reset", "enable", "e8b"
+                };
+
+                foreach (var category in categoriesRoot)
+                {
+                    if (category.Name == "base" || category.Name == "pmgr" || category.Name == "perfor" || category.Name == "settings" || category.Name == "ab" || category.Name == "quick") continue;
+                    if (category.Value["main"] == null) continue;
+                    if (category.Value["main"]["label"] == null) continue;
+
+                    string internalTag = category.Name;
+                    string displayCategoryName = catNames.ContainsKey(internalTag) 
+                        ? catNames[internalTag] 
+                        : internalTag;
+
+                    if (category.Value["main"] != null)
+                    {
+                        foreach (var tweak in category.Value["main"])
+                        {
+                            string key = tweak.Name;
+
+                            if (ignoredKeys.Contains(key) || (key == "label" || key == "choose" || key == "showall" ||
+                                key == "info1" || key == "info2" || key == "info3" ||
+                                key == "chk" || key == "comp" || key == "b" ||
+                                key == "mode1" || key == "mode2" || key == "mode3" ||
+                                key.StartsWith("tooltip") || key.StartsWith("desc") ||
+                                key.StartsWith("status") || key.StartsWith("info") ||
+                                key.StartsWith("tip") || key.StartsWith("note") ||
+                                key.StartsWith("warn") || key.StartsWith("msg")))
+                                continue;
+
+                            string displayValue = tweak.Value.ToString();
+    
+                            if (displayValue.Length > 90) continue;
+    
+                            tweaks.Add(new TweakSuggestion
+                            {
+                                Id = key,
+                                DisplayName = displayValue,
+                                CategoryKey = displayCategoryName,
+                                InternalCategoryTag = internalTag
+                            });
+                        }
+                    }
+                }
+                return tweaks;
+            }
+        }
+        
+        public class TweakSuggestion
+        {
+            public string Id { get; set; }
+            public string DisplayName { get; set; }
+            public string CategoryKey { get; set; }
+            public string InternalCategoryTag { get; set; }
+    
+            public override string ToString() => DisplayName;
+        }
+        
+        private List<TweakSuggestion> _searchLibrary = new List<TweakSuggestion>();
+
+        private void InitializeSearch()
+        {
+            _searchLibrary = Localization.GetAllTweaksForSearch(Settings.Default.lang);
+        }
+
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var query = sender.Text.ToLower();
+                if (string.IsNullOrWhiteSpace(query))
+                {
+                    sender.ItemsSource = null;
+                    return;
+                }
+
+                sender.ItemsSource = _searchLibrary
+                    .Where(t => t.DisplayName.ToLower().Contains(query))
+                    .Take(10)
+                    .ToList();
+            }
+        }
+
+        private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            if (args.SelectedItem is TweakSuggestion selected)
+            {
+                string xamlTag = selected.InternalCategoryTag switch
+                {
+                    "expl" => "exp",
+                    "wu" => "wu",
+                    "sr" => "sys",
+                    "per" => "per",
+                    "uwp" => "uwp",
+                    "quick" => "quick",
+                    "adv" => "adv",
+                    "compon" => "compon",
+                    "act" => "act",
+                    "perf" => "perf",
+                    "sat" => "sat",
+                    "procmgr" => "pmgr",
+                    "pci" => "pci",
+                    _ => selected.InternalCategoryTag
+                };
+
+                var targetItem = NavigationView_Root.MenuItems
+                    .OfType<NavigationViewItem>()
+                    .FirstOrDefault(i => i.Tag?.ToString() == xamlTag);
+
+                if (targetItem != null)
+                {
+                    NavigationView_Root.SelectedItem = targetItem;
+                }
+            }
         }
 
         public MainWindow()
@@ -147,6 +289,7 @@ namespace MakuTweakerNew
 
             LoadLang(Properties.Settings.Default.lang);
             _ = CheckForUpd();
+            InitializeSearch();
         }
 
         private void ApplyTheme(WindowsTheme theme)
@@ -182,10 +325,10 @@ namespace MakuTweakerNew
                     "exp" => typeof(Explorer),
                     "wu" => typeof(WindowsUpdate),
                     "sys" => typeof(SysAndRec),
-                    "uwp" => typeof(UWP),
                     "per" => typeof(Personalization),
-                    "adv" => typeof(Advanced),
+                    "uwp" => typeof(UWP),
                     "quick" => typeof(QuickSet),
+                    "adv" => typeof(Advanced),
                     "compon" => typeof(WindowsComponents),
                     "act" => typeof(Act),
                     "perf" => typeof(Perf),
@@ -206,7 +349,35 @@ namespace MakuTweakerNew
 
         private void MicaWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Length > 1 && args[1].EndsWith(".mktw", StringComparison.OrdinalIgnoreCase))
+            {
+                string presetPath = args[1];
+
+                if (File.Exists(presetPath))
+                {
+                    var settingsPage = new SettingsAbout();
+                    NavigationView_Root.SelectedItem = null;
+                    MainFrame.Navigate(settingsPage, null, _transitionInfo);
+                    Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        settingsPage.ProcessPresetImport(presetPath);
+                    }), DispatcherPriority.ContextIdle);
+
+                    return;
+                }
+            }
+
             string lastTag = Properties.Settings.Default.lastPageTag;
+            var checkQs = new QuickSet();
+            if (checkQs.expander.Visibility == Visibility.Collapsed && checkQs.expander2.Visibility == Visibility.Collapsed)
+            {
+                c6.Visibility = Visibility.Collapsed;
+                if (lastTag == "quick")
+                {
+                    lastTag = "exp";
+                }
+            }
 
             if (!string.IsNullOrEmpty(lastTag))
             {
@@ -218,6 +389,10 @@ namespace MakuTweakerNew
                 {
                     NavigationView_Root.SelectedItem = itemToSelect;
                 }
+                else
+                {
+                    NavigationView_Root.SelectedItem = c1;
+                }
             }
             else
             {
@@ -226,29 +401,6 @@ namespace MakuTweakerNew
 
             Enum.TryParse(Settings.Default.style, out BackdropType bd);
             MicaWPFServiceUtility.ThemeService.EnableBackdrop(this, bd);
-        }
-
-        private bool isAnimating = false;
-
-        public async void ChSt(string st)
-        {
-            if (isAnimating) return;
-
-            try
-            {
-                isAnimating = true;
-
-                AnimY(status, 300, 26, 0);    
-                status.Text = st;
-
-                await Task.Delay(5000);      
-
-                AnimY(status, 300, 0, 33);    
-            }
-            finally
-            {
-                isAnimating = false;      
-            }
         }
 
         public void LoadLang(string lang)
@@ -260,10 +412,10 @@ namespace MakuTweakerNew
                 c1.Content = basel["catname"]["expl"];
                 c2.Content = basel["catname"]["wu"];
                 c3.Content = basel["catname"]["sr"];
-                c4.Content = basel["catname"]["uwp"];
-                c5.Content = basel["catname"]["per"];
-                c6.Content = basel["catname"]["adv"];
-                c7.Content = basel["catname"]["quick"];
+                c4.Content = basel["catname"]["per"];
+                c5.Content = basel["catname"]["uwp"];
+                c6.Content = basel["catname"]["quick"];
+                c7.Content = basel["catname"]["adv"];
                 c8.Content = basel["catname"]["compon"];
                 c9.Content = basel["catname"]["act"];
                 c10.Content = basel["catname"]["perf"];
@@ -272,6 +424,9 @@ namespace MakuTweakerNew
                 c13.Content = basel["catname"]["pci"];
                 rexplorerText.Text = basel["lowtabs"]["rexp"];
                 settingsText.Text = basel["lowtabs"]["set"];
+                SearchBox.PlaceholderText = basel["def"]["search"];
+                InitializeSearch();
+                SearchBox.Text = string.Empty;
             }
             catch(Exception ex)
             {
@@ -280,35 +435,7 @@ namespace MakuTweakerNew
                 System.Windows.Application.Current.Shutdown();
             }
         }
-        private void AnimY(UIElement element, double durationMilliseconds, double from, double to)
-        {
-            double currentY = 16;
 
-            if (element.RenderTransform != null && element.RenderTransform is TranslateTransform transform)
-            {
-                currentY = transform.Y;
-            }
-            else if (element.RenderTransform != null && element.RenderTransform is MatrixTransform matrixTransform)
-            {
-                currentY = matrixTransform.Matrix.OffsetY;
-            }
-
-            var moveDownAnimation = new DoubleAnimation
-            {
-                From = from,
-                To = to,
-                Duration = TimeSpan.FromMilliseconds(durationMilliseconds),
-                EasingFunction = new QuinticEase { EasingMode = EasingMode.EaseOut },
-            };
-            if (element.RenderTransform == null || element.RenderTransform is not TranslateTransform)
-            {
-                element.RenderTransform = new TranslateTransform();
-            }
-
-            var translateTransform = (TranslateTransform)element.RenderTransform;
-            translateTransform.BeginAnimation(TranslateTransform.YProperty, moveDownAnimation);
-
-        }
         public void RebootNotify(int mode)
         {
             string message = string.Empty;

@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using MakuTweakerNew.Properties;
 using MicaWPF.Controls;
 using Windows.UI.Composition.Desktop;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Diagnostics;
 using System.Runtime.Intrinsics.X86;
 

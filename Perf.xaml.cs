@@ -21,7 +21,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Windows.UI.Composition.Desktop;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MakuTweakerNew
 {

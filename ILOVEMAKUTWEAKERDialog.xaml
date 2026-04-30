@@ -2,7 +2,7 @@
     x:Class="MakuTweakerNew.ILOVEMAKUTWEAKERDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:ui="http://schemas.modernwpf.com/2019"
+     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
     Title="MakuTweaker"
     CloseButtonText="Cancel"
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick"

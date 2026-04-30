@@ -25,16 +25,16 @@ namespace MakuTweakerNew
 
         private readonly Dictionary<string, (string Label, string Name)> _translators = new()
         {
-            ["cs"] = ("Pomohl s lokalizací:", "qCLairvoyant"),
-            ["de"] = ("Hilfe bei der Lokalisierung:", "Scorazio"),
-            ["pl"] = ("Pomoc w lokalizacji:", "dfa_jk"),
-            ["et"] = ("Aitas lokaliseerimisega:", "KirTeanEesti")
+            ["cs"] = ("Přispěl k lokalizaci:", "qCLairvoyant"),
+            ["de"] = ("Beitrag zur Lokalisierung:", "Scorazio"),
+            ["pl"] = ("Wkład w lokalizację:", "dfa_jk"),
+            ["et"] = ("Panustas lokaliseerimisse:", "KirTeanEesti")
         };
 
         public SettingsAbout()
         {
             InitializeComponent();
-            credN.Text = "5.4\nMark Adderly\nNikitori\nMaksimCeleron, Massgrave";
+            credN.Text = "5.5\nMark Adderly\nNikitori\nMaksimCeleron, Massgrave";
             if (string.IsNullOrEmpty(Settings.Default.lang))
             {
                 string systemLang = CultureInfo.CurrentUICulture.Name.ToLower();
@@ -402,40 +402,38 @@ namespace MakuTweakerNew
             }
             catch (Exception ex)
             {
-                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"{ab["main"]["cfg_error"]}\n\n{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"{ab["main"]["cfg_error"]}\n\n{ex.Message}", "MakuTweaker", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private async void ImportPreset_Click(object sender, RoutedEventArgs e)
+        public async void ProcessPresetImport(string filePath)
         {
             var languageCode = Settings.Default.lang ?? "en";
             var ab = MainWindow.Localization.LoadLocalization(languageCode, "ab");
             try
             {
-                OpenFileDialog ofd = new OpenFileDialog
+                string json = File.ReadAllText(filePath);
+                if (string.IsNullOrWhiteSpace(json))
                 {
-                    Filter = "MakuTweaker Config (*.mktw)|*.mktw",
-                    Title = ab["main"]["cfg_import"]
-                };
+                    return;
+                }
 
-                if (ofd.ShowDialog() == true)
+                MakuPreset preset = JsonSerializer.Deserialize<MakuPreset>(json);
+
+                if (preset != null)
                 {
-                    string json = File.ReadAllText(ofd.FileName);
-                    MakuPreset preset = JsonSerializer.Deserialize<MakuPreset>(json);
+                    importProgress.Value = 0;
+                    importProgress.Visibility = Visibility.Visible;
+                    importPresetBtn.IsEnabled = false;
+                    savePresetBtn.IsEnabled = false;
 
-                    if (preset != null)
-                    {
-                        importProgress.Value = 0;
-                        importProgress.Visibility = Visibility.Visible;
-                        importPresetBtn.IsEnabled = false;
-                        savePresetBtn.IsEnabled = false;
-                        var progress = new Progress<int>(value => importProgress.Value = value);
-                        await System.Threading.Tasks.Task.Run(() => ApplyPresetBackground(preset, progress));
-                        importProgress.Visibility = Visibility.Collapsed;
-                        importPresetBtn.IsEnabled = true;
-                        savePresetBtn.IsEnabled = true;
-                        iNKORE.UI.WPF.Modern.Controls.MessageBox.Show(ab["main"]["cfg_ldsuccess"], "MakuTweaker", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
+                    var progress = new Progress<int>(value => importProgress.Value = value);
+                    await System.Threading.Tasks.Task.Run(() => ApplyPresetBackground(preset, progress));
+
+                    importProgress.Visibility = Visibility.Collapsed;
+                    importPresetBtn.IsEnabled = true;
+                    savePresetBtn.IsEnabled = true;
+                    iNKORE.UI.WPF.Modern.Controls.MessageBox.Show(ab["main"]["cfg_ldsuccess"], "MakuTweaker", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
@@ -443,8 +441,24 @@ namespace MakuTweakerNew
                 importProgress.Visibility = Visibility.Collapsed;
                 importPresetBtn.IsEnabled = true;
                 savePresetBtn.IsEnabled = true;
+                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"{ab["main"]["cfg_error1"]}\n\n{ex.Message}", "MakuTweaker", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 
-                iNKORE.UI.WPF.Modern.Controls.MessageBox.Show($"{ab["main"]["cfg_error1"]}\n\n{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        private void ImportPreset_Click(object sender, RoutedEventArgs e)
+        {
+            var languageCode = Settings.Default.lang ?? "en";
+            var ab = MainWindow.Localization.LoadLocalization(languageCode, "ab");
+
+            OpenFileDialog ofd = new OpenFileDialog
+            {
+                Filter = "MakuTweaker Config (*.mktw)|*.mktw",
+                Title = ab["main"]["cfg_import"]
+            };
+
+            if (ofd.ShowDialog() == true)
+            {
+                ProcessPresetImport(ofd.FileName);
             }
         }
 

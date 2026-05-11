@@ -65,11 +65,11 @@
 
             <TextBlock x:Name="gpedit" HorizontalAlignment="Left" Margin="24,10,0,0" TextWrapping="Wrap" Visibility="Collapsed" Text="Enable Local Group Policy Editor" VerticalAlignment="Top" FontSize="16"/>
 
-            <Grid HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top">
+            <Grid x:Name="lgpGrid" HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top" Visibility="Collapsed">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" SharedSizeGroup="MainActionButtons"/>
                 </Grid.ColumnDefinitions>
-                <controls:Button x:Name="lgp" Content="Enable" Height="28" Visibility="Collapsed" Click="lgp_Click"/>
+                <controls:Button x:Name="lgp" Content="Enable" Height="28" Click="lgp_Click"/>
             </Grid>
 
             <StackPanel Orientation="Horizontal" Margin="24,10,0,0">

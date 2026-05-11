@@ -13,7 +13,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel Margin="24,10,24,24">
 
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,24">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
                     <TextBlock x:Name="label" Text="PCI" FontSize="32" FontFamily="Segoe UI Semibold"/>
                     <controls:Button x:Name="buttontooltip" Width="24" Height="24" Margin="10,5,0,0" Padding="0" VerticalAlignment="Center" ToolTipService.InitialShowDelay="100" Content="?">
                         <controls:Button.ToolTip>

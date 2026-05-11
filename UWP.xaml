@@ -28,9 +28,8 @@
                 </StackPanel.Resources>
 
                 <TextBlock x:Name="label" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Remove UWP Apps" VerticalAlignment="Top" FontSize="32" FontFamily="Segoe UI Semibold"/>
-                <TextBlock x:Name="info1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Select The UWP Apps You Want to Remove" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Semibold"/>
-                <ui:InfoBar x:Name="info2" IsOpen="True" Message="Please note: This apps will not be removed for all users." VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI" Margin="0,5,0,5"  IsClosable="False"/>
-
+                <ui:InfoBar x:Name="info2" IsOpen="True" FontSize="18" FontFamily="Segoe UI" Margin="0,5,0,5" IsClosable="False"/>
+                
                 <ui:SettingsExpander x:Name="e1" Header="Bloatware" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Stretch" IsExpanded="True" IsTabStop="False" >
                     <ui:SettingsExpander.HeaderIcon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Delete}" />
@@ -46,14 +45,14 @@
                         <ui:SettingsCard x:Name="u30" Header="Microsoft To Do" IsEnabled="False">
                             <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u30t" IsTabStop="False"/>
                         </ui:SettingsCard>
+                        <ui:SettingsCard x:Name="u28" Header="Microsoft Outlook" IsEnabled="False">
+                            <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u28t" IsTabStop="False"/>
+                        </ui:SettingsCard>
                         <ui:SettingsCard x:Name="u1" Header="Windows Mixed Reality" IsEnabled="False">
                             <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u1t" IsTabStop="False"/>
                         </ui:SettingsCard>
                         <ui:SettingsCard x:Name="u2" Header="Solitaire Collection" IsEnabled="False">
                             <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u2t" IsTabStop="False"/>
-                        </ui:SettingsCard>
-                        <ui:SettingsCard x:Name="u3" Header="Messaging" IsEnabled="False">
-                            <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u3t" IsTabStop="False"/>
                         </ui:SettingsCard>
                         <ui:SettingsCard x:Name="u4" Header="Cortana" IsEnabled="False">
                             <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u4t" IsTabStop="False"/>
@@ -109,8 +108,8 @@
                         <ui:SettingsCard x:Name="u27" Header="Alarms &amp; Clock" IsEnabled="False">
                             <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u27t" IsTabStop="False"/>
                         </ui:SettingsCard>
-                        <ui:SettingsCard x:Name="u28" Header="Outlook" IsEnabled="False">
-                            <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u28t" IsTabStop="False"/>
+                        <ui:SettingsCard x:Name="u3" Header="Messaging" IsEnabled="False">
+                            <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u3t" IsTabStop="False"/>
                         </ui:SettingsCard>
                     </ui:SettingsExpander.Items>
                 </ui:SettingsExpander>
@@ -140,7 +139,6 @@
                     <ui:SettingsExpander.HeaderIcon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Admin}" />
                     </ui:SettingsExpander.HeaderIcon>
-                    <CheckBox x:Name="selectAllE3" Content="Select All" IsThreeState="True" PreviewMouseLeftButtonDown="SelectAll_PreviewMouseLeftButtonDown" />
                     <ui:SettingsExpander.Items>
                         <ui:SettingsCard x:Name="u23" Header="Microsoft Store" IsEnabled="False">
                             <ui:ToggleSwitch IsEnabled="False" Toggled="AppToggle_Toggled" x:Name="u23t" IsTabStop="False"/>

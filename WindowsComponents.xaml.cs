@@ -15,11 +15,13 @@ namespace MakuTweakerNew
         public WindowsComponents()
         {
             InitializeComponent();
+
             if (checkWinEd() == "Core" || checkWinEd() == "CoreSingleLanguage" || checkWinEd() == "CoreCountrySpecific" || checkWinEd() == "CoreN")
             {
                 gpedit.Visibility = Visibility.Visible;
-                lgp.Visibility = Visibility.Visible;
+                lgpGrid.Visibility = Visibility.Visible;
             }
+
             checkReg();
             LoadLang(Properties.Settings.Default.lang);
             isLoaded = true;

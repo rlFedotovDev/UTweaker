@@ -245,7 +245,6 @@ namespace MakuTweakerNew
             
             UpdateCategorySelectAllState(e1, selectAllE1);
             UpdateCategorySelectAllState(e2, selectAllE2);
-            UpdateCategorySelectAllState(e3, selectAllE3);
             UpdateCategoryVisibility();
 
             b.IsEnabled = AllToggles.Any(t => t.IsOn);
@@ -651,12 +650,10 @@ namespace MakuTweakerNew
             var main = MainWindow.Localization.LoadLocalization(languageCode, "base");
 
             label.Text = uwp["main"]["label"];
-            info1.Text = uwp["main"]["info1"];
-            info2.Message = uwp["main"]["info2"];
+            info2.Message = uwp["main"]["info1"] + "\n" + uwp["main"]["info2"];
 
             selectAllE1.Content = quick["main"]["checkall"];
             selectAllE2.Content = quick["main"]["checkall"];
-            selectAllE3.Content = quick["main"]["checkall"];
 
             u3.Header = uwp["main"]["u3"];
             u5.Header = uwp["main"]["u5"];
@@ -728,7 +725,6 @@ namespace MakuTweakerNew
         {
             UpdateCategorySelectAllState(e1, selectAllE1);
             UpdateCategorySelectAllState(e2, selectAllE2);
-            UpdateCategorySelectAllState(e3, selectAllE3);
 
             bool anyOn = AllToggles.Any(t => t.IsOn);
             b.IsEnabled = anyOn;

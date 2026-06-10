@@ -1,4 +1,4 @@
-name: Build MakuTweaker
+name: Build UTweaker
 
 on:
   push:
